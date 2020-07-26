@@ -1,0 +1,49 @@
+<ng-container 
+*ngIf="router.url === '/entrypoint'  ||
+router.url === '/sign-in'  || 
+router.url === '/sign-up'  || 
+router.url === '/forgot-password'; then blankfooter; else mainfooter">
+</ng-container>
+
+<ng-template #blankfooter></ng-template>
+<ng-template #mainfooter>
+  <ion-footer class="ion-no-border">
+      <ion-toolbar>
+        <ion-grid>
+          <ion-row>
+            <ion-col [routerLink]="['/home']" routerLinkActive="router-link-active" >
+              <ion-icon name="home-outline"></ion-icon>
+              <div class="clear"></div>
+              <ion-label>Home</ion-label>
+            </ion-col>
+            <ion-col  [routerLink]="['/categories']" routerLinkActive="router-link-active" >
+              <ion-icon name="duplicate-outline"></ion-icon>
+              <div class="clear"></div>
+              <ion-label>Categories</ion-label>
+            </ion-col>
+            <ion-col [routerLink]="['/products']" routerLinkActive="router-link-active">
+              <ion-icon name="cart-outline"></ion-icon>
+              <div class="clear"></div>
+              <ion-label>Shop</ion-label>
+            </ion-col>
+            <ion-col [routerLink]="['/cart']" routerLinkActive="router-link-active">
+              <div class="icon-details">
+                <ion-icon name="cart-outline"></ion-icon>
+                <!--<span class="no">{{qtn}}</span>-->
+              </div>
+              <div class="clear"></div>
+              <ion-label>Cart</ion-label>
+            </ion-col>
+            <ion-col [routerLink]="['/profile']" routerLinkActive="router-link-active">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <div class="clear"></div>
+              <ion-label>Profile</ion-label>
+            </ion-col>
+            
+          </ion-row>
+          </ion-grid>
+      </ion-toolbar>
+  </ion-footer>
+</ng-template>
+
+

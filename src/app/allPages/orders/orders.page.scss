@@ -1,0 +1,43 @@
+/* DOES NOT WORK - not specific enough */
+.modal-wrapper {
+    background: #222;
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class .modal-wrapper {
+    background: #222;
+  }
+  .my-custom-class {
+    --background: #222;
+  }
+
+.orders{
+    width: 100%;
+    ion-card{
+        margin: 0; padding: 0; box-shadow: none; 
+        .title{
+            font-size: 30px; color: #173143; font-weight: 700;
+            ion-icon{ 
+                position: relative; top: 3px;
+            }
+        }
+        .close_modal{
+            position: absolute; top: 0; bottom: 0; right: 15px; width: 30px; height: 30px; color: #173143; box-shadow: none; margin: auto;
+        }
+    }
+}
+.main-orders{
+    padding: 11px;
+    h2{
+        color: #173143; font-weight: 700; font-size: 18px; text-transform: capitalize;
+    }
+    h3{
+        color: #000; font-weight: 700; font-size: 16px;
+    }
+}
+
+
+
+
+
+  

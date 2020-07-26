@@ -1,0 +1,29 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.study-table-back{
+    width: 100%; height: auto; padding: 0 12px; margin-top: 40px;
+    table{
+         width: 100%; max-width: 100%;
+        thead{
+            tr{ 
+                color: #fff; text-transform: uppercase;  font-weight: 700;  background-color: $custom_secondary;
+                td{
+                    padding: 12px 8px;
+                }
+            }
+        }
+        tr{
+            background-color: #26baa1; font-size: 12px; color: #fff;
+            &.head{
+                color: $custom_primary; text-transform: uppercase; font-weight: 700; background-color: $custom_secondary; padding: 12px 8px;
+            }
+            td{
+                padding: 8px; border-bottom: #fff 1px solid; border-right: #fff 1px solid; width: 33.33333%;
+                button{
+                    background-color: transparent; color: #fff; border: none; outline-style: none; cursor: pointer;
+                }
+                
+            }
+        }
+    }
+}

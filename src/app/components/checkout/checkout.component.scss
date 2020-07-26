@@ -1,0 +1,26 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+.check-out-back{
+    width: 100%; height: auto; padding: 0 11px 11px 11px; float: left;
+    ion-label{
+        span{
+            color: red;
+       }
+       
+    }
+    .order-details{
+        padding: 0 11px;
+        table{
+            width: 100%; max-width: 100%; font-size: 14px;  background-color: $custom_primary; color: #fff;
+            th{ width: 50%; border: #ddd 1px solid; padding: 10px; text-align: left;}
+            td{ width: 50%; border: #ddd 1px solid; padding: 10px;}
+        }
+        ion-button{
+            background-color: $custom_primary; color: #fff; width: 100%; height: 50px; margin: 0; border: none;
+        }
+    }
+    
+}
+ion-button{
+    background-color: $custom_primary; color: #fff; width: 100%; height: 50px; margin: 5.5px 0; border: none; float: left;
+}

@@ -1,0 +1,3 @@
+will add module of codepush
+
+https://github.com/Dellos7/example-cordova-code-push-plugin

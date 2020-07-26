@@ -1,0 +1,26 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.avatoo-section{
+    width: 100%; float: left;  margin-top: 20px;
+    .heading{ margin-bottom: 0; width: 100%; float: left; padding: 0 20px 10px;}
+    h2{
+        font-weight: 600; font-size: 27px; color: #212121; text-transform: capitalize; margin: 0; padding: 0; float: left;
+    }
+    a{
+        font-size: 17px; color: #001f46; font-weight: 600; text-decoration: none; text-transform: capitalize; float: right; margin-top: 6px;
+    }
+    .quiz_back{
+        padding: 0 15px;  width: 100%;; float: left; margin-top: 10px; margin-bottom: 20px;
+        ion-item{ 
+            margin-bottom: 10px; position: relative; border-radius: 10px; overflow: visible;
+            .ion-back{
+                background-color: $custom_secondary;  position: absolute; top: 0; left: -16px;  width: 70px; height: 100%; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center;  border-radius: 10px 0 0 10px;
+            }
+            ion-icon{ color:$custom_primary; width: 40px; height: 40px;  } 
+            }
+            ion-label{
+                padding: 0 0 0 82px; font-weight: 700;
+            }
+        }
+ }
+

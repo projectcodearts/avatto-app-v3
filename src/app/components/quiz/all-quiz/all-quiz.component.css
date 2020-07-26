@@ -1,0 +1,80 @@
+.avatoo-section {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+
+.avatoo-section .heading {
+  margin-bottom: 0;
+  width: 100%;
+  float: left;
+  padding: 0 20px 10px;
+}
+
+.avatoo-section h2 {
+  font-weight: 600;
+  font-size: 27px;
+  color: #212121;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.avatoo-section a {
+  font-size: 17px;
+  color: #001f46;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+  float: right;
+  margin-top: 6px;
+}
+
+.avatoo-section .quiz_back {
+  padding: 0 15px;
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.avatoo-section .quiz_back ion-item {
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.avatoo-section .quiz_back ion-item .ion-back {
+  background-color: #f7bb00;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  width: 70px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px 0 0 10px;
+}
+
+.avatoo-section .quiz_back ion-item ion-icon {
+  color: #001f46;
+  width: 40px;
+  height: 40px;
+}
+
+.avatoo-section .quiz_back ion-label {
+  padding: 0 0 0 82px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=all-quiz.component.css.map */

@@ -1,0 +1,17 @@
+<div class="search-bar">
+  <!--<ion-title class="ion-text-wrap">Get CTET, NTSE, Homi Bhabha Test, Maths solution</ion-title>
+  <ion-searchbar showCancelButton="always" placeholder="Search for subjects, Books, Topics or PDFs..."></ion-searchbar>-->
+  <div class="search-section">
+    <ion-text color="default">
+      <h1>Get CTET, NTSE, Homi Bhabha Test, Maths solution</h1>
+    </ion-text>
+    <form >
+      <ion-input type="text" placeholder="Search for subjects, Books, Topics or PDFs..." id="name" #name></ion-input>
+      <ion-button (click)="onSearch(name.value)" color="button_transparent"> 
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+   </form>
+  </div>
+</div>
+
+

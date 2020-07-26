@@ -1,0 +1,88 @@
+.about-us-back {
+  width: 100%;
+  float: left;
+}
+
+.about-us-back .image-back {
+  width: 100%;
+  position: relative;
+}
+
+.about-us-back .image-back:after {
+  width: 100%;
+  height: 100px;
+  background-color: #f2f2f3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 73%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 73%);
+}
+
+.about-us-back .image-back img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.drescription-back {
+  text-align: left;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.drescription-back h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.drescription-back h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.drescription-back p {
+  line-height: 28px;
+  color: #727272;
+  font-size: 14px;
+}
+
+.drescription-back ul {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.drescription-back ul li {
+  width: 100%;
+  list-style: none;
+  float: left;
+  padding-left: 16px;
+  position: relative;
+  font-size: 14px;
+  color: #727272;
+  margin-bottom: 10px;
+}
+
+.drescription-back ul li:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "";
+  background: #fb4138;
+  background: -webkit-gradient(linear, left top, right top, from(#fb4138), to(#ff8003));
+  background: linear-gradient(to right, #fb4138 0%, #ff8003 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb4138', endColorstr='#ff8003',GradientType=1 );
+}
+/*# sourceMappingURL=aboutus.component.css.map */

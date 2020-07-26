@@ -1,0 +1,27 @@
+<div class="avatoo-section">
+  <div class="fetching-block" *ngIf="fetching" >
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching</p>
+  </div>
+  <ion-grid class="mocktest-details">
+    <ion-row>
+      <ion-col size-lg="3" size-md="3" size-sm="6" size="6" *ngFor="let data of mocktest">
+        <ion-card [routerLink]="['/data.link']">
+          <div class="image-box">
+            <img src="{{data.icon}}">
+          </div>
+          <ion-card-header>
+            <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</div>
+

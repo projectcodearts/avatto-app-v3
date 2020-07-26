@@ -1,0 +1,61 @@
+<!--<div class="papers-table-back">
+  <div class="inner-heading-style blue">
+    <div class="heading">
+      <div class="icon-back"><img src="assets/images/pre-year-i.png" alt=""></div>
+      Short Questions
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <td>Course Name</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
+    
+    <tbody>
+      
+      
+      
+      <tr *ngFor="let item of practiceQs">
+        <td>{{item.title}}</td>
+        <td>Free</td>
+        <td>
+          <button [routerLink]="['/', 'short-question-detail', item.link]" >Access</button>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+</div>-->
+<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<ion-card *ngFor="let item of practiceQs;let i = index;">
+  <div class="top">
+    <img src="assets/images/s-question.png">
+    <ion-card-header>
+      <ion-card-title class="card-title">{{item.title}} (Free)</ion-card-title>
+    </ion-card-header>
+    <div class="progress-back">
+      <ion-progress-bar value="0.3" style="--progress-background: #001f46;"></ion-progress-bar>
+    </div>
+    <div class="completed">
+      <span>30%</span> - 14 Chapters
+    </div>
+    <div class="span" (click)="toggleAccordian($event, i)"></div>
+  </div>
+  <div class="details_back">
+    <ul class="item">
+      <li [routerLink]="['/', 'short-question-detail', item.link]"  routerDirection="root"  expand="block"><span>{{item.title}}</span></li>
+    </ul>
+  </div>
+</ion-card>
+

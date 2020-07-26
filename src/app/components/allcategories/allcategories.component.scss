@@ -1,0 +1,134 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+/*.cat-details{
+    text-align: center; width: 100%; float: left; position: relative; 
+    ion-col{
+        padding: 0;
+    }
+    ion-card{
+        height: 135px; box-shadow: rgba(23,49,67,.15) 2px 0 4px; display: flex; align-items: center; border-radius: 5px; margin: 11px 5.5px 0;
+        img{
+            width: 60px; margin-bottom: 12px;
+        }
+        ion-card-header{
+            padding: 0;
+        }
+    }
+    .card-title{
+        font-size: 14px; color:$custom_primary; font-weight: 700; 
+    }
+    .card-sub-title{
+        font-size: 13px; color: #9d9d9d; 
+    }
+}
+
+@media only screen and (max-width:500px){
+    .cat-details{
+        ion-card{
+            img{
+                width: 36px;;
+            }
+        }
+        .card-title{
+            font-size: 11px;
+        }
+        .card-sub-title{
+            font-size: 10px; color: #9d9d9d; 
+        }
+    }
+}*/
+ion-grid{ margin: 0; padding: 0;}
+ion-col{ margin: 0; padding: 0;}
+.fetching-block{
+    width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; top: 0; left: 0; position: fixed; 
+  }
+/*ion-card{
+    background-color: #fff; border-radius: 0; margin: 0; padding: 0; border-bottom: #b6b6b6 1px solid; --box-shadow: none; box-shadow: none !important; position: relative;
+    .image-back{
+        position: absolute; top: 0; left: 15px; bottom: 0; margin: auto; display: flex; align-items: center; justify-content: center; box-shadow: rgba(0,0,0,.2) 1px 0 15px; width:100px; height: 100px; border-radius: 100%; background-color: #fff;
+    }
+     img{
+         width: 50px; 
+     }
+     ion-card-header{
+         margin: 0; padding: 50px 15px 50px 140px;
+     }
+     .card-title{
+        font-size: 17px; color: #212121; font-weight: 700;     margin-bottom: 11px; padding: 0 0 0 15px;
+    }
+    .card-subtitle{
+        font-size: 14px; color: #9d9d9d; padding: 0 0 0 15px;
+    }
+    .card-subtitle-com{
+        font-size: 10px; color: #fff; background-color: #001f46; border-radius: 30px; padding: 5px 10px 5px 15px; width: 70%;
+    }
+    ion-icon{
+        color: #001f46;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+        border-radius: 100%;
+        padding: 9px;
+        box-shadow: rgba(0,0,0,.2) 1px 0 15px; 
+     }
+ }
+
+ ion-col{
+    &:nth-child(2n+2){
+        ion-card{
+            background: #286bbf;
+            .image-back{
+                box-shadow: none;
+            } 
+            .card-title{
+                color: #fff;
+            } 
+            .card-subtitle{
+                color: #fff;
+            }
+            .card-subtitle-com{
+                color: #fff; background-color: #333;
+            }
+            ion-icon{ color: #001f46;}
+        }
+    }
+}*/
+
+.new-category-section{
+    width: 100%; float: left; padding: 11px 20px 0 52px;
+    .section{
+        width: 100%; float: left; padding: 0 65px 0 80px; position: relative; box-shadow: rgba(0,0,0,.2) 1px 0 15px; height: 100px; display: flex; justify-content: left; align-items: center; margin-bottom: 11px;
+        .image-back{
+            position: absolute; top: 0; left: -36px; bottom: 0; margin: auto; display: flex; align-items: center; justify-content: center; box-shadow: rgba(0,0,0,.2) 1px 0 15px; width:100px; height: 100px; border-radius: 100%; background-color: #fff;
+            img{
+                width: 50px; 
+            }
+        }
+        .card-title{
+            font-size: 17px; color: #173143; font-weight: 700;     margin-bottom: 8px; padding: 0 0 0 0;
+        }
+        .card-subtitle{
+            font-size: 14px; color: #9d9d9d; padding: 0 0 0 0; font-weight: 700; 
+        }
+        ion-icon{
+            background-image: url(../../../assets/images/arrow-new.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100%;
+            width: 58px;
+            position: absolute;
+            top: 0;
+            right: -9px;
+            background-size: 30%;
+            background-color: #f7bb00;
+            border-radius: 100px 20px 20px 100px;
+        }
+        
+    }
+}
+ 

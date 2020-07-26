@@ -1,0 +1,27 @@
+<div class="avatoo-section">
+  <div class="heading">
+    <h2>{{title}}</h2>
+    <a [routerLink]="['/papers']" class="view-all">view all</a>
+  </div>
+  <div class="fetching-block" *ngIf="fetching" >
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching</p>
+  </div>
+  <ion-slides pager="true" [options]="slideOpts" class="papers-details">
+    <ion-slide *ngFor="let data of papers">
+      <ion-card [routerLink]="['/', 'practice-question', data.link]">
+        <div class="image-box">
+          <img src="{{data.icon}}">
+        </div>
+        <ion-card-header>
+          <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>

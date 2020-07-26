@@ -1,0 +1,13 @@
+────────────┬────────────────────────────────────────┐
+│ Name       │ Deployment Key                         │
+├────────────┼────────────────────────────────────────┤
+│ Production │ j9VqiQLqvk6vF7n8y2iSMPHG466R7cbN7NcZ8x │
+├────────────┼────────────────────────────────────────┤
+│ Staging    │ n6zsB8_d9inyYPU3s0CMA_85mpIOpkjEJQvYg  │
+└────────────┴────────────────────────────────────────┘
+
+
+
+<platform name="android">
+    <preference name="CodePushDeploymentKey" value="n6zsB8_d9inyYPU3s0CMA_85mpIOpkjEJQvYg" />
+</platform>

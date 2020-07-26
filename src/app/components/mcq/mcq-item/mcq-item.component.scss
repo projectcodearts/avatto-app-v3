@@ -1,0 +1,177 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+
+
+.new-mcq-back{
+    width: 100%; height: auto; float: left;
+    ion-card{
+        ion-card-header{
+            ion-card-subtitle{
+                font-size: 17px; color: $custom_primary; margin: 0; padding: 2px 0 2px 35px; background-image: url(../../../../assets/images/q.png); background-repeat: no-repeat; background-position: left center; font-weight: 700;
+            }
+            ion-card-title{
+                color: #5c6f7a; font-size: 25px;   margin: 22px 0 0 0; font-weight: 600;
+            }
+        }
+        .question-option{
+            width: 100%; height: auto; float: left; margin: 20px 0 0 0; padding: 0;
+            li{
+                width: 100%; float: left; border: #eaeaea 1px solid; padding: 15px 8px 15px 58px; list-style: none; position: relative; margin-bottom: 14px; font-weight: 700; color: #5c6f7a; font-size: 15px;
+                
+                span{
+                    position: absolute; top: 0; left: 0; width: 40px; height: 100%; border-right: #eaeaea 1px solid; display: flex; align-items: center; justify-content: center;
+                    &:before{
+                        width: 100%; height: 100%;background-position: center center; background-repeat: no-repeat; position: absolute; top: 0; left: 0;  content: "";
+                    }
+                }
+                &.wrong{
+                    border-color: #d33238;  
+                    span{
+                        &:before{
+                            background-color: #d33238; background-image: url(../../../../assets/images/new-remove.png);
+                        }
+                    }
+                    &:focus{
+                        border-color: #d33238;
+                        outline-style: none ;
+                    }
+                }
+                &.right{
+                    border-color: #24b077;  
+                    span{
+                        &:before{
+                            background-color: #24b077; background-image: url(../../../../assets/images/new-check.png);
+                        }
+                    }
+                    &:focus{
+                        border-color: #24b077;
+                        outline-style: none ;
+                    }
+                }
+            }
+        }
+    }
+    .answare-back{
+        width: 100%; height: auto; float: left; padding: 20px; margin-top: 15px;display:none;
+        &.right{
+            background-color: #eef9e8; 
+            .main{
+                border-color: #24b077; 
+            }
+            
+        }
+        &.wrong{
+            background-color: #f9e1e1; 
+            .main{
+                border-color: #d33238; 
+            }
+            
+        }
+        
+        .main{
+            border: #000 1px solid; padding: 20px; width: 100%; height: auto; float: left; min-height: 190px;
+            
+            .show-option{
+                font-size: 18px; color: #5c6f7a; font-weight: 700; margin-bottom: 15px;
+                span{
+                    color:#000;
+                }
+            }
+            .explanation{
+                font-size: 18px;  color: #5c6f7a; line-height: 24px;
+            }
+        }
+    }
+}
+.button-back{
+    width: 100%; float: left; padding: 0 7px;
+    ion-button{
+        height: 50px; text-transform: capitalize; font-size: 21px; border-radius: 5px; margin-top: 20px;
+        background: #286bbf; 
+        background: -moz-linear-gradient(left,  #286bbf 0%, #163c6c 100%); 
+        background: -webkit-linear-gradient(left,  #286bbf 0%,#163c6c 100%); 
+        background: linear-gradient(to right,  #286bbf 0%,#163c6c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#286bbf', endColorstr='#163c6c',GradientType=1 ); border-radius: 100px; --box-shadow: none;
+        &.transparent{
+            background: none; color: #757575; font-size: 15px; --box-shadow:none;  border: #286bbf 2px solid;
+        }
+        &.yellow{
+            background: #f7bb00; color: #286bbf; 
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:500px){
+    .new-mcq-back{
+        ion-card{
+            ion-card-header{
+                ion-card-subtitle{
+                    font-size: 15px;
+                }
+                ion-card-title{
+                   font-size: 18px;
+                }
+            }
+            
+        }
+        .answare-back{
+            .main{
+                .explanation{
+                    font-size: 14px;
+                    strong{
+                        font-size: 15px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*.ion-item-back{
+     width: 100%; height: auto; background-color: #fff; float: left; box-shadow: rgba(23,49,67,.15) 2px 0 4px; float: left; border-radius: 10px; margin-bottom: 15px;
+     .question-title{
+        background-color: $custom_secondary; color: $custom_primary; padding: 15px; font-size: 16px; border-radius: 10px 10px 0 0; float: left; width: 100%; font-weight: 700;
+     }
+     .option-back{
+         padding: 20px 15px; width: 100%; float: left; margin: 0;
+         li{
+            list-style: none; color: $custom_primary; font-size: 16px; font-weight: 700;     padding: 5px 0 0 42px;    min-height: 30px; position: relative; cursor: pointer; margin-bottom: 15px;
+            &:last-child{ margin-bottom: 0;}
+            &.wrong{
+                .icon{
+                    background-image: url(../../../../assets/images/wrong.png);
+                }
+            }
+            &.right{
+                .icon{
+                    background-image: url(../../../../assets/images/right.png);
+                }
+            }
+            span{
+                width: 30px; height: 30px; background-color: $custom_primary; color: #fff; line-height: 30px; text-align: center; text-transform: uppercase; float: left; position: absolute; top: 0; left: 0; border-radius: 100%; font-size: 14px; font-weight: normal;
+            }
+            .icon{
+               width: 17px; height: 17px; position: absolute; top: 0; right: 0; bottom: 0; margin: auto;
+            }
+         }
+     }
+     .answare-back{
+        background-color: $custom_primary; color: #fff; font-size: 16px; border-radius: 0 0 10px 10px; float: left; width: 100%; font-weight: 700;
+        .title{
+            width: 100%; color: #fff; font-size: 16px; font-weight: 700;     padding: 15px 0 15px 58px;    min-height: 30px; position: relative; 
+            &:before{
+                background-image: url(../../../../assets/images/check.png); width: 24px; height: 24px; position: absolute; top: 0; bottom: 0; margin: auto; left: 18px; content: "";
+            }
+        }
+        .show-option{
+            border-top: #17447d 1px solid; border-bottom: #17447d 1px solid; width: 100%; padding: 10px 20px; color: #fff; font-size: 16px; font-weight: normal;
+        }
+        .explanation{
+            padding: 15px; color: #fff; font-size: 14px; font-weight: normal; line-height: 28px;
+        }
+     }
+}*/
+
+

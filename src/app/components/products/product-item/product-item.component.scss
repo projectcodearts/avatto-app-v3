@@ -1,0 +1,75 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.avatoo-section{
+    width: 100%; float: left;  margin-top: 20px;
+    .heading{ margin-bottom: 0; width: 100%; float: left; padding: 0 20px 10px;}
+    h2{
+        font-weight: 600; font-size: 27px; color: #212121; text-transform: capitalize; margin: 0; padding: 0; float: left;
+    }
+    a{
+        font-size: 17px; color: #001f46; font-weight: 600; text-decoration: none; text-transform: capitalize; float: right; margin-top: 6px;
+    }
+    .product-details{
+        text-align: left; width: 100%; float: left;        
+        ion-card{
+            height: auto;  box-shadow: rgba(23,49,67,.15) 8px 0 14px; border-radius: 5px; position: relative; 
+             transition: all .5s ease-in-out; padding: 15px;
+            .image-box{
+                width: 40%; height: auto; position: relative; float: left;
+                img{width: 100%; height: 130px; object-fit: cover; padding: 8px; border: #ddd 1px solid; border-radius: 5px;}
+            }
+            .drescription-back{
+                ion-card-header{
+                    padding: 0;
+                    .card-title{
+                        color: $custom_primary; font-weight: 700; font-size: 16px; position: relative; padding-bottom: 7px;
+                        &:after{
+                            position: absolute; bottom: 0; left: 0; background-color: $custom_secondary; width: 50px; height: 1px; content: "";
+                        }
+                        &:before{
+                            position: absolute; bottom: 3px; left: 0; background-color: $custom_primary; width: 25px; height: 1px; content: "";
+                        }
+                    }
+                }
+                width: 60%; height: auto; position: relative; float: left; padding-left: 20px;
+                ion-button{
+                    background-color: $custom_primary; border-radius: 5px; box-shadow: none !important; cursor: pointer; color: #fff; text-transform: capitalize; 
+                    padding: 0 !important; transition: all .5s ease-in; font-size: 11px;
+                   
+                    &:hover{
+                        background-color: $custom_secondary; color: $custom_primary; 
+                    }
+                    ion-icon{
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
+.fetching-block{
+    width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; top: 0; left: 0; position: fixed; 
+  }
+
+
+@media only screen and (max-width:450px){
+    .avatoo-section{
+        .product-details{
+            ion-card{
+                .image-box{
+                    width: 100%; margin-bottom: 10px;
+                    img{ height: 208px;}
+                }
+                .drescription-back{
+                    width: 100%;
+                    padding: 0;
+                }
+            } 
+        }
+    }
+}
+
+ 
+   

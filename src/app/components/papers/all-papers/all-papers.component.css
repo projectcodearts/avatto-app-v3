@@ -1,0 +1,154 @@
+.avatoo-section {
+  width: 100%;
+  float: left;
+  margin-top: 0;
+  padding: 0 0 0 0;
+}
+
+.avatoo-section .papers-details {
+  text-align: left;
+  width: 100%;
+  float: left;
+  position: relative;
+  /*ion-card{
+            height: 149px; box-shadow: rgba(23,49,67,.15) 2px 0 4px; border-radius: 5px; position: relative; padding: 0; margin: 0 0 11px 0;
+            .image-box{
+                width: 100%; height: 100px; position: relative;
+                img{position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
+            }
+            .card-title{
+                position: absolute; bottom: -17px; left: 0; background-color: #f0f0f0; font-size: 14px; color: #212121; width: 100%;  font-weight: 700; height: 70px; display: flex; align-items: center; justify-content: center;
+            }
+        }*/
+}
+
+.avatoo-section .papers-details .new-category-section {
+  width: 100%;
+  float: left;
+  padding: 11px 11px 0 11px;
+}
+
+.avatoo-section .papers-details .new-category-section .section {
+  width: 100%;
+  float: left;
+  padding: 0 65px 0 115px;
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 0 15px;
+          box-shadow: rgba(0, 0, 0, 0.2) 1px 0 15px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 11px;
+}
+
+.avatoo-section .papers-details .new-category-section .section .image-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 0 50px 50px 0;
+}
+
+.avatoo-section .papers-details .new-category-section .section .image-back img {
+  width: 50px;
+}
+
+.avatoo-section .papers-details .new-category-section .section .card-title {
+  font-size: 14px;
+  color: #173143;
+  font-weight: 700;
+  padding: 10px 15px 10px 25px;
+  border-radius: 10px 30px 30px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 0 15px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 0 15px;
+}
+
+.avatoo-section .papers-details .new-category-section .section .card-subtitle {
+  font-size: 14px;
+  color: #9d9d9d;
+  padding: 0 0 0 15px;
+  font-weight: 700;
+}
+
+.avatoo-section .papers-details .new-category-section .section ion-icon {
+  background-image: url(../../../../assets/images/arrow-new.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 0 15px;
+          box-shadow: rgba(0, 0, 0, 0.2) 1px 0 15px;
+  background-size: 50%;
+  border-radius: 100%;
+}
+
+ion-grid {
+  margin: 0;
+  padding: 0;
+}
+
+ion-col {
+  margin: 0;
+  padding: 0;
+}
+
+.fetching-block {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+/*@media only screen and (max-width:500px){
+    .avatoo-section{
+        .papers-details{
+            ion-card{
+                .image-box{
+                    img{
+                        width: 36px;
+                    }
+                }
+            }
+            .card-title{ font-size: 11px;}
+        }
+    }
+ }*/
+/*# sourceMappingURL=all-papers.component.css.map */

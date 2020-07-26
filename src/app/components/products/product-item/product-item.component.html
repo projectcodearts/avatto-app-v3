@@ -1,0 +1,44 @@
+<div class="avatoo-section">
+  <div class="fetching-block" *ngIf="fetching" >
+    <div>
+      <div class="lds-ring">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Fetching...</p>
+    </div>
+  </div>
+
+  <ion-grid>
+    <ion-row class="product-details">
+      <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of product">
+        <ion-card>
+          <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+            <img src="{{data.images[0].src}}">
+          </div>
+          <div class="drescription-back">
+            <ion-card-header class="card-header">
+              <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+            </ion-card-header>
+            <b [innerHTML]="data.price_html"></b>
+            <p [innerHTML]="data.short_description | textshort"></p>
+            <ion-button color="button_transparent" (click)="addToCart(data)">
+              <ion-icon slot="start" name="cart-outline"></ion-icon>
+              <ion-lable>Add to Cart</ion-lable>
+            </ion-button>
+            <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+              <ion-icon slot="start" name="add"></ion-icon>
+              <ion-lable>Explore</ion-lable>
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+
+
+</div>

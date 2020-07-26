@@ -1,0 +1,91 @@
+<!--<div class="ion-item-back" *ngFor="let data of mcqdata, index as i">
+  <div class="question-title">{{i+1}}. {{data.questionTitle}}</div>
+  <ul class="option-back">
+    <li *ngFor="let question of data.questionoption" [class]="question.iconoption" (click)="selection.value = question.id" tabindex="0"><span>{{question.option_no}}</span> {{question.option}} <i class="icon"></i></li>
+  </ul>
+  <div class="answare-back">
+    <div class="title">Answer</div> 
+    <input type="hidden" #selection>
+    <div *ngFor="let ans of data.answareoption" >
+      <div [ngSwitch]="selection.value">
+        <div *ngSwitchCase="ans.id">
+          <div class="show-option">Option {{ans.showOption | uppercase}} ({{ans.showoptiontext}})</div>
+          <div class="explanation">{{ans.explanation}}</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    
+</div>-->
+
+<!--<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<div class="ion-item-back" *ngFor="let user of users, index as i">
+  <div class="question-title">{{user.num}}. {{user.title}}</div>
+  <ul class="option-back">
+    <li><span>A</span>{{user.option.A}} <i class="icon"></i></li>
+    <li><span>B</span>{{user.option.B}} <i class="icon"></i></li>
+    <li><span>C</span>{{user.option.C}} <i class="icon"></i></li>
+    <li><span>D</span>{{user.option.D}} <i class="icon"></i></li>
+  </ul>
+</div>
+
+  
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)" loadingSpinner="bubbles" loadingText="Loading Users...">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>-->
+
+  <div class="fetching-block" *ngIf="fetching">
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching...</p> 
+  </div>
+  <div class="mcq_warp" *ngFor="let item of users | slice:lStart:lEnd; let i=index ">
+    <div class="new-mcq-back">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Question {{item.num}}</ion-card-subtitle>
+          <ion-card-subtitle>{{item.num}}/{{total}}</ion-card-subtitle>
+          <ion-card-title [innerHtml]="item.title"></ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ul class="question-option">
+            <li (click)="selectAnswer('A',item.id,item.choice,lStart,i)" class="ansA{{i}}{{item.id}}"><span>A</span><p [innerHtml]="item.option.A"></p></li>
+            <li (click)="selectAnswer('B',item.id,item.choice,lStart,i)" class="ansB{{i}}{{item.id}}"><span>B</span><p [innerHtml]="item.option.B"></p></li>
+            <li (click)="selectAnswer('C',item.id,item.choice,lStart,i)" class="ansC{{i}}{{item.id}}"><span>C</span><p [innerHtml]="item.option.C"></p></li>
+            <li (click)="selectAnswer('D',item.id,item.choice,lStart,i)" class="ansD{{i}}{{item.id}}"><span>D</span><p [innerHtml]="item.option.D"></p></li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+      <div class="answare-back right answare-back{{item.id}}">
+        <div class="main">
+          <div class="show-option"><strong>Option</strong> : <span>{{item.choice}}</span></div>
+          <div class="explanation"><strong>Explanation</strong> 
+          <p [innerHtml] ="item.explain"></p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="button-back">
+      <ion-button color="button_transparent" expand="block" *ngIf="nextBtnActive == 'true'" (click)="submitQuestion(item.id,lStart)">submit</ion-button>
+      <ion-button color="button_transparent" class="yellow" expand="block" (click)="prevQuestion(item.id,lStart)" *ngIf="prev !='false'">Prev</ion-button>
+      <ion-button color="button_transparent" class="transparent" expand="block" (click)="nextQuestion(item.id,lStart)">skip</ion-button>
+    </div>
+</div>
+ 
+
+
+

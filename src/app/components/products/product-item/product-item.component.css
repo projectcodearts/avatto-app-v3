@@ -1,0 +1,163 @@
+.avatoo-section {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+
+.avatoo-section .heading {
+  margin-bottom: 0;
+  width: 100%;
+  float: left;
+  padding: 0 20px 10px;
+}
+
+.avatoo-section h2 {
+  font-weight: 600;
+  font-size: 27px;
+  color: #212121;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.avatoo-section a {
+  font-size: 17px;
+  color: #001f46;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+  float: right;
+  margin-top: 6px;
+}
+
+.avatoo-section .product-details {
+  text-align: left;
+  width: 100%;
+  float: left;
+}
+
+.avatoo-section .product-details ion-card {
+  height: auto;
+  -webkit-box-shadow: rgba(23, 49, 67, 0.15) 8px 0 14px;
+          box-shadow: rgba(23, 49, 67, 0.15) 8px 0 14px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  padding: 15px;
+}
+
+.avatoo-section .product-details ion-card .image-box {
+  width: 40%;
+  height: auto;
+  position: relative;
+  float: left;
+}
+
+.avatoo-section .product-details ion-card .image-box img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 8px;
+  border: #ddd 1px solid;
+  border-radius: 5px;
+}
+
+.avatoo-section .product-details ion-card .drescription-back {
+  width: 60%;
+  height: auto;
+  position: relative;
+  float: left;
+  padding-left: 20px;
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-card-header {
+  padding: 0;
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-card-header .card-title {
+  color: #001f46;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-card-header .card-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f7bb00;
+  width: 50px;
+  height: 1px;
+  content: "";
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-card-header .card-title:before {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  background-color: #001f46;
+  width: 25px;
+  height: 1px;
+  content: "";
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-button {
+  background-color: #001f46;
+  border-radius: 5px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  cursor: pointer;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0 !important;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  font-size: 11px;
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-button:hover {
+  background-color: #f7bb00;
+  color: #001f46;
+}
+
+.avatoo-section .product-details ion-card .drescription-back ion-button ion-icon {
+  height: 20px;
+}
+
+.fetching-block {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+@media only screen and (max-width: 450px) {
+  .avatoo-section .product-details ion-card .image-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .avatoo-section .product-details ion-card .image-box img {
+    height: 208px;
+  }
+  .avatoo-section .product-details ion-card .drescription-back {
+    width: 100%;
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=product-item.component.css.map */

@@ -1,0 +1,30 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.site-header{
+    background-color: #001f46;
+    .title-default{ text-align: center; color: #fff;}
+    ion-icon{
+        color: #fff; width: 64px; height: 30px;
+    }
+    ion-menu-button{
+        color: #fff; width: 64px; height: 30px;
+    }
+    ion-button{ text-align: center;}
+}
+.my-custom-menu {
+    --width: 500px;
+  }
+
+.toolbar-container{
+    background-color: #001f46;
+}
+.icon-details{
+    display: inline-block; position: relative;
+    span{
+        width: 18px; height: 18px; background-color: $custom_secondary; color: $custom_primary; position: absolute;top: -1px; left: 15px; float: left; border-radius: 100%; text-align: center; line-height: 18px; font-size: 9px;
+    }
+}
+
+
+
+

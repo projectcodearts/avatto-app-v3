@@ -1,0 +1,121 @@
+<div class="check-out-back">
+  <ion-item>
+    <ion-label position="floating"> Coupon Code </ion-label>
+    <ion-input type="text" name="couponCode" [(ngModel)]="todo.couponCode" ></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="full" block color="button_transparent" (click)="appyCouponCode()"> Apply Coupon Code</ion-button>
+  <form action="">
+    <div class="clear"></div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">First name <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.first_name" name="first_name" ></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Last name <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.last_name" name="last_name" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Email Address <span>*</span></ion-label>
+            <ion-input type="email" [(ngModel)]="orderData.billing.email" name="email" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Country / Region <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.country" name="country"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label>Street address <span>*</span></ion-label>
+          <ion-item>
+            <ion-label position="floating">House number and street name</ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.address_1" name="address_1"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apartment, suite, unit, etc. (optional)</ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.address_2" name="address_2"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">State <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.state" name="state"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">city <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.city" name="city"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Postcode <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.postcode" name="postcode"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Phone <span>*</span></ion-label>
+            <ion-input type="text" [(ngModel)]="orderData.billing.phone" name="phone"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <div class="order-details">
+    <h3>Your Order Details</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> {{cartProduct.name}}  × 3</td>
+          <td>Rs. {{cartProduct.price}}</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>Rs. {{cartProduct.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ion-list>
+      <ion-item>
+        <ion-label> I agree to the website terms and conditions *</ion-label>
+        <ion-checkbox slot="start" (ionChange)="checkTerm()"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button button color="light" *ngIf="isChecked != '1'">
+      <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      <ion-label>Continue</ion-label>
+    </ion-button>
+
+    <ion-button button color="button_transparent" (click)="payWithRazorpay()" *ngIf="isChecked == '1'">
+      <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      <ion-label>Continue</ion-label>
+    </ion-button>
+  </div>
+</div>

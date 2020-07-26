@@ -1,0 +1,180 @@
+ion-card {
+  margin: 0;
+}
+
+.check-out-back {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+.check-out-back ion-label span {
+  color: red;
+}
+
+.check-out-back .order-details {
+  padding: 0 11px;
+}
+
+.check-out-back .order-details table {
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  background-color: #001f46;
+  color: #fff;
+}
+
+.check-out-back .order-details table th {
+  width: 50%;
+  border: #ddd 1px solid;
+  padding: 10px;
+  text-align: left;
+}
+
+.check-out-back .order-details table td {
+  width: 50%;
+  border: #ddd 1px solid;
+  padding: 10px;
+}
+
+.check-out-back .order-details ion-button {
+  background-color: #001f46;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  border: none;
+}
+
+.orders {
+  width: 100%;
+}
+
+.orders ion-card {
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.orders ion-card .title {
+  font-size: 30px;
+  color: #173143;
+  font-weight: 700;
+}
+
+.orders ion-card .title ion-icon {
+  position: relative;
+  top: 3px;
+}
+
+.orders ion-card .close_modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  color: #173143;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: auto;
+}
+
+.contact-details {
+  padding: 11px;
+}
+
+.back {
+  color: #fff;
+}
+
+.login-back h3 {
+  margin: 25px 0 0 15px;
+  text-transform: capitalize;
+  color: #173143;
+}
+
+.login-back .login-main-back {
+  width: 100%;
+  height: 75%;
+  background-color: #fff;
+  float: left;
+}
+
+.login-back .login-main-back form .form-portion {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  outline-width: none;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.login-back .login-main-back form .form-portion ion-input.sc-ion-input-md-h, .login-back .login-main-back form .form-portion ion-input.sc-ion-input-ios-h {
+  text-align: left;
+  border: none;
+  border-bottom: #b6b6b6 1px solid;
+  padding: 0 10px 0 42px !important;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  height: 50px;
+}
+
+.login-back .login-main-back form .form-portion ion-input.sc-ion-input-md-h.has-focus, .login-back .login-main-back form .form-portion ion-input.sc-ion-input-ios-h.has-focus {
+  border-color: #001f46;
+}
+
+.login-back .login-main-back form .form-portion ion-input.sc-ion-input-md-h.ng-invalid.ng-touched, .login-back .login-main-back form .form-portion ion-input.sc-ion-input-ios-h.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.login-back .login-main-back form .form-portion ion-input.sc-ion-input-md-h.ng-valid, .login-back .login-main-back form .form-portion ion-input.sc-ion-input-ios-h.ng-valid {
+  border-color: green;
+}
+
+.login-back .login-main-back form .form-portion ion-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: 22px;
+  width: 70px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.login-back .login-main-back form .button-list {
+  width: 100%;
+  height: auto;
+  margin: 0 0 15px 0;
+  padding: 0 15px;
+  float: left;
+}
+
+.login-back .login-main-back form .button-list li {
+  width: 100%;
+  list-style: none;
+  float: left;
+}
+
+.login-back .login-main-back form .button-list li ion-button.blue-border {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: none !important;
+  color: #001f46;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 92px;
+  text-transform: capitalize;
+  text-decoration: none;
+  float: left;
+  border-radius: 10px;
+  background-color: #f7bb00;
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=user-address.page.css.map */

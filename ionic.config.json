@@ -1,0 +1,7 @@
+{
+  "name": "avatto",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

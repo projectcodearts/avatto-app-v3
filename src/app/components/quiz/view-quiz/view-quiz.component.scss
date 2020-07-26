@@ -1,0 +1,107 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+ion-slides {
+    height: 100%;
+  }
+  
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+  
+  
+  ion-col > .question_num_tal {
+    text-align: center;
+    border: solid 1px #ddd;
+    padding: 5px; font-size: 12px;
+  }
+  
+  .saveActivated{
+    color: #fff; 
+    background-color: #59ad19;
+  }
+  .markActivated{
+    color: #fff; 
+    background-color:#7c58b8
+  }
+  .markActivatednotAnswer{
+    color: #fff;
+    background-color:#ec4908
+  }
+
+  .pop-up{
+    width: 100%; height: 100%; top: 0; left: 0; position: fixed; display: flex; justify-content: center; align-items: center; visibility: hidden; opacity: 0;   background-color: #fff;  z-index: 2;
+    &.active{
+      visibility: visible; opacity: 1; top: 0; 
+    }
+    
+  }
+  ion-button{
+    background-color: $custom_primary; color: #fff; width: 100%; height: 50px; line-height: 50px; margin: 5.5px 0; border: none; float: left; border-radius: 100px; --box-shadow: none;
+}
+.fetching-block{
+  width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; top: 0; left: 0; position: fixed; z-index: 2; background-color: #fff;
+}
+.quiz-header{
+  width: 100%; border-bottom: #ddd 1px solid; padding: 10px 0;
+  .count-down{
+    text-align: right;
+    span{
+      background-color: #001f46;
+      color: #fff;
+      border-radius: 3px;
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+.quiz-no{
+  ion-col{
+    max-width: 10% !important;
+  }
+}
+.quiz-question{
+  background: #001f46;
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.answare-list{
+  ion-list{
+    background-color: transparent;
+  }
+  ion-item{ 
+    --background: #fff; position: relative; overflow: visible; padding: 0 0 0 45px;
+    &:nth-child(2n+2){
+      --background: #e6e3e3;
+      .icon-cover{
+        background-color: #1d5dad;
+      }
+    }
+    .icon-cover{
+      position: absolute; top: 0; left: -60px; width: 45px; height: 100%;     background-color: #001f46;display: flex; align-items: center; justify-content: center;
+      ion-icon{
+        width: 20px; height: 20px;  color: #fff; 
+      }
+    }
+  }
+}
+.back{
+  width: 100%;
+}
+.quiz-buttons{
+ width: 100%;
+  ion-button{
+    border-radius: 100px; --box-shadow: none !important;
+    &.war{
+      background-color: #f7bb00;
+      color: #001f46;
+    }
+    &.submit{
+      background-color: rgb(89, 173, 25);
+    }
+  }
+}

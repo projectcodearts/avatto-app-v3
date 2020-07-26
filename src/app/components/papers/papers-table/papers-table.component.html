@@ -1,0 +1,85 @@
+<!--<div class="papers-table-back">
+  <div class="heading">Previous Year Papers</div>
+  <table>
+    <thead>
+      <tr>
+        <td>Course Name</td>
+        <td>Free</td>
+        <td>Paid</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="head"> 
+        <td>Online</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr *ngFor="let item of tabledata">
+        <td>{{item.testname}}</td>
+        <td><mark>{{item.testprice}}</mark></td>
+        <td>
+          <button [routerLink]="['/', 'practice-question', item.link]" >{{item.buttontext}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+
+<div class="fetching-block" *ngIf="fetching" >
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching...</p>
+</div>
+<ion-card>
+  <div class="top" (click)="acco()" [class.active]="active">
+    <img src="assets/images/s-question.png">
+    <ion-card-header>
+      <ion-card-title class="card-title">Previous Year Papers</ion-card-title>
+    </ion-card-header>
+    <div class="progress-back">
+      <ion-progress-bar value="0.0" style="--progress-background: #001f46;"></ion-progress-bar>
+    </div>
+    <div class="completed">
+      <span>0%</span> - 10 Chapters
+    </div>
+    <div class="span" (click)="toggleAccordian($event, i)" ></div>
+  </div>
+  <div class="details_back" *ngIf="papersaccordion">
+    <div class="table-back">
+      <table>
+        <thead>
+          <tr>
+            <td>Course Name</td>
+            <td>Free</td>
+            <td>Paid</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="head"> 
+            <td>Online</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr *ngFor="let item of tabledata">
+            <td>{{item.testname}}</td>
+            <td><mark>{{item.testprice}}</mark></td>
+            <td>
+              
+              <ion-button [routerLink]="['/', 'practice-question', item.link]" expand="block" color="button_transparent">
+                {{item.buttontext}}
+              </ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</ion-card>
+
+
+
