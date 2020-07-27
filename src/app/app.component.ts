@@ -14,7 +14,7 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  
+  backButtonSubscription;
   showLoadingIndicator: boolean = true;
   constructor(
     private platform: Platform,
@@ -42,9 +42,8 @@ export class AppComponent implements OnInit {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      /*this.statusBar.styleDefault();*/
       this.splashScreen.hide();
-
       if (this.platform.is('android')) {
         this.statusBar.backgroundColorByHexString("#33000000");
       }
@@ -70,5 +69,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
    
+  }
+  ngAfterViewInit() { 
+    this.backButtonSubscription = this.platform.backButton.subscribe(() => {
+      navigator['app'].exitApp();
+    });
+  }
+  ngOnDestroy() { 
+    this.backButtonSubscription.unsubscribe();
   }
 }

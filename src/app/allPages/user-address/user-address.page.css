@@ -47,7 +47,7 @@ ion-card {
 }
 
 .orders {
-  width: 100%;
+  width: 100%; 
 }
 
 .orders ion-card {
@@ -60,7 +60,7 @@ ion-card {
 .orders ion-card .title {
   font-size: 30px;
   color: #173143;
-  font-weight: 700;
+  font-weight: 700; padding-top: 80px;
 }
 
 .orders ion-card .title ion-icon {

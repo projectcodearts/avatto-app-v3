@@ -1,7 +1,7 @@
 @import "../../../assets/css/mixin.component.scss";
 @import "../../../theme/color_variables.scss";
 .search-bar{
-    width: 100%; height: auto; float: left; background-color: $custom_primary; padding: 50px 30px 30px 30px; text-align: center; color: #fff;
+    width: 100%; height: auto; float: left; background-color: $custom_primary; padding: 30px 30px 30px 30px; text-align: center; color: #fff;
     
 }
 
@@ -31,7 +31,7 @@
     }
     ion-text{
         h1{
-            font-size: 16px; color: #fff; margin: 0 0 20px 0;
+            font-size: 14px; color: #fff; margin: 0 0 20px 0;
         }
     }
 }

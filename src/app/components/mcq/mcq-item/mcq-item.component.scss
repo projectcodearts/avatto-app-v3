@@ -101,7 +101,15 @@
     }
 }
 
-
+.countdown{ position: absolute; top: 18px; right: 18px; background-color: #f7f7f7;}
+.countdown .item{ padding: 8px 10px 8px 20px;
+    background: #286bbf;
+    color: #fff;
+    border-radius: 30px 0 0 30px;}
+.countdown .total{ padding: 8px 20px 8px 10px;
+    background: #f7bb00;
+    color: #286bbf;
+    border-radius: 0 30px 30px 0;}
 
 @media only screen and (max-width:500px){
     .new-mcq-back{

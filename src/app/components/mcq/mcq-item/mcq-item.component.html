@@ -55,9 +55,13 @@
   <div class="mcq_warp" *ngFor="let item of users | slice:lStart:lEnd; let i=index ">
     <div class="new-mcq-back">
       <ion-card>
+        <div class="countdown">
+          <span class="item">{{item.num}}</span>
+          <span class="total">{{total}}</span>
+        </div>
         <ion-card-header>
           <ion-card-subtitle>Question {{item.num}}</ion-card-subtitle>
-          <ion-card-subtitle>{{item.num}}/{{total}}</ion-card-subtitle>
+        
           <ion-card-title [innerHtml]="item.title"></ion-card-title>
         </ion-card-header>
         <ion-card-content>
