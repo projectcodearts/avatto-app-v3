@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-categories',
@@ -11,6 +12,8 @@ export class CategoriesPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+    
+    }
+  
 
 }

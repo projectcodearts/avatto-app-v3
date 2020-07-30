@@ -3,6 +3,7 @@ import { ProductsService } from '../../allServices/products.service';
 import { Platform, LoadingController, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Router,ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 declare var RazorpayCheckout:any;
 @Component({
   selector: 'app-checkout',
@@ -16,7 +17,8 @@ export class CheckoutComponent implements OnInit {
     couponCode: ''
   };
   cartProduct : any = JSON.parse(localStorage.getItem("product"))?JSON.parse(localStorage.getItem("product")):[];
-
+  price:any;
+  couponData:any;
   orderData = {
     payment_method: "razorpay",
     payment_method_title: "Razorpay",
@@ -50,10 +52,12 @@ export class CheckoutComponent implements OnInit {
     public _products: ProductsService,
     private router: Router,
     private route: ActivatedRoute,
+    private http:HttpClient,
     private storage: Storage
   ) { 
     //this.storage.clear();
     console.log(this.cartProduct);
+    this.price = this.cartProduct.price;
     this.storage.get('userInfo').then((val) => {
       let userInfo = JSON.parse(val);
       console.log(userInfo);
@@ -81,6 +85,11 @@ export class CheckoutComponent implements OnInit {
     this._products.appycoupon(this.todo.couponCode).subscribe(async (resp) => {
         loading.dismiss();	
         console.log(resp);
+        this.couponData = resp;
+        let ins = this.cartProduct.price/100;
+        let dis = ins*this.couponData.price;
+        console.log(ins);
+        this.price = this.cartProduct.price-dis;
     }, async (err) => {
         loading.dismiss();		
         const toast = await this.toastCtrl.create({
@@ -92,12 +101,14 @@ export class CheckoutComponent implements OnInit {
   }
 
   payWithRazorpay() {
+    //console.log(typeof(this.price));
+    //this.createOrder();
     var options = {
       description: 'Credits towards consultation',
       image: 'https://i.imgur.com/3g7nmJC.png',
       currency: "INR", // your 3 letter currency code
       key: "rzp_test_1DP5mmOlF5G5ag", // your Key Id from Razorpay dashboard
-      amount: 100, // Payment amount in smallest denomiation e.g. cents for USD
+      amount: this.price, // Payment amount in smallest denomiation e.g. cents for USD
       name: 'Razorpay',
      
       prefill: {
@@ -138,30 +149,101 @@ export class CheckoutComponent implements OnInit {
     loading.present();
     let shillpingAddress = this.orderData.billing;
     this.orderData['shipping'] = shillpingAddress;
-    this.orderData['customer_id'] = 24;
+    //this.orderData['customer_id'] = 24;
 
     let products = {
       "product_id" : this.cartProduct.id,
       "quantity" : "1"
     }
-    this.orderData.line_items.push(products);
+    //this.orderData.line_items.push(products);
+
+    let createOrderData = {
+      payment_method: "razorpay",
+      payment_method_title: "Razorpay",
+      set_paid: true,
+      discount_total: this.price,
+
+      billing: {
+        first_name: "",
+        last_name: "",
+        address_1: "",
+        address_2: "",
+        city: "",
+        state: "",
+        postcode: "",
+        country: "",
+        email: "",
+        phone: ""
+      },
+      shipping: {
+        first_name: "",
+        last_name: "",
+        address_1: "",
+        address_2: "",
+        city: "",
+        state: "",
+        postcode: "",
+        country: "",
+        email: "",
+        phone: ""
+      },
+      line_items: [
+        {
+          product_id: this.cartProduct.id,
+          quantity: 1,
+          
+        }
+      ],
+      coupon_lines:[
+        {
+          code:"LOVE2SHOP",
+        }
+        
+
+      ]
+    }
+
+    createOrderData['shipping'] = shillpingAddress;
+    createOrderData['billing'] = shillpingAddress;
+    createOrderData['customer_id'] = 24;
+    this.http.post("https://avatto.in/wp-json/wc/v3/orders?consumer_key=ck_ac58eb3d104d676d8c0543ac74b6ad5a3a3dd7a9&consumer_secret=cs_d7d0b84586275581ad4f307dc8f9e582fffee848", createOrderData)
+      .subscribe(
+        async data => {
+          loading.dismiss();
+          const toast = await this.toastCtrl.create({
+                message: 'Order has been successfully placed.',
+                duration: 2000
+          });
+          toast.present(); 
+          this.router.navigate(['/profile']);   
+          console.log("Order successfully created", data);
+        },
+        async error => {
+          console.log("Error", error);
+          const toast = await this.toastCtrl.create({
+                  message: 'failed to place order.',
+                  duration: 2000
+            });
+          toast.present();
+        }
+      );
     
     
-    this._products.postOrder(this.orderData).subscribe(async (resp) => {
-      loading.dismiss();
-      const toast = await this.toastCtrl.create({
-        message: 'Order has been successfully placed.',
-        duration: 2000
-      });
-      toast.present();
-      this.router.navigate(['/home']);
-    }, async (err) => {
-        const toast = await this.toastCtrl.create({
-          message: 'failed to place order.',
-          duration: 2000
-        });
-        toast.present();
-    });   
+    // this._products.postOrder(this.orderData).subscribe(async (resp) => {
+    //   loading.dismiss();
+    //   const toast = await this.toastCtrl.create({
+    //     message: 'Order has been successfully placed.',
+    //     duration: 2000
+    //   });
+    //   toast.present();
+    //   //this.router.navigate(['/home']);
+    // }, async (err) => {
+    //     const toast = await this.toastCtrl.create({
+    //       message: 'failed to place order.',
+    //       duration: 2000
+    //     });
+    //     toast.present();
+    // });   
   }
 
   checkTerm(){

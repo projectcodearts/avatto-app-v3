@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../allServices/products.service';
-import { Platform, LoadingController, ToastController, ModalController } from '@ionic/angular';
+import { Platform, LoadingController, ToastController, ModalController,NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-user-address',
@@ -25,6 +25,7 @@ export class UserAddressPage implements OnInit {
     }
   };
   constructor(public platform: Platform,
+    public nav: NavController,
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController,
     public _products: ProductsService,
@@ -36,30 +37,22 @@ export class UserAddressPage implements OnInit {
     this._products.getCustomer("12").then(data => {
       let item = data[0];
       this.customerInfo = item;
+      this.userAddress.billing = item.billing;
       console.log(this.customerInfo);
-      
-      // userAddress = {
-      //   billing: {
-      //     first_name: this.customerInfo.first_name,
-      //     last_name: this.customerInfo.last_name,
-      //     address_1: this.customerInfo.address_1,
-      //     address_2: this.customerInfo.address_2,
-      //     city: this.customerInfo.city,
-      //     state: this.customerInfo.state,
-      //     postcode: this.customerInfo.postcode,
-      //     country: this.customerInfo.country,
-      //     email: this.customerInfo.email,
-      //     phone: this.customerInfo.phone
-      //   }
-      // };
     });
   }
+
+  ionViewDidEnter(){
+    
+  }
+
   dismiss() {
+    this.nav.back();
     // using the injected ModalController this page
     // can "dismiss" itself and optionally pass back data
-    this.modalController.dismiss({
+    /*this.modalController.dismiss({
       'dismissed': true
-    });
+    });*/
   }
 
   async updateAddress(){
@@ -72,7 +65,7 @@ export class UserAddressPage implements OnInit {
     let shillpingAddress = this.userAddress.billing;
     this.userAddress['shipping'] = shillpingAddress;
     
-    this._products.updateUserAddress(this.userAddress,"1").subscribe(async (resp) => {
+    this._products.updateUserAddress(this.userAddress,"12").subscribe(async (resp) => {
       loading.dismiss();
       const toast = await this.toastCtrl.create({
         message: 'Address has been successfully updated.',

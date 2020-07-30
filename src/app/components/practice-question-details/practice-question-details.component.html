@@ -61,10 +61,10 @@
       <ion-card-title class="card-title">{{item.title}} (Free)</ion-card-title>
     </ion-card-header>
     <div class="progress-back">
-      <ion-progress-bar value="0.0" style="--progress-background: #001f46;"></ion-progress-bar>
+      <ion-progress-bar value="{{percentageBar[item.link]}}" style="--progress-background: #001f46;"></ion-progress-bar>
     </div>
     <div class="completed">
-      <span>0%</span> - {{item.count}} Chapters
+      <span>{{percentage[item.link] * 100 }}%</span> - {{item.count}} Chapters
     </div>
     <div class="span" (click)="toggleAccordian($event, i)"></div>
   </div>

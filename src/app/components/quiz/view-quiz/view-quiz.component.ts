@@ -269,6 +269,10 @@ export class ViewQuizComponent implements OnInit {
   }
 
   async submitQuiz(){
+
+    let id = this.route.snapshot.paramMap.get('id');
+    this.storage.set("solve_quiz"+id,"yes");
+
     clearInterval(this.interval);
     let loading = await this.loadingCtrl.create({
 			cssClass: 'my-custom-class',

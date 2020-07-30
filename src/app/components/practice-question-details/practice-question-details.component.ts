@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PracticeQuestionDetailsServicesService } from '../../allServices/practice-question-details-services.service';
 import { Storage } from '@ionic/storage';
+
+
 import { ActivatedRoute,Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 @Component({
@@ -11,8 +13,9 @@ import { HttpClient } from '@angular/common/http';
 export class PracticeQuestionDetailsComponent implements OnInit {
   fetching = false;
   practiceQs:any=[];
-  previous:any;
   uemail:any;
+  percentage : any = [];
+  percentageBar : any = [];
   constructor(private _practiceqsdts:PracticeQuestionDetailsServicesService,private route: ActivatedRoute,private router:Router,private storage: Storage,private http:HttpClient) { }
 
   ngOnInit() {
@@ -24,46 +27,44 @@ export class PracticeQuestionDetailsComponent implements OnInit {
     });
 
     this.http.get('http://avatto.in/wp-json/avatto/v2/paid-check/?id='+id+'&ue='+this.uemail).subscribe(res=>{
-      this.previous = res;
-      if(this.previous.bought == "no"){
-        if(this.previous.id !=""){
-          console.log(this.previous.id);
-          this.router.navigate(['/products', this.previous.id]);
-        }
-      }
+      console.log(res);
     })
 
     this.fetching = true;
     this._practiceqsdts.getPracticeQuestionDetails(id).pipe().subscribe(response=>{
       
       this.practiceQs = response;
-      let i =0 ;
+      let i = 0 ;
       
       let count_post = {};
-      this.practiceQs.forEach(element => {
-        
-        //console.log(element.count_post);
-        
+      let count_postPercentage = {};
+      this.practiceQs.forEach(async element => {
+              
         let ans = 0;
         
-        element.child.forEach(element2 => {
+        element.child.forEach(async element2 => {
           //console.log(element.link);
-          this.storage.get('mcq_data'+element2.link).then((val) => {
+          console.log(i);
+          await this.storage.get('mcq_data'+element2.link).then(async val => {
             if(val){
-              //console.log(val.lEnd/element.count_post);
+              //console.log(val.lEnd);
               ans+= val.lEnd;
-              count_post[i] = (ans);
              }
           });
+          count_post[element.link] = ans/element.count_post;
+          let num = ans/element.count_post;
+          count_postPercentage[element.link] = num.toFixed(2);
         });
 
         i++;
 
       });
 
-      console.log(count_post);
-
-
+      
+      this.percentageBar = count_post;
+      this.percentage = count_postPercentage;
+      console.log("here",this.percentage);
+      
       if(this.practiceQs.length == 0){
         console.log('no response');
         this.router.navigate(['/mcq', id]);

@@ -53,7 +53,7 @@ export class ProductsService {
   }
 
   appycoupon(params){
-    let seq = this.get('wp-json/avatto/v2/coupon/'+params, '');
+    let seq = this.get('wp-json/avatto/v2/coupon/?id='+params, '');
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
@@ -72,6 +72,7 @@ export class ProductsService {
   }
 
   postOrder(obj){
+    console.log('i am here');
     const order = obj; //this.JSON_to_URLEncoded(obj);
 
     const headers = new HttpHeaders({
@@ -80,10 +81,12 @@ export class ProductsService {
 
     let seq = this.post(`wp-json/wc/v3/orders/?consumer_key=${
       this.consumerKey
-    }&consumer_secret=${this.consumerSecret}`, order);
+    }&consumer_secret=${this.consumerSecret}`,{
+      headers: { 'Content-Type': 'application/json' }
+    },order);
 
     seq.subscribe((res: any) => {
-      // If the API returned a successful response, mark the user as logged in
+      console.log(res);
     }, err => {
       console.error('ERROR', err);
     });
@@ -128,7 +131,7 @@ export class ProductsService {
   }
   getPastOrders(customerId) {
     let orderlist = [];
-    let seq = this.get(`wp-json/wc/v3/orders/customer/${customerId}?consumer_key=${
+    let seq = this.get(`wp-json/wc/v3/orders/?customer=${customerId}&consumer_key=${
       this.consumerKey
     }&consumer_secret=${this.consumerSecret}`, '');
     // don't have the data yet
@@ -144,4 +147,3 @@ export class ProductsService {
 
 
 }
-
