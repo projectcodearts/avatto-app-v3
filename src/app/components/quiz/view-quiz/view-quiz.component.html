@@ -39,19 +39,19 @@
     </ion-col>
     <ion-col size="12">
       <ion-list class="answare-list">
-        <ion-item lines="none" (click)="selectAnswer('A',questionContent.id,questionContent.choice,lStart)">
+        <ion-item lines="none" (click)="selectAnswer('A',questionContent.id,questionContent.choice,lStart)" [color]="buttonValue == 'A' ? 'primary' : ''">
           <div class="icon-cover"><ion-icon name="arrow-forward-outline"></ion-icon></div> 
           <ion-label class="ion-text-wrap"><span [innerHTML]="questionContent.option.A"> </span> </ion-label>
         </ion-item>   
-        <ion-item lines="none" (click)="selectAnswer('B',questionContent.id,questionContent.choice,lStart)">
+        <ion-item lines="none" (click)="selectAnswer('B',questionContent.id,questionContent.choice,lStart)" [color]="buttonValue == 'B' ? 'primary' : ''">
           <div class="icon-cover"><ion-icon name="arrow-forward-outline"></ion-icon></div> 
           <ion-label class="ion-text-wrap"><span [innerHTML]="questionContent.option.B"> </span> </ion-label>
         </ion-item> 
-        <ion-item lines="none" (click)="selectAnswer('C',questionContent.id,questionContent.choice,lStart)">
+        <ion-item lines="none" (click)="selectAnswer('C',questionContent.id,questionContent.choice,lStart)" [color]="buttonValue == 'C' ? 'primary' : ''">
           <div class="icon-cover"><ion-icon name="arrow-forward-outline"></ion-icon></div> 
           <ion-label class="ion-text-wrap"><span [innerHTML]="questionContent.option.C"> </span></ion-label>
         </ion-item>
-        <ion-item lines="none" (click)="selectAnswer('D',questionContent.id,questionContent.choice,lStart)">
+        <ion-item lines="none" (click)="selectAnswer('D',questionContent.id,questionContent.choice,lStart)" [color]="buttonValue == 'D' ? 'primary' : ''">
           <div class="icon-cover"><ion-icon name="arrow-forward-outline"></ion-icon></div> 
           <ion-label class="ion-text-wrap"><span [innerHTML]="questionContent.option.D"> </span></ion-label>
         </ion-item>  

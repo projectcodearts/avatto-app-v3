@@ -1,8 +1,8 @@
 {
-  "name": "avatto",
+  "name": "Avatto",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Avatto",
+  "homepage": "https://avatto.in/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
