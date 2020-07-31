@@ -1,5 +1,5 @@
-@import "../../../assets/css/mixin.component.scss";
-@import "../../../theme/color_variables.scss";
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
 .drescription-back{
       width: 100%; height: 90%;
      iframe{
@@ -27,4 +27,3 @@
         background-color: $custom_primary; color: #fff; width: 100%; height: 40px;  border: none;  --box-shadow: none;  border-radius: 100px; text-transform: capitalize; 
       }
   }
-  

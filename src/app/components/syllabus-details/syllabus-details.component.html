@@ -15,8 +15,11 @@
     
       <!-- <iframe [src]="sylllabus.iframe_src | safe" ></iframe> -->
       <!-- <ion-button expand="full" (click)="openLocalPdf()">Open Local Pdf</ion-button> -->
-      <ion-button expand="full" (click)="ViewPDFFromUrl(iframe_src,'demo')">Download And Open Pdf</ion-button>
-    
+      <div class="button-back">
+        <ion-button expand="full" shape="round" (click)="ViewPDFFromUrl(iframe_src,'demo')" color="button_transparent">Download And Open Pdf</ion-button>
+      </div>
+     
+     
   
   <div class="details" [innerHTML]="sylllabus.content"></div>
   

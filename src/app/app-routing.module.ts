@@ -57,8 +57,16 @@ const routes: Routes = [
     loadChildren: () => import('./allPages/eligiblity-page/eligiblity-page.module').then( m => m.EligiblityPagePageModule)
   },
   {
+    path: 'eligiblity-details/:id',
+    loadChildren: () => import('./allPages/eligiblity-page/eligiblity-page-details/eligiblity-page-details.module').then( m => m.EligiblityPageDetailsPageModule)
+  },
+  {
     path: 'syllabus',
     loadChildren: () => import('./allPages/syllabus-page/syllabus-page.module').then( m => m.SyllabusPagePageModule)
+  },
+  {
+    path: 'syllabus-details/:id',
+    loadChildren: () => import('./allPages/syllabus-details/syllabus-details.module').then( m => m.SyllabusDetailsPageModule)
   },
   {
     path: 'explain',
@@ -111,10 +119,7 @@ const routes: Routes = [
     path: 'short-question-listing/:id',
     loadChildren: () => import('./allPages/short-question-listing/short-question-listing.module').then( m => m.ShortQuestionListingPageModule)
   },
-  {
-    path: 'syllabus-details/:id',
-    loadChildren: () => import('./allPages/syllabus-details/syllabus-details.module').then( m => m.SyllabusDetailsPageModule)
-  },
+  
   {
     path: 'quiz',
     loadChildren: () => import('./allPages/quiz-main-page/quiz-main-page.module').then( m => m.QuizMainPagePageModule)
@@ -153,6 +158,7 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./allPages/pagenotfound/pagenotfound.module').then( m => m.PagenotfoundPageModule)
   }
+
   
 
   

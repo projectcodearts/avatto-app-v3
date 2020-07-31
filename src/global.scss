@@ -116,7 +116,7 @@ ion-content{
   }
 
 .site-header{
-    background-color: #001f46; padding-top: 32px;
+    background-color: #001f46; padding-top: 32px; z-index: 99;
     .title-default{ text-align: center; color: #fff;}
     ion-icon{
         color: #fff; width: 64px; height: 30px;

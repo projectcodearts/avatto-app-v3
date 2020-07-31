@@ -14,7 +14,7 @@
   </div>
   <ion-slides pager="false" [options]="slideOpts" class="eligiblity-details">
     <ion-slide *ngFor="let data of eligiblity">
-      <ion-card [routerLink]="['/', 'syllabus-details', data.link]">
+      <ion-card [routerLink]="['/', 'eligiblity-details', data.link]">
         <div class="image-box">
           <img src="{{data.icon}}">
         </div>

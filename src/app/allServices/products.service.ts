@@ -46,6 +46,18 @@ export class ProductsService {
     }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish`);
     
   }
+  getproductstwo(){
+    return this.http.get(`${this.url}/wp-json/wc/v3/products?consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish`);
+    
+  }
+  getproductsall(){
+    return this.http.get(`${this.url}/wp-json/wc/v3/products?consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish`);
+    
+  }
   getProduct(pid) {
     return this.http.get(`${this.url}/wp-json/wc/v3/products/${pid}?consumer_key=${
       this.consumerKey

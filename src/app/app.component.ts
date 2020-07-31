@@ -33,12 +33,12 @@ export class AppComponent implements OnInit {
 		});*/
     this.initializeApp();
   }
-  doRefresh(event){
+  /*doRefresh(event){
     setTimeout(()=>{
       console.log('operation ended', event)
       event.target.complete();
     },2000)
-  }
+  }*/
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
         this.statusBar.backgroundColorByHexString("#33000000");
       }
 
-      this.oneSignal.startInit('18f94304-6229-4cbf-af68-815aee3ed1f7', '398470612714');
+      this.oneSignal.startInit('a0ab64fa-c1d8-4187-b0fa-9d8317251d5b', '94474898842');
 
       this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
 
