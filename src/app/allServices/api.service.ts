@@ -71,6 +71,9 @@ export class ApiService {
   }
  
   logout() {
+    this.storage.remove('userInfo').then(()=>{
+
+    })
     this.storage.remove(JWT_KEY).then(() => {
       this.user.next(null);
     });
