@@ -2,11 +2,16 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, from } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Platform } from '@ionic/angular';
-import { environment } from '../../environments/environment';
+// import { environment } from '../../environments/environment';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { Storage } from '@ionic/storage';
  
 const JWT_KEY = 'demo';
+
+const environment = {
+  production: true,
+  apiUrl: 'https://avatto.in/wp-json'
+};
  
 @Injectable({
   providedIn: 'root'

@@ -16,7 +16,7 @@ export class SearchbarComponent implements OnInit {
       name: ['', Validators.required]
     });
   }
-  onSearch(name: string) {
+  onSearch(name) {
     this.router.navigate(['/search-result', name])
  }
 
