@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, ToastController, AlertController } from '@ionic/angular';
+import { File } from '@ionic-native/File/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
@@ -20,9 +21,9 @@ export class EligiblityDetailsComponent implements OnInit {
   iframe_src:any;
   constructor(
     private platform: Platform,
-    /*/private fileopen: FileOpener,
+    private fileopen: FileOpener,
     private file: File,
-    private ft: FileTransfer,*/
+    private ft: FileTransfer,
     private document: DocumentViewer,
     
     private sanitizer: DomSanitizer,
@@ -47,7 +48,7 @@ export class EligiblityDetailsComponent implements OnInit {
       console.log(this.iframe_src);
     });
   }
- /*/ ViewPDFFromUrl2(URL: string, filename: string) {
+  ViewPDFFromUrl2(URL: string, filename: string) {
     console.log(URL);
     filename = filename + new Date().toISOString();
     const transfer: FileTransferObject = this.ft.create();
@@ -63,6 +64,6 @@ export class EligiblityDetailsComponent implements OnInit {
      console.log('Failed!', error);
     });
 
-  }*/
+  }
 
 }
