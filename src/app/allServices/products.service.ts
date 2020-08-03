@@ -43,13 +43,13 @@ export class ProductsService {
   getproducts(){
     return this.http.get(`${this.url}/wp-json/wc/v3/products?consumer_key=${
       this.consumerKey
-    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish`);
+    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish&category=838`);
     
   }
   getproductstwo(){
     return this.http.get(`${this.url}/wp-json/wc/v3/products?consumer_key=${
       this.consumerKey
-    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish`);
+    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish&category=839`);
     
   }
   getproductsall(){

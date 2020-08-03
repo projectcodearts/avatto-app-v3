@@ -21,46 +21,17 @@
   </ion-list>-->
   <div class="main-orders">
     <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let item of orderDatas">
       <ion-avatar slot="start" class="ios hydrated">
-        <img src="assets/images/eli-i1.png">
+        <img src="{{item.order_status}}">
       </ion-avatar>
       <ion-label>
-        <h2>ugc net paper 1</h2>
-        <h3>$200</h3>
-        <p>Order Success</p>
+        <h2>{{item.product_name}}</h2>
+        <h3>Rs.{{item.product_id}}</h3>
+        <p>Order {{item.order_status}}</p>
       </ion-label>
     </ion-item>
-    <ion-item>
-      <ion-avatar slot="start" class="ios hydrated">
-        <img src="assets/images/eli-i1.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>ugc net computer science</h2>
-        <h3>$200</h3>
-        <p>Order Pending</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start" class="ios hydrated">
-        <img src="assets/images/eli-i1.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>ugc net paper 1</h2>
-        <h3>$200</h3>
-        <p>Order Success</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start" class="ios hydrated">
-        <img src="assets/images/eli-i1.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>ugc net computer science</h2>
-        <h3>$200</h3>
-        <p>Order Pending</p>
-      </ion-label>
-    </ion-item>
+   
    
   </ion-list>
   </div>

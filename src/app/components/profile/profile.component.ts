@@ -12,12 +12,17 @@ import { ApiService } from 'src/app/allServices/api.service';
 export class ProfileComponent implements OnInit {
   user = this.api.getCurrentUser();
   loggedin:any="false";
+  userName:any;
+  userEmail:any;
   constructor(public nav: NavController,public modalController: ModalController,  private api: ApiService,private toastCtrl: ToastController, private alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.user.subscribe(user => {
       if (user) {
         this.loggedin = "true";
+        console.log(user)
+        this.userName = user.user_nicename;
+        this.userEmail = user.user_email;
       } else {
         this.loggedin = "false";
         console.log('not logged in');

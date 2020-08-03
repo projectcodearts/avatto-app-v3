@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../allServices/products.service';
 import { Platform, LoadingController, ToastController, ModalController,NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-user-address',
   templateUrl: './user-address.page.html',
@@ -9,6 +10,8 @@ import { Storage } from '@ionic/storage';
 })
 export class UserAddressPage implements OnInit {
   title:string = "Address";
+  userid:any;
+  userData:any;
    customerInfo :any = [];
    userAddress = {
     billing: {
@@ -30,16 +33,39 @@ export class UserAddressPage implements OnInit {
     public toastCtrl: ToastController,
     public _products: ProductsService,
     private storage: Storage,
+    private http:HttpClient,
     public modalController: ModalController,
   ) { }
 
   ngOnInit() {
-    this._products.getCustomer("12").then(data => {
-      let item = data[0];
-      this.customerInfo = item;
-      this.userAddress.billing = item.billing;
-      console.log(this.customerInfo);
+
+    this.storage.get('userInfo').then((val) => {
+      let userInfo = JSON.parse(val);
+      console.log(userInfo.user_email);
+      if(!userInfo){
+        
+      }
+
+      this.http.get('https://avatto.in/wp-json/avatto/v2/user-id/?ue='+userInfo.user_email).subscribe(data=>{
+        this.userData = data;
+        if(this.userData.id !="null"){
+          this.userid = this.userData.id;
+          this._products.getCustomer(this.userid).then(data => {
+            let item = data[0];
+            this.customerInfo = item;
+            this.userAddress.billing = item.billing;
+            console.log(this.customerInfo);
+          });
+        }
+      })
+
     });
+
+    
+  
+
+
+    
   }
 
   ionViewDidEnter(){

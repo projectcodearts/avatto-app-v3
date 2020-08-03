@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, ToastController, AlertController } from '@ionic/angular';
-import { File } from '@ionic-native/File/ngx';
+import { DocumentViewer,DocumentViewerOptions} from '@ionic-native/document-viewer/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { File } from '@ionic-native/File/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
-import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
-import { DomSanitizer } from '@angular/platform-browser';
+
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { EligiblityDetailsService } from 'src/app/allServices/eligiblity-details.service';
@@ -25,8 +25,6 @@ export class EligiblityDetailsComponent implements OnInit {
     private file: File,
     private ft: FileTransfer,
     private document: DocumentViewer,
-    
-    private sanitizer: DomSanitizer,
     private _eligiblity:EligiblityDetailsService,
     private route: ActivatedRoute,
     private toastCtrl: ToastController, 
