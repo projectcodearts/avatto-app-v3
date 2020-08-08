@@ -1,0 +1,8 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.filter_back{ 
+    width: 100%; float: left;
+    ion-button{
+        background-color: $custom_primary; border-radius: 100px;
+    }
+}

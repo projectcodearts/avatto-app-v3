@@ -88,7 +88,8 @@ export class ProductItemComponent implements OnInit {
     this.storage.set('product',JSON.stringify(product));
     localStorage.setItem("product",JSON.stringify(product));
     const toast = await this.toast.create({
-      message: 'Added to Cart Online Product',
+      /*message: 'Added to Cart Online Product',*/
+      message: 'Added to Cart',
       duration: 2000
     });
     toast.present();
