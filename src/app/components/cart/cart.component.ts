@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage';
 })
 export class CartComponent implements OnInit {
   cartProduct : any = '';
-
+  img:any= '';
   constructor(public toast: ToastController,public loadingController: LoadingController,private storage: Storage) {
     
   }
@@ -16,8 +16,10 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     //console.log(this.cartProduct);
     this.storage.get('product').then((val) => {
-      console.log('Your Cart Value is', val);
+      
       this.cartProduct = JSON.parse(val);
+      this.img = this.cartProduct.images[0].src;
+      console.log('Your Cart Value is', this.cartProduct);
     });
   }
 

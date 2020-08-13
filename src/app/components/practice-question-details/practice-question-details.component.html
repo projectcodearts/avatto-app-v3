@@ -60,13 +60,14 @@
     <ion-card-header>
       <ion-card-title class="card-title">{{item.title}} (Free)</ion-card-title>
     </ion-card-header>
-    <div class="progress-back">
+    <div class="progress-back" *ngIf="item.count!=0">
       <ion-progress-bar value="{{percentageBar[item.link]}}" style="--progress-background: #001f46;"></ion-progress-bar>
     </div>
-    <div class="completed">
+    <ion-icon [routerLink]="['/', 'practice-question', item.link]" *ngIf="item.count==0"></ion-icon>
+    <div class="completed" *ngIf="item.count!=0">
       <span>{{percentage[item.link] * 100 }}%</span> - {{item.count}} Chapters
     </div>
-    <div class="span" (click)="toggleAccordian($event, i)"></div>
+    <div class="span" (click)="toggleAccordian($event, i)" *ngIf="item.count!=0"></div>
   </div>
   <div class="details_back">
     <ul class="item">

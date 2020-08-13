@@ -130,5 +130,97 @@ ion-button.tab_button{
     }
 }
 
+.modal-wrapper {
+    background: #222;
+  }
+  
+  
+  .my-custom-class .modal-wrapper {
+    background: #222;
+  }
+  .my-custom-class {
+    --background: #222;
+  }
+
+.filter{
+    width: 100%;
+    ion-card{
+        margin: 0; padding: 0; box-shadow: none; 
+        .title{
+            font-size: 30px; color: #173143; font-weight: 700; padding-top: 42px;
+            ion-icon{ 
+                position: relative; top: 3px;
+            }
+        }
+        .close_modal{
+            position: absolute; top: 46px; bottom: 0; right: 15px; width: 30px; height: 30px; color: #173143; box-shadow: none; margin: auto;
+        }
+    }
+}
+.main-orders{
+    padding: 11px;
+    h2{
+        color: #173143; font-weight: 700; font-size: 18px; text-transform: capitalize;
+    }
+    h3{
+        color: #000; font-weight: 700; font-size: 16px;
+    }
+}
+
+
+
+
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+
+.cat-name6,.cat-name7,.cat-name8,.cat-name9,
+.cat-name10,.cat-name11,.cat-name12,.cat-name13,.cat-name14,
+.cat-name15{
+    display: none;
+}
+.cat-details{
+    text-align: center; width: 100%; float: left; position: relative; 
+    ion-col{
+        padding: 0;
+    }
+    ion-card{
+        height: 135px; box-shadow: rgba(23,49,67,.15) 2px 0 4px; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 11px 5.5px 0;
+        img{
+            width: 60px; margin-bottom: 12px;
+        }
+        ion-card-header{
+            padding: 0;
+        }
+    }
+    .card-title{
+        font-size: 14px; color:$custom_primary; font-weight: 700; 
+    }
+    .card-sub-title{
+        font-size: 13px; color: #9d9d9d; 
+    }
+}
+.button-back{
+    width: 100%; float: left; text-align: center;
+}
+ion-button{
+    background-color: $custom_primary; color: #fff; width: 90%; height: 50px; margin: 5.5px 0; border: none; border-radius: 100px; --box-shadow: none; display: inline-block;
+}
+
+@media only screen and (max-width:500px){
+    .cat-details{
+        ion-card{
+            img{
+                width: 36px;;
+            }
+        }
+        .card-title{
+            font-size: 11px;
+        }
+        .card-sub-title{
+            font-size: 10px; color: #9d9d9d; 
+        }
+    }
+}
+
  
    

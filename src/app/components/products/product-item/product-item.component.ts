@@ -3,6 +3,7 @@ import { LoadingController,ToastController } from '@ionic/angular';
 import { finalize } from 'rxjs/operators';
 import { ProductsService } from '../../../allServices/products.service';
 import { Storage } from '@ionic/storage';
+import { ActivatedRoute,Router } from '@angular/router';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -25,12 +26,13 @@ export class ProductItemComponent implements OnInit {
   offlinepro: boolean = false;
   onactive: boolean = false;
   offactive: boolean = false;
-  constructor(private _products: ProductsService,public toast: ToastController,public loadingController: LoadingController,private storage: Storage) { }
+  constructor(private route: ActivatedRoute,private router:Router,private _products: ProductsService,public toast: ToastController,public loadingController: LoadingController,private storage: Storage) { }
   ngOnInit() {
     this.fetching = true;
     this.onlinepro=true;
     this.offlinepro=false;
-    this._products.getproducts().pipe().subscribe(data=>{
+    let id = this.route.snapshot.paramMap.get('id');
+    this._products.getproducts(id).pipe().subscribe(data=>{
       
       const demo = JSON.stringify(data)
       this.product = data;
@@ -60,7 +62,7 @@ export class ProductItemComponent implements OnInit {
     this.offlinepro=false;
     this.onactive=true;
     this.offactive=false;
-    this._products.getproducts().pipe().subscribe(data=>{
+    this._products.getproducts(201).pipe().subscribe(data=>{
       const demo = JSON.stringify(data)
       this.product = data;
       this.fetching = false;

@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
       /*this.statusBar.styleDefault();*/
       this.splashScreen.hide();
       if (this.platform.is('android')) {
+        this.statusBar.hide();
         this.statusBar.backgroundColorByHexString("#33000000");
       }
 

@@ -33,6 +33,10 @@ const routes: Routes = [
     loadChildren: () => import('./allPages/product-page/product-page.module').then( m => m.ProductPagePageModule)
   },
   {
+    path: 'product/:id',
+    loadChildren: () => import('./allPages/product-page/product-page.module').then( m => m.ProductPagePageModule)
+  },
+  {
     path: 'orders',
     loadChildren: () => import('./allPages/orders/orders.module').then( m => m.OrdersPageModule)
   },

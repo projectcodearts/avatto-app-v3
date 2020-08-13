@@ -34,6 +34,8 @@ export class PracticeQuestionDetailsComponent implements OnInit {
     this._practiceqsdts.getPracticeQuestionDetails(id).pipe().subscribe(response=>{
       
       this.practiceQs = response;
+
+      console.log(this.practiceQs);
       let i = 0 ;
       
       let count_post = {};

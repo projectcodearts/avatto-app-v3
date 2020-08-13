@@ -40,10 +40,10 @@ export class ProductsService {
   }
 
 
-  getproducts(){
+  getproducts(id){
     return this.http.get(`${this.url}/wp-json/wc/v3/products?consumer_key=${
       this.consumerKey
-    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish&category=838`);
+    }&consumer_secret=${this.consumerSecret}&per_page=100&status=publish&category=${id}`);
     
   }
   getproductstwo(){

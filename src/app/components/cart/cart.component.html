@@ -15,8 +15,8 @@
         <ion-row class="product-details">
           <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngIf="cartProduct">
             <ion-card>
-              <div class="image-box">
-                <img src="assets/images/eli-i3.png">
+              <div class="image-box" *ngIf="img[0]">
+                <img src="{{img}}">
               </div>
               <div class="drescription-back">
                 <ion-card-header class="card-header">
@@ -24,6 +24,7 @@
                 </ion-card-header>
                 <div class="clear"></div>
                 <p> $ {{ cartProduct.price }}</p>
+                 <p [innerHTML]="cartProduct.short_description" *ngIf="cartProduct.short_description"></p>
                 <div class="clear"></div>
                 <div class="trash" (click)="removeCart()">
                   <ion-icon name="trash-outline"></ion-icon>
