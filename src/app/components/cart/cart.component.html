@@ -23,7 +23,7 @@
                   <ion-card-title class="card-title"> {{ cartProduct.name}} </ion-card-title>
                 </ion-card-header>
                 <div class="clear"></div>
-                <p> $ {{ cartProduct.price }}</p>
+                <p> Rs. {{ cartProduct.price }}</p>
                  <p [innerHTML]="cartProduct.short_description" *ngIf="cartProduct.short_description"></p>
                 <div class="clear"></div>
                 <div class="trash" (click)="removeCart()">
@@ -44,8 +44,8 @@
       <div class="order-details">
         <ion-item>
           <ion-label slot="start" class="lable">Order Total</ion-label>
-          <ion-label slot="end" class="price" *ngIf="cartProduct" >${{ cartProduct.price }}</ion-label>
-          <ion-label slot="end" class="price" *ngIf="!cartProduct">$ 0.00 </ion-label>
+          <ion-label slot="end" class="price" *ngIf="cartProduct" >Rs.{{ cartProduct.price }}</ion-label>
+          <ion-label slot="end" class="price" *ngIf="!cartProduct">Rs. 0.00 </ion-label>
         </ion-item>
         <ion-button button color="button_transparent" [routerLink]="['/checkout']" >
           <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>

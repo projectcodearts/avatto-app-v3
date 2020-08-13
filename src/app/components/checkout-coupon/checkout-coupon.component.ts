@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, LoadingController, ToastController } from '@ionic/angular';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-checkout-coupon',
   templateUrl: './checkout-coupon.component.html',
@@ -13,9 +13,14 @@ export class CheckoutCouponComponent implements OnInit {
    } = {
     couponCode: ''
   };
-  constructor(public toastCtrl: ToastController) { }
+  counponData:any;
+  constructor(public toastCtrl: ToastController,private http:HttpClient) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.http.get('https://avatto.in/wp-json/avatto/v2/coupon-details').subscribe(data=>{
+        this.counponData = data;
+    })
+  }
   async copyText(val: string){
     let selBox = document.createElement('textarea');
       selBox.style.position = 'fixed';

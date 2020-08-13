@@ -9,7 +9,7 @@ import { MenuServices } from 'src/app/allServices/menu.service';
 })
 export class HomePage implements OnInit, OnDestroy {
 
-  title:string = "Home";
+  title:string = "Avatto";
   exitmethod: any;
   menu: any[];
   mainlogo: string = "assets/images/avatto-web-white.png";

@@ -77,12 +77,5 @@ export class AppComponent implements OnInit {
   ngOnInit() {
    
   }
-  ngAfterViewInit() { 
-    this.backButtonSubscription = this.platform.backButton.subscribe(() => {
-      navigator['app'].exitApp();
-    });
-  }
-  ngOnDestroy() { 
-    this.backButtonSubscription.unsubscribe();
-  }
+  
 }

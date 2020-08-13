@@ -21,7 +21,20 @@ export class CheckoutComponent implements OnInit {
     couponCode: ''
   };
   userid:any;
-  
+  userAddress = {
+    shipping: {
+      first_name: "",
+      last_name: "",
+      address_1: "",
+      address_2: "",
+      city: "",
+      state: "",
+      postcode: "",
+      country: "",
+      email: "",
+      phone: ""
+    }
+  };
   userData:any;
   couponAdded:string = 'false';
   cartProduct : any = JSON.parse(localStorage.getItem("product"))?JSON.parse(localStorage.getItem("product")):[];
@@ -122,7 +135,7 @@ export class CheckoutComponent implements OnInit {
           let ins = this.cartProduct.price/100;
           let dis = ins*this.couponData.price;
           console.log(ins);
-          this.price = this.cartProduct.price-dis;
+          this.price = this.cartProduct.price-this.couponData.price;
           loading.dismiss();		
           const toast = await this.toastCtrl.create({
               message: 'Coupon Added Successfully',
@@ -289,6 +302,26 @@ export class CheckoutComponent implements OnInit {
           toast.present();
         }
       );
+
+      this.userAddress['shipping'] = shillpingAddress;
+      this.userAddress['billing'] = shillpingAddress;
+    
+      this._products.updateUserAddress(this.userAddress,this.userid).subscribe(async (resp) => {
+        loading.dismiss();
+        const toast = await this.toastCtrl.create({
+          message: 'Address has been successfully updated.',
+          duration: 2000
+        });
+        toast.present();
+      }, async (err) => {
+          loading.dismiss();
+          const toast = await this.toastCtrl.create({
+            message: err,
+            duration: 2000
+          });
+          toast.present();
+      });  
+      
     }
 
     else{
@@ -356,6 +389,29 @@ export class CheckoutComponent implements OnInit {
           toast.present();
         }
       );
+
+      this.userAddress['shipping'] = shillpingAddress;
+      this.userAddress['billing'] = shillpingAddress;
+    
+      this._products.updateUserAddress(this.userAddress,this.userid).subscribe(async (resp) => {
+        loading.dismiss();
+        const toast = await this.toastCtrl.create({
+          message: 'Address has been successfully updated.',
+          duration: 2000
+        });
+        toast.present();
+      }, async (err) => {
+        console.log(err);
+          loading.dismiss();
+          const toast = await this.toastCtrl.create({
+            message: err,
+            duration: 2000
+          });
+          toast.present();
+      }); 
+
+
+
     }
   }
 

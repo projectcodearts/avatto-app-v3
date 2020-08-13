@@ -91,7 +91,7 @@ export class UserAddressPage implements OnInit {
     let shillpingAddress = this.userAddress.billing;
     this.userAddress['shipping'] = shillpingAddress;
     
-    this._products.updateUserAddress(this.userAddress,"12").subscribe(async (resp) => {
+    this._products.updateUserAddress(this.userAddress,this.userid).subscribe(async (resp) => {
       loading.dismiss();
       const toast = await this.toastCtrl.create({
         message: 'Address has been successfully updated.',

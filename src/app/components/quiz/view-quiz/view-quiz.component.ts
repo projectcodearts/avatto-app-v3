@@ -59,10 +59,15 @@ export class ViewQuizComponent implements OnInit {
 
 
   async presentModal() {
+    let id = this.route.snapshot.paramMap.get('id');
     const modal = await this.modalController.create({
       component: QuizInstructionPage,
       cssClass: 'my-custom-class',
       swipeToClose: true,
+      componentProps: {
+        pid:id,
+        
+     },
       presentingElement: await this.modalController.getTop() // Get the top-most ion-modal
     });
 
@@ -269,10 +274,6 @@ export class ViewQuizComponent implements OnInit {
   }
 
   async submitQuiz(){
-
-    let id = this.route.snapshot.paramMap.get('id');
-    this.storage.set("solve_quiz"+id,"yes");
-
     clearInterval(this.interval);
     let loading = await this.loadingCtrl.create({
 			cssClass: 'my-custom-class',

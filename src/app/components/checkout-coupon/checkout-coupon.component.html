@@ -18,10 +18,10 @@
           <div>
             <ion-card-header>
               <ion-card-subtitle class="card-sub-title">Coupon Code</ion-card-subtitle>
-              <ion-card-title class="card-title">Flat 30% Off With Our Offer</ion-card-title>
+              <ion-card-title class="card-title" *ngIf="counponData.coupon_description !=''">{{counponData.coupon_description}}</ion-card-title>
             </ion-card-header>
-            <ion-card-content>The standard chunk of Lorem Ipsum used since the 1500s is reproduced</ion-card-content>
-            <ion-button color="button_transparent" (click)="copyText('LOVE2SHOP')">LOVE2SHOP</ion-button>
+            <ion-card-content>{{counponData.description}}</ion-card-content>
+            <ion-button color="button_transparent" (click)="copyText(counponData.title)">{{counponData.title}}</ion-button>
           </div>
         </div>
       </ion-card>
