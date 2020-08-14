@@ -42,6 +42,19 @@ ion-content{
                 }
             }
         }
+        /*p{
+            &:after{
+                background-image: url(../../../assets/images/down_arrow.png); background-repeat: no-repeat; background-position: center top; width: 64px; height: 64px; content: ""; position: absolute; top: -49px; left: 0; right: 0; margin: auto;
+            }
+            color: #fff;
+            text-align: center;
+            background-color: rgba(255,255,255,.1);
+            
+            padding: 30px 20px;
+            border-radius: 200px;
+            overflow: visible; 
+            margin-top: 30px; position: relative;
+        }*/
     }
    
 }

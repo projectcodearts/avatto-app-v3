@@ -10,7 +10,7 @@ import { FiltercategoryComponent } from './filtercategory/filtercategory.compone
 })
 export class FilterComponent implements OnInit {
 
-  constructor(public modalController: ModalController,) { }
+  constructor(public modalController: ModalController) { }
   async filtercategory() {
     const modal = await this.modalController.create({
       component: FiltercategoryComponent,

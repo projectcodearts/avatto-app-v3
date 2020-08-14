@@ -5,7 +5,7 @@ import { EntrypointComponent } from './components/entrypoint/entrypoint.componen
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'entrypoint',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
