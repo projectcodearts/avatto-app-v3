@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Event, Router, NavigationStart, NavigationEnd,ActivatedRoute } from '@angular/router';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
+
 
 
 
@@ -16,14 +17,17 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
 export class AppComponent implements OnInit {
   backButtonSubscription;
   showLoadingIndicator: boolean = true;
+ 
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
+    /*private splashScreen: SplashScreen,*/
+    private splashScreen: LottieSplashScreen,
     private statusBar: StatusBar,
     private _router: Router,
     private route: ActivatedRoute,
     private oneSignal: OneSignal
   ) {
+    
     /*this._router.events.subscribe((routerEvent: Event)=>{
 			if(routerEvent instanceof NavigationStart){
 				this.showLoadingIndicator = true;
@@ -44,7 +48,9 @@ export class AppComponent implements OnInit {
   initializeApp() {
     this.platform.ready().then(() => {
       /*this.statusBar.styleDefault();*/
-      this.splashScreen.hide();
+      setTimeout(() => {
+        this.splashScreen.hide();
+      }, 2500);
       if (this.platform.is('android')) {
         this.statusBar.hide();
         this.statusBar.backgroundColorByHexString("#33000000");
