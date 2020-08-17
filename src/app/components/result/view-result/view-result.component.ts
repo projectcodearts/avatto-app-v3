@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NavController  } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-view-result',
   templateUrl: './view-result.component.html',
@@ -9,13 +10,20 @@ import { NavController  } from '@ionic/angular';
 export class ViewResultComponent implements OnInit {
   postAns : any = JSON.parse(localStorage.getItem("postAns"))?JSON.parse(localStorage.getItem("postAns")):{};
   questionList : any = JSON.parse(localStorage.getItem("question"))?JSON.parse(localStorage.getItem("question")):[];
-
+  optionList:any;
   resultSheet : any = [];
   shortResult : any = [];
   ViewDetail : any = "";
-  constructor(public modalController: ModalController,public nav: NavController) { }
+  constructor(public modalController: ModalController,public nav: NavController,private storage: Storage) { }
 
   ngOnInit() {
+
+    this.storage.get("questions_data").then((val)=>{
+      this.optionList = val[0].question;
+      console.log(val[0].question);
+    })
+
+
     let correctChoiceCount : number = 0,incorrectChoiceCount : number = 0,unattended : number = 0 ,timeTaken,score;
     for(var key in this.questionList){
       console.log(this.questionList[key]);

@@ -50,6 +50,14 @@ export class McqPagePage implements OnInit {
       console.log(this.maximumPages);
       this.fetching = false;
     })
+
+    let pid = this.route.snapshot.paramMap.get('id');
+    this.httpClient.get('https://avatto.in/wp-json/avatto/v2/mcq-title/'+pid).subscribe(res=>{
+      this.data = JSON.stringify(res);
+      this.data = JSON.parse(this.data);
+      this.title = this.data.title;
+    }) 
+
   }
 
   selectAnswer(params, questionId,rightChoice,selector){

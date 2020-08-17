@@ -23,7 +23,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
-
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 
 
 @NgModule({
@@ -41,6 +41,7 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
     StatusBar,
     SplashScreen,
     CommonService,
+    LottieSplashScreen,
     FormBuilder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     File,

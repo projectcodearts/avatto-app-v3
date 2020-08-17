@@ -20,8 +20,8 @@
     <preference name="SplashScreen" value="none" />
     <preference name="SplashScreenDelay" value="0" />
     <preference name="LottieRemoteEnabled" value="true" />
-    <preference name="LottieAnimationLocation" value="www/assets/splash.json" />
-    <preference name="LottieImagesLocation" value="www/lottie/images" />
+    <preference name="LottieAnimationLocation" value="src/assets/splash.json" />
+    <preference name="LottieImagesLocation" value="src/lottie/images" />
     <preference name="LottieBackgroundColor" value="#001f46" />
     <preference name="LottieHideAfterAnimationEnd" value="true" />
     <preference name="LottieFullScreen" value="true" />
