@@ -4,6 +4,7 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+/*import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';*/
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { CommonService } from './allServices/common.service';
 
@@ -23,7 +24,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
-import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
+
 
 
 @NgModule({
@@ -40,8 +41,8 @@ import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    /*LottieSplashScreen,*/
     CommonService,
-    LottieSplashScreen,
     FormBuilder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     File,

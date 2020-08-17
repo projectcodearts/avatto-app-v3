@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
+/*import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';*/
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     /*private splashScreen: SplashScreen,*/
-    private splashScreen: LottieSplashScreen,
+    /*private splashScreen: LottieSplashScreen,*/
+    private spalashScreen: SplashScreen,
     private statusBar: StatusBar,
     private _router: Router,
     private route: ActivatedRoute,
@@ -47,10 +48,11 @@ export class AppComponent implements OnInit {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.spalashScreen.hide();
       /*this.statusBar.styleDefault();*/
-      setTimeout(() => {
+      /*setTimeout(() => {
         this.splashScreen.hide();
-      }, 2500);
+      }, 2500);*/
       if (this.platform.is('android')) {
         this.statusBar.hide();
         this.statusBar.backgroundColorByHexString("#33000000");
