@@ -4,6 +4,7 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+/*import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';*/
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { CommonService } from './allServices/common.service';
 
@@ -40,6 +41,7 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    /*LottieSplashScreen,*/
     CommonService,
     FormBuilder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
