@@ -1,0 +1,123 @@
+.drescription-back {
+  width: 100%;
+  float: left;
+  padding: 20px 15px;
+}
+
+.drescription-back .head {
+  width: 100%;
+  height: 68px;
+  text-transform: capitalize;
+  font-size: 21px;
+  border-radius: 5px;
+  margin-top: 20px;
+  line-height: 68px;
+  color: #fff;
+  padding: 0 0 0 15px;
+  position: relative;
+  background: #286bbf;
+  background: -webkit-gradient(linear, left top, right top, from(#286bbf), to(#163c6c));
+  background: linear-gradient(to right, #286bbf 0%, #163c6c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#286bbf', endColorstr='#163c6c',GradientType=1 );
+}
+
+.drescription-back .head.minus:after {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  content: "-";
+  line-height: 20px;
+  text-align: center;
+  font-size: 34px;
+  color: #163c6c;
+  margin: auto;
+}
+
+.drescription-back .head.minus.plus:after {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  content: "+";
+  line-height: 22px;
+  text-align: center;
+  font-size: 22px;
+  color: #163c6c;
+  margin: auto;
+}
+
+.drescription-back .main {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+
+.drescription-back .main.active {
+  height: auto;
+  overflow: visible;
+}
+
+.drescription-back .main .details {
+  margin-bottom: 30px;
+}
+
+.drescription-back .main .title {
+  color: #212121;
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.drescription-back .main p {
+  color: #727272;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.drescription-back .main .list {
+  width: 100%;
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+}
+
+.drescription-back .main .list li {
+  width: 50%;
+  list-style: none;
+  float: left;
+  padding-left: 16px;
+  position: relative;
+  font-size: 14px;
+  color: #727272;
+  margin-bottom: 10px;
+}
+
+.drescription-back .main .list li:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "";
+  background: #fb4138;
+  background: -webkit-gradient(linear, left top, right top, from(#fb4138), to(#ff8003));
+  background: linear-gradient(to right, #fb4138 0%, #ff8003 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb4138', endColorstr='#ff8003',GradientType=1 );
+}
+
+@media only screen and (max-width: 500px) {
+  .drescription-back .main .list li {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=drescription.component.css.map */

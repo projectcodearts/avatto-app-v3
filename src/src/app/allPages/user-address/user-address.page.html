@@ -1,0 +1,80 @@
+<ion-content>
+  <div class="orders">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="title">
+          <ion-icon name="cube-outline"></ion-icon>
+          Edit Details
+        </ion-card-title>
+      </ion-card-header>
+      <ion-icon name="close-outline" class="close_modal" (click)="dismiss()"></ion-icon>
+    </ion-card>
+  </div>
+
+  <div class="contact-details">
+    <ion-card>
+      <div class="edit-details">
+        <div class="login-back">
+          <div class="login-main-back">
+            <form action="">
+              <div class="form-portion">
+                <ion-icon name="person-outline"></ion-icon>
+                <ion-input type="text" placeholder="First Name *" [(ngModel)]="userAddress.billing.first_name" name="first_name"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="person-outline"></ion-icon>
+                <ion-input type="text" placeholder="Last Name *" [(ngModel)]="userAddress.billing.last_name" name="last_name"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="mail-outline"></ion-icon>
+                <ion-input type="email" placeholder="Email Adress *"  [(ngModel)]="userAddress.billing.email" name="email"></ion-input>
+              </div>
+
+              <div class="form-portion">
+                <ion-icon name="globe-outline"></ion-icon>
+                <ion-input type="text" placeholder="Country / Region *" [(ngModel)]="userAddress.billing.country" name="country"></ion-input>
+              </div>
+              <h3>Street address <span>*</span></h3>
+              <div class="form-portion">
+                <ion-icon name="map-outline"></ion-icon>
+                <ion-input type="text" placeholder="House number and street name" [(ngModel)]="userAddress.billing.address_1" name="address_1"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="map-outline"></ion-icon>
+                <ion-input type="text" placeholder="Apartment, suite, unit, etc. (optional)" [(ngModel)]="userAddress.billing.address_2" name="address_2"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="navigate-outline"></ion-icon>
+                <ion-input type="text" placeholder="State *"  [(ngModel)]="userAddress.billing.state" name="state"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="airplane-outline"></ion-icon>
+                <ion-input type="text" placeholder="City *"  [(ngModel)]="userAddress.billing.city" name="city"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="qr-code-outline"></ion-icon>
+                <ion-input type="text" placeholder="Postcode *"  [(ngModel)]="userAddress.billing.postcode" name="postcode"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="call-outline"></ion-icon>
+                <ion-input type="text" placeholder="Phone *"  [(ngModel)]="userAddress.billing.phone" name="phone"></ion-input>
+              </div>
+              
+                <ul class="button-list">
+                  <li class="yellow"><ion-button class="blue-border" color="button_transparent" expand="full" (click)="updateAddress()" >save</ion-button></li>
+                  
+                </ul>
+             
+              
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    
+  </div>
+  
+</ion-content>
+
+

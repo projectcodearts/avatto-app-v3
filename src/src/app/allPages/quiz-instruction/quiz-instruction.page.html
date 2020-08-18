@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="instruction-back">
+    <ion-card>
+      <ion-card-header text-wrap>
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-card-title>{{title}}</ion-card-title>
+      </ion-card-header>
+      <!--<ion-card-content [innerHTML]="instructionText">-->
+        <ion-card-content  [innerHTML]="instructionText">
+          <!--<ion-list>
+            <ion-item lines="none">
+              <ion-label class="ion-text-wrap">
+                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                <p>You will get oney one attempt. Please ensure that you have reliable and power for the whole duration of the test.</p> 
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label class="ion-text-wrap">
+                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                <p>You cannot pause the test.</p> 
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label class="ion-text-wrap">
+                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                <p>Evaluate all options carefully. There may be more than one correct option.</p>
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label class="ion-text-wrap">
+                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                <p>This test has negative marking. You get +3 marks for a correct answare and -1 mark for a wrong answare.</p> 
+                </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label class="ion-text-wrap">
+                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                <p>You can select options by using your mouse or keyboard: A, B, C and D for respestive options.</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>-->
+          
+      </ion-card-content>
+    </ion-card>
+    <ion-button (click)="dismissModal()" color="button_transparent" expand="block">Got it </ion-button>
+  </div>
+  
+</ion-content>
+

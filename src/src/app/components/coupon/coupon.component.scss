@@ -1,0 +1,57 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+.coupon-details{
+    width: 100%; float: left; position: relative; 
+    ion-col{
+        padding: 0;
+    }
+    ion-card{
+        box-shadow: rgba(23,49,67,.15) 2px 0 4px; border-radius: 5px;
+        background: #001f46; 
+        background: -moz-linear-gradient(45deg,  #001f46 0%, #286bbf 100%); 
+        background: -webkit-linear-gradient(45deg,  #001f46 0%,#286bbf 100%); 
+        background: linear-gradient(45deg,  #001f46 0%,#286bbf 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001f46', endColorstr='#286bbf',GradientType=1 ); position: relative; margin: 0 5.5px; padding: 0;
+        
+        .logo-back{
+            width: 50%; height: 100%; background-color: #fff; display: flex; align-items: center; justify-content: center; float: left; clip-path: polygon(0 0, 100% 0, 73% 100%, 0 100%); position: absolute; top: 0; left: 0;
+            img{
+                width: 70%; position: relative; left: -16px;
+            }
+        }
+        .details-back{
+            width: 100%; height: 170px; float: left; padding-left: calc(50% + 10px); padding-right: 10px; display: flex; align-items: center;
+            ion-card-content{
+                color: #fff; font-size: 10px; margin-top: 10px;
+            }
+        }
+        ion-card-header, ion-card-content{
+            padding: 0;
+        }
+        ion-button{
+            width: 113px; height: 35px;  padding-top: 2px; border-radius: 100px; line-height: 36px; text-align: center; float: left; background-color: transparent; color: #fff; font-size: 11px; border: #fff 2px dotted; margin-top:20px; overflow: hidden;
+        }
+    }
+    .card-title{
+        font-size: 12px; color:#fff; font-weight: 700; 
+    }
+    .card-sub-title{
+        font-size: 8px; color: #fff; 
+    }
+}
+
+@media only screen and (max-width:500px){
+    .cat-details{
+        ion-card{
+            img{
+                width: 36px;;
+            }
+        }
+        .card-title{
+            font-size: 11px;
+        }
+        .card-sub-title{
+            font-size: 10px; color: #9d9d9d; 
+        }
+    }
+}

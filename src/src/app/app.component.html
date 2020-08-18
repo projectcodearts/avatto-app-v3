@@ -1,0 +1,16 @@
+<!--<div class="load-page" *ngIf="showLoadingIndicator">
+    <img src="assets/images/loader.svg" alt="">
+</div>-->
+
+<ion-app>
+    <app-header></app-header>
+    <ion-content>
+        <!--<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>-->
+        <ion-router-outlet id="main"></ion-router-outlet>
+    </ion-content>
+    <app-footer></app-footer>
+</ion-app>
+    
+

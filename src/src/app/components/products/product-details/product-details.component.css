@@ -1,0 +1,107 @@
+.product-details-back {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.product-details-back .gallery {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.product-details-back .gallery img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-details-back .content-back {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+
+.product-details-back .content-back .head {
+  padding-bottom: 15px;
+  border-bottom: #e4e4e4 1px solid;
+}
+
+.product-details-back .content-back h1.title {
+  color: #001f46;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.product-details-back .content-back .price {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product-details-back .content-back .price span {
+  color: #949292;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.product-details-back .content-back p {
+  font-size: 14px;
+  color: #888888;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.product-details-back .add-to-cart {
+  background-color: #001f46;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product-details-back .add-to-cart ion-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+.product-details-back .add-to-cart ion-lable {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+ion-slides {
+  --bullet-background: #000;
+  --bullet-background-active: #001f46;
+}
+
+.fetching-block {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #fff;
+}
+/*# sourceMappingURL=product-details.component.css.map */

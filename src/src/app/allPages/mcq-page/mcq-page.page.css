@@ -1,0 +1,131 @@
+.ion-item-back {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  float: left;
+  -webkit-box-shadow: rgba(23, 49, 67, 0.15) 2px 0 4px;
+          box-shadow: rgba(23, 49, 67, 0.15) 2px 0 4px;
+  float: left;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.ion-item-back .question-title {
+  background-color: #f7bb00;
+  color: #001f46;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0;
+  float: left;
+  width: 100%;
+  font-weight: 700;
+}
+
+.ion-item-back .option-back {
+  padding: 20px 15px;
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+
+.ion-item-back .option-back li {
+  list-style: none;
+  color: #001f46;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 0 0 42px;
+  min-height: 30px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.ion-item-back .option-back li:last-child {
+  margin-bottom: 0;
+}
+
+.ion-item-back .option-back li.wrong .icon {
+  background-image: url(../../../assets/images/wrong.png);
+}
+
+.ion-item-back .option-back li.right .icon {
+  background-image: url(../../../assets/images/right.png);
+}
+
+.ion-item-back .option-back li span {
+  width: 30px;
+  height: 30px;
+  background-color: #001f46;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.ion-item-back .option-back li .icon {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.ion-item-back .answare-back {
+  background-color: #001f46;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0 0 10px 10px;
+  float: left;
+  width: 100%;
+  font-weight: 700;
+}
+
+.ion-item-back .answare-back .title {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 0 15px 58px;
+  min-height: 30px;
+  position: relative;
+}
+
+.ion-item-back .answare-back .title:before {
+  background-image: url(../../../assets/images/check.png);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 18px;
+  content: "";
+}
+
+.ion-item-back .answare-back .show-option {
+  border-top: #17447d 1px solid;
+  border-bottom: #17447d 1px solid;
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.ion-item-back .answare-back .explanation {
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px;
+}
+/*# sourceMappingURL=mcq-page.page.css.map */

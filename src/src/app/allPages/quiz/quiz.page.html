@@ -1,0 +1,24 @@
+<!--<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start" *ngIf="startQz != ''">
+      <ion-button (click)="prevQuestion()" *ngIf="lStart > 0">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>-->
+<ion-header class="site-header">
+  <ion-toolbar color="custom">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title start>{{title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-view-quiz></app-view-quiz>  
+</ion-content>

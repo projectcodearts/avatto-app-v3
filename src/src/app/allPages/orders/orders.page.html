@@ -1,0 +1,41 @@
+
+<ion-content>
+  <div class="orders">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="title">
+          <ion-icon name="cube-outline"></ion-icon>
+          Order Details
+        </ion-card-title>
+      </ion-card-header>
+      <ion-icon name="close-outline" class="close_modal" (click)="dismiss()"></ion-icon>
+    </ion-card>
+  </div>
+  
+  <!--<ion-list *ngFor="let orderContent of orderList" >
+    <ion-item *ngFor="let product of orderContent.line_items" >
+      <ion-label slot="start" >{{product.name}}</ion-label>
+      <ion-label slot="end" > {{product.currency_symbol}}. {{product.price}}</ion-label>
+      <ion-label> Status : {{orderContent.status}} </ion-label>
+    </ion-item>
+  </ion-list>-->
+  <div class="main-orders">
+    <ion-list>
+    <ion-item *ngFor="let item of orderDatas">
+      <ion-avatar slot="start" class="ios hydrated">
+        <img src="{{item.order_status}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.product_name}}</h2>
+        <h3>Rs.{{item.product_id}}</h3>
+        <p>Order {{item.order_status}}</p>
+      </ion-label>
+    </ion-item>
+   
+   
+  </ion-list>
+  </div>
+
+  
+  
+</ion-content>

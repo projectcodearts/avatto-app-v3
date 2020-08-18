@@ -35,6 +35,10 @@ export class PracticeQuizListingComponent implements OnInit {
               count_post[element.link] = "100";
               count_postPercentage[element.link] = "1";
              }
+             else{
+              count_post[element.link] = "0";
+              count_postPercentage[element.link] = "0";
+             }
           });
            
           // let num = ans/element.count_post;

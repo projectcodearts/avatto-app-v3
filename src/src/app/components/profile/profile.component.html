@@ -1,0 +1,101 @@
+<div class="profile-page">
+  <ion-card>
+    <img src="assets/images/avator.svg" alt="">
+    <ion-card-header>
+      <ion-card-title>{{userName}}</ion-card-title>
+      <ion-card-subtitle>Student</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+ 
+  <div class="contact-details">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="mail-outline"></ion-icon>
+          Contact Information
+        </ion-card-title>
+        <ion-card-subtitle>{{userEmail}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="title">
+          <ion-icon name="cube-outline"></ion-icon>
+          Order Information
+        </ion-card-title>
+        <ion-button color="button_transparent" (click)="presentModal()" >
+          <ion-icon slot="end" name="gift-outline"></ion-icon>
+          Check Order
+        </ion-button>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="title">
+          <ion-icon name="cube-outline"></ion-icon>
+          Profile Information
+        </ion-card-title>
+        <ion-button color="button_transparent" (click)="profileModal()" >
+          <ion-icon slot="end" name="create-outline"></ion-icon>
+          Edit Profile
+        </ion-button>
+      </ion-card-header>
+    </ion-card>
+    <ion-list>
+      <ion-item lines="none" *ngIf="loggedin !='false'" class="logout" (click)="logout()">
+        <ion-icon slot="start" name="download-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+      <ion-item lines="none" *ngIf="loggedin !='true'" [routerLink]="['/', 'sign-in']" class="login">
+        <ion-icon slot="start" name="download-outline"></ion-icon>
+        <ion-label>Login</ion-label>
+      </ion-item>
+    
+    </ion-list>
+  </div>
+  
+
+  <!--<div class="contact-details">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="mail-outline"></ion-icon>
+          Edit Details
+        </ion-card-title>
+      </ion-card-header>
+      <div class="edit-details">
+        <div class="login-back">
+          <div class="login-main-back">
+            <form>
+              <div class="form-portion">
+                <ion-icon name="person-outline"></ion-icon>
+                <ion-input type="text" placeholder="Your user name" value="Natasha Doe"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="mail-outline"></ion-icon>
+                <ion-input type="email" placeholder="Your email adress" value="lorem@dummy.com"></ion-input>
+              </div>
+              <div class="form-portion">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-input type="password" placeholder="Your password" value="admin@123"></ion-input>
+              </div>
+              
+                <ul class="button-list">
+                  <li class="yellow"><ion-button class="blue-border" color="button_transparent" expand="full" type="submit">save</ion-button></li>
+                  
+                </ul>
+             
+              
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    
+  </div>-->
+
+ 
+
+  
+</div>

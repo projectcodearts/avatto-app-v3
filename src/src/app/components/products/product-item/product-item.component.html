@@ -1,0 +1,264 @@
+
+<div class="avatoo-section">
+  <div class="fetching-block" *ngIf="fetching" >
+    <div>
+      <div class="lds-ring">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Fetching Products...</p>
+    </div>
+  </div>
+  <app-filter></app-filter>
+  <ion-grid>
+    <ion-row class="product-details">
+      <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of product">
+        <ion-card>
+          <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+            <img src="{{data.images[0].src}}">
+          </div>
+          <div class="drescription-back">
+            <ion-card-header class="card-header">
+              <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+            </ion-card-header>
+            <b [innerHTML]="data.price_html"></b>
+            <p [innerHTML]="data.short_description | textshort"></p>
+            <ion-button color="button_transparent" (click)="addToCart(data)">
+              <ion-icon slot="start" name="cart-outline"></ion-icon>
+              <ion-label>Add to Cart</ion-label>
+            </ion-button>
+            <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+              <ion-icon slot="start" name="add"></ion-icon>
+              <ion-label>Explore</ion-label>
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <!--<ion-grid class="card-button">
+    <ion-row>
+      <ion-col size="6">
+        <ion-card (click)="onlineclick()" [class.onactive]="onactive">
+          <img src="assets/images/product.png" alt="">
+          <ion-card-title>Online Products</ion-card-title>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card (click)="offlineclick()" [class.offactive]="offactive">
+          <img src="assets/images/product.png" alt="">
+          <ion-card-title>Offline Products</ion-card-title>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ng-container *ngIf="onlinepro; then onlinesection; else offlinesection"></ng-container>
+  <ng-template #onlinesection>
+    <div class="fetching-block" *ngIf="fetching" >
+      <div>
+        <div class="lds-ring">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p>Fetching Online Products...</p>
+      </div>
+    </div>
+    <ion-grid>
+      <ion-row class="product-details">
+        <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of product">
+          <ion-card>
+            <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+              <img src="{{data.images[0].src}}">
+            </div>
+            <div class="drescription-back">
+              <ion-card-header class="card-header">
+                <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+              </ion-card-header>
+              <b [innerHTML]="data.price_html"></b>
+              <p [innerHTML]="data.short_description | textshort"></p>
+              <ion-button color="button_transparent" (click)="addToCart(data)">
+                <ion-icon slot="start" name="cart-outline"></ion-icon>
+                <ion-label>Add to Cart</ion-label>
+              </ion-button>
+              <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+                <ion-icon slot="start" name="add"></ion-icon>
+                <ion-label>Explore</ion-label>
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+  <ng-template #offlinesection>
+    <div class="fetching-block" *ngIf="fetching" >
+      <div>
+        <div class="lds-ring">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p>Fetching Offline Products...</p>
+      </div>
+    </div>
+    <ion-grid>
+      <ion-row class="product-details">
+        <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of producttwo">
+          <ion-card>
+            <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+              <img src="{{data.images[0].src}}">
+            </div>
+            <div class="drescription-back">
+              <ion-card-header class="card-header">
+                <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+              </ion-card-header>
+              <b [innerHTML]="data.price_html"></b>
+              <p [innerHTML]="data.short_description | textshort"></p>
+              <ion-button color="button_transparent" (click)="addToCarttwo(data)">
+                <ion-icon slot="start" name="cart-outline"></ion-icon>
+                <ion-label>Add to Cart</ion-label>
+              </ion-button>
+              <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+                <ion-icon slot="start" name="add"></ion-icon>
+                <ion-label>Explore</ion-label>
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>-->
+
+  <!--<ion-grid fixed>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button (click)="selection.value = 'all'" tabindex="0" expand="block" shape="round" color="button_transparent" class="tab_button">All Products</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button (click)="selection.value = 'OnlineProducts'" tabindex="0" expand="block" shape="round" color="button_transparent" class="tab_button">Online Products</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button (click)="selection.value = 'OfflineProducts'" tabindex="0" expand="block" shape="round" color="button_transparent" class="tab_button">Offline Products</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <input type="hidden" #selection>
+
+  <div [ngSwitch]="selection.value">
+    <ion-grid *ngSwitchDefault>
+      <ion-row class="product-details">
+        <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of product">
+          <ion-card>
+            <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+              <img src="{{data.images[0].src}}">
+            </div>
+            <div class="drescription-back">
+              <ion-card-header class="card-header">
+                <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+              </ion-card-header>
+              <b [innerHTML]="data.price_html"></b>
+              <p [innerHTML]="data.short_description | textshort"></p>
+              <ion-button color="button_transparent" (click)="addToCart(data)">
+                <ion-icon slot="start" name="cart-outline"></ion-icon>
+                <ion-label>Add to Cart</ion-label>
+              </ion-button>
+              <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+                <ion-icon slot="start" name="add"></ion-icon>
+                <ion-label>Explore</ion-label>
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid *ngSwitchCase="'all'">
+      <ion-row class="product-details">
+        <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of productall">
+          <ion-card>
+            <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+              <img src="{{data.images[0].src}}">
+            </div>
+            <div class="drescription-back">
+              <ion-card-header class="card-header">
+                <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+              </ion-card-header>
+              <b [innerHTML]="data.price_html"></b>
+              <p [innerHTML]="data.short_description | textshort"></p>
+              <ion-button color="button_transparent" (click)="addToCartall(data)">
+                <ion-icon slot="start" name="cart-outline"></ion-icon>
+                <ion-label>Add to Cart</ion-label>
+              </ion-button>
+              <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+                <ion-icon slot="start" name="add"></ion-icon>
+                <ion-label>Explore</ion-label>
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid *ngSwitchCase="'OnlineProducts'">
+      <ion-row class="product-details">
+        <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of product">
+          <ion-card>
+            <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+              <img src="{{data.images[0].src}}">
+            </div>
+            <div class="drescription-back">
+              <ion-card-header class="card-header">
+                <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+              </ion-card-header>
+              <b [innerHTML]="data.price_html"></b>
+              <p [innerHTML]="data.short_description | textshort"></p>
+              <ion-button color="button_transparent" (click)="addToCart(data)">
+                <ion-icon slot="start" name="cart-outline"></ion-icon>
+                <ion-label>Add to Cart</ion-label>
+              </ion-button>
+              <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+                <ion-icon slot="start" name="add"></ion-icon>
+                <ion-label>Explore</ion-label>
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid *ngSwitchCase="'OfflineProducts'">
+      <ion-row class="product-details">
+        <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of producttwo">
+          <ion-card>
+            <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+              <img src="{{data.images[0].src}}">
+            </div>
+            <div class="drescription-back">
+              <ion-card-header class="card-header">
+                <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+              </ion-card-header>
+              <b [innerHTML]="data.price_html"></b>
+              <p [innerHTML]="data.short_description | textshort"></p>
+              <ion-button color="button_transparent" (click)="addToCarttwo(data)">
+                <ion-icon slot="start" name="cart-outline"></ion-icon>
+                <ion-label>Add to Cart</ion-label>
+              </ion-button>
+              <ion-button color="button_transparent" [routerLink]="['/', 'products', data.id]">
+                <ion-icon slot="start" name="add"></ion-icon>
+                <ion-label>Explore</ion-label>
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>-->
+
+  
+  
+
+
+
+</div>

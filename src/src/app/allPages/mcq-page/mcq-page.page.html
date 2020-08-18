@@ -1,0 +1,50 @@
+<!--<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<ion-content>
+
+  <div class="ion-item-back" *ngFor="let user of users, index as i">
+    <div class="question-title">{{user.num}}. {{user.title}}</div>
+    <ul class="option-back">
+      <li (click)="selectAnswer('A',user.id,user.choice,i)" class="questionNum{{i}}A">
+        <span>A</span>{{user.option.A}} <i class="icon"></i>
+      </li>
+      <li (click)="selectAnswer('B',user.id,user.choice,i)" class="questionNum{{i}}B">
+        <span>B</span>{{user.option.B}} <i class="icon"></i>
+      </li>
+      <li (click)="selectAnswer('C',user.id,user.choice,i)" class="questionNum{{i}}C">
+          <span>C</span>{{user.option.C}} <i class="icon"></i>
+      </li>
+      <li (click)="selectAnswer('D',user.id,user.choice,i)" class="questionNum{{i}}D">
+          <span>D</span>{{user.option.D}} <i class="icon"></i>
+      </li>
+    </ul>
+  </div>
+  
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)" loadingSpinner="bubbles" loadingText="Loading Users...">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>-->
+<ion-header class="site-header">
+  <ion-toolbar color="custom">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title start>{{title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-mcq></app-mcq>
+</ion-content>
+
+
+

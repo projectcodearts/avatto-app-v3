@@ -1,0 +1,72 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.avatoo-section{
+    width: 100%; float: left;  margin-top: 0; padding: 0 0 0 0;
+    .syallabus-details{
+        text-align: left; width: 100%; float: left; position: relative;
+        
+        /*ion-card{
+            height: 149px; box-shadow: rgba(23,49,67,.15) 2px 0 4px; border-radius: 5px; position: relative; padding: 0; margin: 0;
+            .image-box{
+                width: 100%; height: 100px; position: relative;
+                img{position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
+            }
+        }*/
+        /*.card-title{
+            position: absolute; bottom: -17px; left: 0; background-color: #f0f0f0; font-size: 14px; color: #212121; width: 100%;  font-weight: 700; height: 56px; display: flex; align-items: center; justify-content: center;
+        }*/
+        .new-category-section{
+            width: 100%; float: left; padding: 11px 11px 0 11px;
+            .section{
+                width: 100%; float: left; padding: 0 65px 0 85px; margin-bottom: 11px; position: relative; box-shadow: rgba(0,0,0,.2) 1px 0 15px; height: 100px; display: flex; justify-content: left; align-items: center;
+                .image-back{
+                    position: absolute; top: 0; left: 15px; bottom: 0; margin: auto; display: flex; align-items: center; justify-content: center; width:80px; height: 80px;  background: #fff; border-radius: 100%;
+                    img{
+                        width: 40px; 
+                    }
+                }
+                .card-title{
+                    font-size: 14px; color: #173143; font-weight: 700; padding: 15px 15px 15px 25px; box-shadow: rgba(0, 0, 0, 0.1) 1px 0 15px; width: 97%;     border-radius: 0 50px 50px 0;
+                }
+                .card-subtitle{
+                    font-size: 14px; color: #9d9d9d; padding: 0 0 0 15px; font-weight: 700; 
+                }
+                ion-icon{
+                    background-image: url(../../../../assets/images/arrow-new.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    height: 40px;
+                    width: 40px;
+                    position: absolute;
+                    top: 0;
+                    right: 15px; bottom: 0; margin: auto; background-color: #fff; box-shadow: rgba(0,0,0,.2) 1px 0 15px;
+                    background-size: 50%; border-radius: 100%;
+                }
+                .new-sec{
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+}
+ion-grid{ margin: 0; padding: 0;}
+ion-col{ margin: 0; padding: 0;}
+.fetching-block{
+    width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; top: 0; left: 0; position: fixed; 
+  }
+
+ /*@media only screen and (max-width:500px){
+    .avatoo-section{
+        .syallabus-details{
+            ion-card{
+                .image-box{
+                    img{
+                        width: 36px;
+                    }
+                }
+            }
+            .card-title{ font-size: 11px;}
+        }
+    }
+ }*/

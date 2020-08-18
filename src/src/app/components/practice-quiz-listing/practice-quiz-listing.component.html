@@ -1,0 +1,68 @@
+<!--div class="papers-table-back">
+  <div class="inner-heading-style blue">
+    <div class="heading">
+      <div class="icon-back"><img src="assets/images/pre-year-i.png" alt=""></div>
+      Practice Questions
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <td>Course Name</td>
+        <td>FREE</td>
+        <td>PAID</td>
+      </tr>
+    </thead>
+    
+    <tbody>
+      
+      <tr class="head">
+        <td>Online</td>
+        <td></td>
+        <td></td>
+      </tr>
+      
+      <tr *ngFor="let item of practiceQs">
+        <td>{{item.testname}}</td>
+        <td>Free</td>
+        <td>
+          <button [routerLink]="['/', 'quiz', item.link]" >Access</button>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+</div>-->
+<div class="fetching-block" *ngIf="fetching" >
+  <div>
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching...</p>
+  </div>
+</div>
+<ion-card *ngFor="let item of practiceQs;let i = index;">
+  <div class="top">
+    <img src="assets/images/s-question.png">
+    <ion-card-header>
+      <ion-card-title class="card-title">{{item.testname}} (Free)</ion-card-title>
+    </ion-card-header>
+    <div class="progress-back">
+      <ion-progress-bar value="{{percentageBar[item.link]}}" style="--progress-background: #001f46;"></ion-progress-bar>
+    </div>
+    <div class="completed">
+      <span>{{percentageBar[item.link]}}%</span> - 1 Quiz
+    </div>
+    <div class="span" (click)="toggleAccordian($event, i)"></div>
+  </div>
+  <div class="details_back">
+    <ul class="item">
+      <li [routerLink]="['/', 'quiz', item.link]"><span>{{item.testname}}</span></li>
+    </ul>
+  </div>
+</ion-card>
+
+

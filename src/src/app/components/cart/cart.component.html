@@ -1,0 +1,59 @@
+<div class="avatoo-section">
+  <div class="fetching-block" *ngIf="fetching" >
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching</p>
+  </div>
+
+  <div class="cart-main-back">
+    <div class="cover">
+      <ion-grid>
+        <ion-row class="product-details">
+          <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngIf="cartProduct">
+            <ion-card>
+              <div class="image-box" *ngIf="img[0]">
+                <img src="{{img}}">
+              </div>
+              <div class="drescription-back">
+                <ion-card-header class="card-header">
+                  <ion-card-title class="card-title"> {{ cartProduct.name}} </ion-card-title>
+                </ion-card-header>
+                <div class="clear"></div>
+                <p> Rs. {{ cartProduct.price }}</p>
+                 <p [innerHTML]="cartProduct.short_description" *ngIf="cartProduct.short_description"></p>
+                <div class="clear"></div>
+                <div class="trash" (click)="removeCart()">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </div>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngIf="!cartProduct">
+            <ion-item>
+              <ion-label slot="start" class="lable"> Cart is Empty </ion-label>
+              <ion-label slot="end" class="price"> 0.00 </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="clear"></div>
+      <div class="order-details">
+        <ion-item>
+          <ion-label slot="start" class="lable">Order Total</ion-label>
+          <ion-label slot="end" class="price" *ngIf="cartProduct" >Rs.{{ cartProduct.price }}</ion-label>
+          <ion-label slot="end" class="price" *ngIf="!cartProduct">Rs. 0.00 </ion-label>
+        </ion-item>
+        <ion-button button color="button_transparent" [routerLink]="['/checkout']" >
+          <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+          <ion-label>Continue</ion-label>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+  
+
+</div>

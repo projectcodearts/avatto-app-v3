@@ -1,0 +1,52 @@
+.study-table-back {
+  width: 100%;
+  height: auto;
+  padding: 0 12px;
+  margin-top: 40px;
+}
+
+.study-table-back table {
+  width: 100%;
+  max-width: 100%;
+}
+
+.study-table-back table thead tr {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #f7bb00;
+}
+
+.study-table-back table thead tr td {
+  padding: 12px 8px;
+}
+
+.study-table-back table tr {
+  background-color: #26baa1;
+  font-size: 12px;
+  color: #fff;
+}
+
+.study-table-back table tr.head {
+  color: #001f46;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #f7bb00;
+  padding: 12px 8px;
+}
+
+.study-table-back table tr td {
+  padding: 8px;
+  border-bottom: #fff 1px solid;
+  border-right: #fff 1px solid;
+  width: 33.33333%;
+}
+
+.study-table-back table tr td button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=study-material-table.component.css.map */

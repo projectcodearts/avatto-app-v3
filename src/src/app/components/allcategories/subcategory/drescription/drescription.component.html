@@ -1,0 +1,5 @@
+<div class="drescription-back">
+  <div class="head minus" (click)="accordion()" [class.plus]="plus">Description</div>
+  <div class="main" *ngIf="expanded" [innerHtml]="description">
+  </div>
+</div>

@@ -1,0 +1,21 @@
+@import "../../../assets/css/mixin.component.scss";
+
+.splash-container{
+    width: 100%; 
+    height: 100vh; 
+    background-color: #001f46;
+    @include displayflex(flex,box,flexbox); 
+    @include alignitems(center); 
+    @include justifycontent(center);     text-align: center; position: relative; z-index: 1;
+    &:before{
+        width: 100%; height: 100vh; background-image: url(../../../assets/images/first-screen-bg.png); background-position: center center; background-size: contain; position: absolute; top: 0; left: 0; content: ""; z-index: -1;
+    }
+    img{ 
+        width: 70%;
+    }
+    p {
+        position: fixed; bottom: 0; left: 0; width: 100%; padding: 20px 0; font-size: 16px;
+    }
+
+    
+}

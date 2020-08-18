@@ -1,0 +1,31 @@
+<div class="side-menu"> 
+  <div class="logo"><a routerLink="/home"><img src="{{mainlogo}}" alt=""></a></div>
+  <div class="menu-wrapper">
+    <ion-menu-toggle  *ngFor="let item of menu">
+      <ion-item lines="none" color="custom" [routerLink]="[item.menulink]" routerLinkActive="router-link-active" >
+        <ion-icon slot="start" [name]="item.menuicon + '-outline'"></ion-icon>
+        <ion-label color="primary">{{item.menuname | titlecase}}</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item lines="none" color="warning" class="logout" (click)="backButtonEvent()" >
+        <ion-icon slot="start"  name="download-outline"></ion-icon>
+        <ion-label>Exit</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    <!--<ion-menu-toggle *ngIf="loggedin !='false'">
+      <ion-item lines="none" color="warning" class="logout" (click)="logout()">
+        <ion-icon slot="start"  name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-menu-toggle *ngIf="loggedin !='true'">
+      <ion-item lines="none" color="warning" class="logout" [routerLink]="['/', 'sign-in']">
+        <ion-icon slot="start"  name="log-out-outline"></ion-icon>
+        <ion-label>Log In</ion-label>
+      </ion-item>
+    </ion-menu-toggle>-->
+
+  </div>
+</div>

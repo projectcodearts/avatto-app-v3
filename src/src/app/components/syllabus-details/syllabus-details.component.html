@@ -1,0 +1,28 @@
+<div class="fetching-block" *ngIf="fetching">
+  <div>
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching...</p>
+  </div>
+   
+</div>
+<div class="drescription-back" *ngIf="pdfblock">
+  
+    
+      <!-- <iframe [src]="sylllabus.iframe_src | safe" ></iframe> -->
+      <!-- <ion-button expand="full" (click)="openLocalPdf()">Open Local Pdf</ion-button> -->
+      <div class="button-back">
+        <ion-button expand="full" shape="round" (click)="ViewPDFFromUrl(iframe_src,'demo')" color="button_transparent">Download And Open Pdf</ion-button>
+      </div>
+     
+     
+  
+  <div class="details" [innerHTML]="sylllabus.content"></div>
+  
+  
+  
+</div>

@@ -1,0 +1,33 @@
+<ion-grid class="cat-details">
+  <div class="fetching-block" *ngIf="fetching">
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching...</p> 
+  </div>
+  <ion-row>
+    <ion-col size-lg="4" size-md="4" size-sm="4" size="4" *ngFor="let cat of fcategory;let i = index" class="cat-name{{i}}">
+      <ion-card [routerLink]="['/', 'categories', cat.link]">
+        <div>
+          <img src="{{cat.icon}}">
+          <ion-card-header>
+            <ion-card-title class="card-title">{{cat.name}}</ion-card-title>
+            <ion-card-subtitle class="card-sub-title">{{cat.countchildren}} Chapters</ion-card-subtitle>
+          </ion-card-header>
+        </div>
+      </ion-card>
+    </ion-col>
+
+    <!-- <ion-col>
+      <ion-button color="secondary" class="load_more" size="small" (click)="loadMore()">Load More</ion-button>
+      <ion-button color="secondary" class="show_less" size="small" (click)="showLess()">Show Less</ion-button> 
+    </ion-col>-->
+  </ion-row>
+</ion-grid>
+<div class="button-back">
+  <ion-button color="button_transparent" *ngIf="lodemorebutton" class="load_more" expand="block" (click)="loadMore()">Load More</ion-button>
+</div>
+
