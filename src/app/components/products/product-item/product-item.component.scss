@@ -16,7 +16,7 @@
              transition: all .5s ease-in-out; padding: 15px;
             .image-box{
                 width: 40%; height: auto; position: relative; float: left;
-                img{width: 100%; height: 130px; object-fit: cover; padding: 8px; border: #ddd 1px solid; border-radius: 5px;}
+                img{width: 100%; height: 130px; object-fit: cover; object-position: center top; padding: 8px; border: #ddd 1px solid; border-radius: 5px;}
             }
             .drescription-back{
                 ion-card-header{
@@ -119,7 +119,7 @@ ion-button.tab_button{
             ion-card{
                 .image-box{
                     width: 100%; margin-bottom: 10px;
-                    img{ height: 208px;}
+                    img{ height: 315px;}
                 }
                 .drescription-back{
                     width: 100%;
@@ -203,7 +203,7 @@ ion-button.tab_button{
     width: 100%; float: left; text-align: center;
 }
 ion-button{
-    background-color: $custom_primary; color: #fff; width: 90%; height: 50px; margin: 5.5px 0; border: none; border-radius: 100px; --box-shadow: none; display: inline-block;
+    background-color: $custom_primary; color: #fff; width: 100%; height: 50px; margin: 5.5px 0; border: none; border-radius: 100px; --box-shadow: none; display: inline-block;
 }
 
 @media only screen and (max-width:500px){
