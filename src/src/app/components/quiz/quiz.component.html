@@ -1,0 +1,23 @@
+<div class="avatoo-section">
+  <div class="heading">
+    <h2>{{title}}</h2>
+    <a [routerLink]="['/quiz']" class="view-all">view all</a>
+  </div>
+  <div class="fetching-block" *ngIf="fetching" >
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching</p>
+  </div>
+  <div class="quiz_back">
+      <ion-item *ngFor="let data of fquiz" [routerLink]="['/', 'quiz', data.link]">
+        <div class="ion-back">
+          <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+        </div>
+        <ion-label class="ion-text-wrap">{{data.title}}</ion-label>
+      </ion-item>
+  </div>
+</div>

@@ -16,7 +16,7 @@
     <ion-row class="product-details">
       <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of product">
         <ion-card>
-          <div class="image-box" [routerLink]="['/data.id']" *ngIf="data.images[0]">
+          <div class="image-box" [routerLink]="['/', 'products', data.id]" *ngIf="data.images[0]">
             <img src="{{data.images[0].src}}">
           </div>
           <div class="drescription-back">

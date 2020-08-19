@@ -1,5 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.page.html',
@@ -8,9 +10,17 @@ import { Platform } from '@ionic/angular';
 export class QuizPage implements OnInit {
   backButtonSubscription;
   title:string = "Quiz";
-  constructor(private platform: Platform) { }
+  data:any;
+  constructor(private platform: Platform,private httpClient: HttpClient,private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    let pid = this.route.snapshot.paramMap.get('id');
+    this.httpClient.get('https://avatto.in/wp-json/avatto/v2/quiz-title/'+pid).subscribe(res=>{
+      this.data = JSON.stringify(res);
+      this.data = JSON.parse(this.data);
+      this.title = this.data.title;
+    }) 
 
   }
   

@@ -1,0 +1,16 @@
+<ion-header class="site-header">
+  <ion-toolbar color="custom">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title start>{{title}}</ion-title>
+    <ion-buttons slot="start" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+      <!--<ion-back-button></ion-back-button>-->
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-view-result></app-view-result>  
+</ion-content>

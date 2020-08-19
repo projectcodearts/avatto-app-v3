@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,KAAK,EAAE,IAAI;EAAE,MAAM,EAAE,IAAI;EAAE,OAAO,EAAE,MAAM;EAAE,UAAU,EAAE,IAAI;CAE/D",
+    "sources": [
+        "shortquestions.component.scss"
+    ],
+    "names": [],
+    "file": "shortquestions.component.css"
+}

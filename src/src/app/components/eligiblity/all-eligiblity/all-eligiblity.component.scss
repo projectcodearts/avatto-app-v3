@@ -1,0 +1,35 @@
+.avatoo-section{
+    width: 100%; float: left;  margin-top: 20px;
+    .heading{ margin-bottom: 0; width: 100%; float: left; padding: 0 20px 10px;}
+    h2{
+        font-weight: 600; font-size: 27px; color: #212121; text-transform: capitalize; margin: 0; padding: 0; float: left;
+    }
+    a{
+        font-size: 17px; color: #001f46; font-weight: 600; text-decoration: none; text-transform: capitalize; float: right; margin-top: 6px;
+    }
+    .eligiblity-details{
+        text-align: center; width: 100%; float: left;        
+        ion-card{
+            height: 302px; box-shadow: rgba(23,49,67,.15) 8px 0 14px; border-radius: 5px; position: relative; background-color: #001f46; transition: all .5s ease-in-out;
+            .image-box{
+                width: 100%; height: 197px; position: relative;
+                img{position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; width: 100%; height: 100%; object-fit: cover;}
+            }
+        }
+       
+        .card-header{
+            padding: 25px 0; 
+            .card-title{
+                font-size: 18px; color: #fff; width: 100%; text-transform: capitalize; transition: all .5s ease-in-out;
+            }
+            .card-sub-title{
+                color: #fff; transition: all .5s ease-in-out;
+            }
+        }
+        
+        
+    }
+}
+.fetching-block{
+    width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; top: 0; left: 0; position: fixed; 
+  }

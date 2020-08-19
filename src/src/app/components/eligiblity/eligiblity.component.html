@@ -1,0 +1,28 @@
+<div class="avatoo-section">
+  <div class="heading">
+    <h2>{{title}}</h2>
+    <a [routerLink]="['/eligiblity']" class="view-all">view all</a>
+  </div>
+  <div class="fetching-block" *ngIf="fetching" >
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching</p>
+  </div>
+  <ion-slides pager="false" [options]="slideOpts" class="eligiblity-details">
+    <ion-slide *ngFor="let data of eligiblity">
+      <ion-card [routerLink]="['/', 'eligiblity-details', data.link]">
+        <div class="image-box">
+          <img src="{{data.icon}}">
+        </div>
+        <ion-card-header class="card-header">
+          <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+          <ion-card-subtitle class="card-sub-title">{{data.excerpt}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>

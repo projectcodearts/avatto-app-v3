@@ -1,0 +1,21 @@
+<!--<div class="short-question">
+  <div class="inner-heading-style yellow">
+    <div class="heading">
+      <div class="icon-back"><img src="assets/images/s-q-i.png" alt=""></div>
+      Short Questions
+    </div>
+  </div>
+  <app-shortitem></app-shortitem>
+</div>-->
+
+<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<app-shortitem></app-shortitem>
+

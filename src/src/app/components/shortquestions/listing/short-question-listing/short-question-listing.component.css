@@ -1,0 +1,195 @@
+/*.papers-table-back{
+    width: 100%; height: auto; padding: 0 12px; margin-top: 40px;
+    table{
+         width: 100%; max-width: 100%;
+        thead{
+            tr{ 
+                color: #fff; text-transform: uppercase;  font-weight: 700;  background-color: $custom_secondary;
+                td{
+                    padding: 12px 8px;
+                }
+            }
+        }
+        tr{
+            background-color: #26baa1; font-size: 12px; color: #fff;
+            &.head{
+                color: $custom_primary; text-transform: uppercase; font-weight: 700; background-color: $custom_secondary; padding: 12px 8px;
+            }
+            td{
+                padding: 8px; border-bottom: #fff 1px solid; border-right: #fff 1px solid; width: 33.33333%;
+                button{
+                    background-color: transparent; color: #fff; border: none; outline-style: none; cursor: pointer;
+                }
+                
+            }
+        }
+    }
+}*/
+ion-card {
+  background-color: #fff;
+  border-radius: 0;
+  margin: 0;
+  border-bottom: #b6b6b6 1px solid;
+  --box-shadow: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+ion-card .top {
+  width: 100%;
+  padding: 35px 15px 35px 120px;
+  position: relative;
+}
+
+ion-card .top img {
+  width: 80px;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  margin: auto;
+}
+
+ion-card .top ion-card-header {
+  margin: 0;
+  padding: 0;
+}
+
+ion-card .top .span {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  margin: auto;
+  background-color: #001f46;
+  border-radius: 100%;
+}
+
+ion-card .top .span:before {
+  color: #fff;
+  line-height: 20px;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  font-size: 20px;
+  content: "+";
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+ion-card .top.active {
+  background: #286bbf;
+  background: -webkit-gradient(linear, left top, right top, from(#286bbf), to(#163c6c));
+  background: linear-gradient(to right, #286bbf 0%, #163c6c 100%);
+}
+
+ion-card .top.active .card-title {
+  color: #ededed;
+}
+
+ion-card .top.active .span {
+  background-color: #ededed;
+}
+
+ion-card .top.active .span:before {
+  content: "-";
+  color: #001f46;
+}
+
+ion-card .top.active .completed {
+  color: #f7bb00;
+}
+
+ion-card .top.active .completed span {
+  color: #f7bb00;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #212121;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+.progress-back {
+  width: 85%;
+}
+
+.progress-back ion-progress-bar {
+  --buffer-background: #ededed;
+  height: 10px;
+  border-radius: 30px;
+}
+
+.completed {
+  font-size: 13px;
+  color: #939393;
+  margin-top: 15px;
+}
+
+.completed span {
+  font-weight: 700;
+  color: #001f46;
+}
+
+.details_back {
+  width: 100%;
+  float: left;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  background: #286bbf;
+  background: -webkit-gradient(linear, left top, right top, from(#286bbf), to(#163c6c));
+  background: linear-gradient(to right, #286bbf 0%, #163c6c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#286bbf', endColorstr='#163c6c',GradientType=1 );
+}
+
+.details_back .item {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0 0 30px 0;
+}
+
+.details_back .item li {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 15px 15px 15px 120px;
+  list-style: none;
+  text-transform: capitalize;
+  border-bottom: #ddd 1px solid;
+  color: #ededed;
+}
+
+.details_back .item li:last-child {
+  border: none;
+}
+
+.details_back .item li span {
+  position: relative;
+  padding: 0 0 0 24px;
+}
+
+.details_back .item li span:before {
+  background-image: url(../../../../../assets/images/item-arrow.png);
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  content: "";
+}
+/*# sourceMappingURL=short-question-listing.component.css.map */

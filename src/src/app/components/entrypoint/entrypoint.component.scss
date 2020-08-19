@@ -1,0 +1,52 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+.entry-point-back{
+    width: 100%; height: 100vh; height: 100%; background-color: $custom_primary; text-align: center; position: relative; z-index: 1;
+    @include displayflex(flex,box,flexbox); 
+    @include alignitems(center); 
+    @include justifycontent(center);
+    &:before{
+        width: 100%; height: 100vh; background-image: url(../../../assets/images/first-screen-bg.png); background-position: center center; background-size: contain; position: absolute; top: 0; left: 0; content: ""; z-index: -1;
+    }
+    img{
+        width: 60%; display: inline-block; transform: translateY(-10%); 
+    }
+    p{
+        font-size: 30px; color: #fff; width: 64%; display: inline-block; 
+    }
+    .button-list{
+        width: 100%; height: auto; margin: 0; padding: 0 30px; float: left; position: fixed; bottom: 0; left: 0;
+        li{ 
+            width: 100%; list-style: none; float: left; margin-bottom: 20px;
+            a{
+                width: 100%; height: 50px; line-height: 50px; text-align: center; color: #768ba6; font-size: 18px; text-transform: capitalize; text-decoration: none;; float: left; border-radius: 100px;
+                &.white-border{
+                    border: #fff 2px solid; color: #fff; font-weight: 600; font-size: 20px; line-height: 50px;
+                }
+                &.yellow{
+                    background-color: $custom_secondary; color: $custom_primary; font-weight: 600; font-size: 20px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    .entry-point-back{
+        p{
+            width: 78%;
+        }
+       
+    }
+}
+
+@media only screen and (max-width:500px){
+    .entry-point-back{
+       
+        p{
+           width: 80%; font-size: 18px;
+        }
+        
+    }
+}

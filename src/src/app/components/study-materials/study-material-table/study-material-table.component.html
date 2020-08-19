@@ -1,0 +1,32 @@
+<div class="study-table-back">
+  <div class="inner-heading-style blue">
+    <div class="heading">
+      <div class="icon-back"><img src="assets/images/study-mat-i.png" alt=""></div>
+      Study Material
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <td>Course Name</td>
+        <td>FREE</td>
+        <td>PAID</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of tabledata">
+      <tr class="head">
+        <td>{{data.testmode}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr *ngFor="let item of data.testdetails">
+        <td>{{item.testname}}</td>
+        <td>{{item.testprice}}</td>
+        <td>
+          <button [routerLink]="['/item.buttonlink']" >{{item.buttontext}}</button>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+</div>

@@ -1,0 +1,226 @@
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+.avatoo-section{
+    width: 100%; float: left;  margin-top: 20px;
+    .heading{ margin-bottom: 0; width: 100%; float: left; padding: 0 20px 10px;}
+    h2{
+        font-weight: 600; font-size: 27px; color: #212121; text-transform: capitalize; margin: 0; padding: 0; float: left;
+    }
+    a{
+        font-size: 17px; color: #001f46; font-weight: 600; text-decoration: none; text-transform: capitalize; float: right; margin-top: 6px;
+    }
+    .product-details{
+        text-align: left; width: 100%; float: left;        
+        ion-card{
+            height: auto;  box-shadow: rgba(23,49,67,.15) 8px 0 14px; border-radius: 5px; position: relative; 
+             transition: all .5s ease-in-out; padding: 15px;
+            .image-box{
+                width: 40%; height: auto; position: relative; float: left;
+                img{width: 100%; height: 130px; object-fit: cover; object-position: center top; padding: 8px; border: #ddd 1px solid; border-radius: 5px;}
+            }
+            .drescription-back{
+                ion-card-header{
+                    padding: 0;
+                    .card-title{
+                        color: $custom_primary; font-weight: 700; font-size: 16px; position: relative; padding-bottom: 7px;
+                        &:after{
+                            position: absolute; bottom: 0; left: 0; background-color: $custom_secondary; width: 50px; height: 1px; content: "";
+                        }
+                        &:before{
+                            position: absolute; bottom: 3px; left: 0; background-color: $custom_primary; width: 25px; height: 1px; content: "";
+                        }
+                    }
+                }
+                width: 60%; height: auto; position: relative; float: left; padding-left: 20px;
+                ion-button{
+                    background-color: $custom_primary; border-radius: 5px; box-shadow: none !important; cursor: pointer; color: #fff; text-transform: capitalize; 
+                    padding: 0 !important; transition: all .5s ease-in; font-size: 11px;
+                   
+                    &:hover{
+                        background-color: $custom_secondary; color: $custom_primary; 
+                    }
+                    ion-icon{
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
+.fetching-block{
+    width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; top: 0; left: 0; position: fixed; z-index: 1; background-color: #fff;
+  }
+
+ion-button.tab_button{
+    background-color: $custom_primary; color: #fff; width: 100%; height: calc(40px + 50px); margin: 0; border: none;  --box-shadow: none;  border-radius: 100px; text-transform: capitalize; 
+    ion-icon{
+        height: 40px;
+        background: $custom_secondary;
+        color: $custom_primary;
+        position: absolute;
+        top: 0;
+        padding: 0 15px;
+        left: 0;
+        right: 0; margin: auto;
+    } 
+    &.onactive{
+        background-color: $custom_secondary; color: $custom_primary;
+        ion-icon{
+            background: $custom_primary;
+            color: $custom_secondary;
+        } 
+    }
+    &.offactive{
+        background-color: $custom_secondary; color: $custom_primary;
+        ion-icon{
+            background: $custom_primary;
+            color: #fff;
+        }  
+    }
+}
+
+.card-button{
+    ion-card{
+        padding: 30px 15px; text-align: center; box-shadow: rgba(23,49,67,.15) 8px 0 14px; border-radius: 5px; position: relative; z-index: 2; overflow: hidden; 
+        &:after{
+            width: 0%; height: 5px; border-radius: 20px; background-color: $custom_primary; content: ""; position: absolute; left: 0; right: 0; bottom: 0; margin: auto; transition: all .5s ease-in-out;
+        }
+        img{
+            width: 50px; margin-bottom: 10px; 
+        }
+        &.onactive{
+            &:after{
+                width: 100%;
+            }
+            ion-card-title{
+                color: $custom_primary;
+            }
+        }
+        &.offactive{
+            &:after{
+                width: 100%;
+            }
+            ion-card-title{
+                color: $custom_primary;
+            }
+        }
+        ion-card-title{
+            text-transform: uppercase; font-size: 16px; color: #000;
+        }
+    }
+}
+
+
+@media only screen and (max-width:450px){
+    .avatoo-section{
+        .product-details{
+            ion-card{
+                .image-box{
+                    width: 100%; margin-bottom: 10px;
+                    img{ height: 315px;}
+                }
+                .drescription-back{
+                    width: 100%;
+                    padding: 0;
+                }
+            } 
+        }
+    }
+}
+
+.modal-wrapper {
+    background: #222;
+  }
+  
+  
+  .my-custom-class .modal-wrapper {
+    background: #222;
+  }
+  .my-custom-class {
+    --background: #222;
+  }
+
+.filter{
+    width: 100%;
+    ion-card{
+        margin: 0; padding: 0; box-shadow: none; 
+        .title{
+            font-size: 30px; color: #173143; font-weight: 700; padding-top: 42px;
+            ion-icon{ 
+                position: relative; top: 3px;
+            }
+        }
+        .close_modal{
+            position: absolute; top: 46px; bottom: 0; right: 15px; width: 30px; height: 30px; color: #173143; box-shadow: none; margin: auto;
+        }
+    }
+}
+.main-orders{
+    padding: 11px;
+    h2{
+        color: #173143; font-weight: 700; font-size: 18px; text-transform: capitalize;
+    }
+    h3{
+        color: #000; font-weight: 700; font-size: 16px;
+    }
+}
+
+
+
+
+@import "../../../../assets/css/mixin.component.scss";
+@import "../../../../theme/color_variables.scss";
+
+.cat-name6,.cat-name7,.cat-name8,.cat-name9,
+.cat-name10,.cat-name11,.cat-name12,.cat-name13,.cat-name14,
+.cat-name15{
+    display: none;
+}
+.cat-details{
+    text-align: center; width: 100%; float: left; position: relative; 
+    ion-col{
+        padding: 0;
+    }
+    ion-card{
+        height: 135px; box-shadow: rgba(23,49,67,.15) 2px 0 4px; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 11px 5.5px 0;
+        img{
+            width: 60px; margin-bottom: 12px;
+        }
+        ion-card-header{
+            padding: 0;
+        }
+    }
+    .card-title{
+        font-size: 14px; color:$custom_primary; font-weight: 700; 
+    }
+    .card-sub-title{
+        font-size: 13px; color: #9d9d9d; 
+    }
+}
+.button-back{
+    width: 100%; float: left; text-align: center;
+}
+ion-button{
+    background-color: $custom_primary; color: #fff; width: 100%; height: 50px; margin: 5.5px 0; border: none; border-radius: 100px; --box-shadow: none; display: inline-block;
+}
+
+@media only screen and (max-width:500px){
+    .cat-details{
+        ion-card{
+            img{
+                width: 36px;;
+            }
+        }
+        .card-title{
+            font-size: 11px;
+        }
+        .card-sub-title{
+            font-size: 10px; color: #9d9d9d; 
+        }
+    }
+}
+
+ 
+   

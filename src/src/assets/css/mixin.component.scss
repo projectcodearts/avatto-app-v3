@@ -1,0 +1,22 @@
+@mixin displayflex($name, $kitname, $kitname2){
+    display: -webkit-$kitname;    
+    display: -moz-$kitname;         
+    display: -ms-$kitname2;   
+    display: -webkit-$name; 
+    display: $name;   
+}
+
+@mixin justifycontent($value){
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+@mixin alignitems($value){
+    -webkit-align-content: $value;
+    -webkit-align-items: $value;
+    align-items: $value;
+}
+
+@mixin lineargradient($position,$value1,$value2){
+    background-image: linear-gradient($position $value1, $value2 );
+    -webkit-background-image: linear-gradient($position $value1, $value2);
+}

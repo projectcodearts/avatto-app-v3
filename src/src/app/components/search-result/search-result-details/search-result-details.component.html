@@ -1,0 +1,26 @@
+<ion-grid class="cat-details">
+  <div class="fetching-block" *ngIf="fetching" >
+    <div>
+      <div class="lds-ring">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Fetching...</p>
+    </div>
+  </div>
+  <div class="new-category-section">
+  <ion-row>
+    <ion-col size-lg="12" size-md="12" size-sm="12" size="12" *ngFor="let data of searchresult">
+        <div class="section">
+          <div>
+            <div class="card-title">{{data.category_name}}</div>
+            <div class="card-subtitle" [innerHTML]="data.description"></div>
+            <ion-icon [routerLink]="['/', 'practice-question', data.category_id]"></ion-icon>
+          </div>
+        </div>
+    </ion-col>
+  </ion-row>
+  </div>
+</ion-grid>

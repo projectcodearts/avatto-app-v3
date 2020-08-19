@@ -1,0 +1,55 @@
+.clear {
+  clear: both;
+}
+
+.ion-no-border {
+  border-top: #ddd 1px solid;
+  padding: 0;
+  text-align: center;
+}
+
+.ion-no-border ion-grid {
+  padding: 0;
+}
+
+.ion-no-border ion-grid ion-col {
+  position: relative;
+}
+
+.ion-no-border ion-label {
+  font-size: 13px;
+}
+
+.ion-no-border ion-icon {
+  width: 100%;
+  height: 20px;
+  outline: none;
+  outline-style: none;
+}
+
+.ion-no-border .icon-details {
+  width: 32px;
+  display: inline-block;
+  position: relative;
+}
+
+.ion-no-border .icon-details span {
+  width: 18px;
+  height: 18px;
+  background-color: #001f46;
+  color: #fff;
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  float: left;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 18px;
+  font-size: 9px;
+}
+
+.ion-no-border .router-link-active {
+  background-color: #f7bb00;
+  color: #001f46;
+}
+/*# sourceMappingURL=footer.component.css.map */

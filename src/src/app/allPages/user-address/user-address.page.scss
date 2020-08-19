@@ -1,0 +1,95 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+ion-card{
+    margin: 0;
+}
+.check-out-back{
+    width: 100%; height: auto; padding: 15px;
+    ion-label{
+        span{
+            color: red;
+       }
+       
+    }
+    .order-details{
+        padding: 0 11px;
+        table{
+            width: 100%; max-width: 100%; font-size: 14px;  background-color: $custom_primary; color: #fff;
+            th{ width: 50%; border: #ddd 1px solid; padding: 10px; text-align: left;}
+            td{ width: 50%; border: #ddd 1px solid; padding: 10px;}
+        }
+        ion-button{
+            background-color: $custom_primary; color: #fff; width: 100%; height: 50px; margin: 0; border: none;
+        }
+    }
+    
+}
+
+.orders{
+    width: 100%;
+    ion-card{
+        margin: 0; padding: 0; box-shadow: none; 
+        .title{
+            font-size: 30px; color: #173143; font-weight: 700; padding-top: 42px;
+            ion-icon{ 
+                position: relative; top: 3px;
+            }
+        }
+        .close_modal{
+            position: absolute; top: 46px; bottom: 0; right: 15px; width: 30px; height: 30px; color: #173143; box-shadow: none; margin: auto;
+        }
+    }
+}
+.contact-details{
+    padding: 11px;
+}
+
+
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+.back{ color: #fff; }
+.login-back{
+    h3{ margin: 25px 0 0 15px; text-transform: capitalize; color: #173143;}
+    .login-main-back{
+        width: 100%; height: 75%; background-color: #fff; float: left;
+        
+        form{
+            .form-portion{
+                width: 100%; height: 50px;  padding: 0 15px; outline-width: none; position: relative; margin-bottom: 15px;
+                ion-input.sc-ion-input-md-h, ion-input.sc-ion-input-ios-h{
+                    text-align: left;
+                    border: none; border-bottom: #b6b6b6 1px solid; padding: 0 10px 0 42px !important; transition: all .5s ease-in-out; height: 50px;
+                    &.has-focus{
+                        border-color: $custom_primary;
+                    }
+                    &.ng-invalid.ng-touched{
+                        border-color: $invalid;
+                    }
+                    &.ng-valid{
+                        border-color: $valid;
+                    }
+                }
+                ion-icon{
+                    position: absolute; top: 0; left: 0; bottom: 0; margin: auto; height: 22px; width: 70px; text-align: center; line-height: 40px;
+                }
+            }
+            .button-list{
+                width: 100%; height: auto; margin: 0 0 15px 0; padding: 0 15px; float: left;
+                li{ 
+                    width: 100%; list-style: none; float: left;
+                    ion-button{
+                        &.blue-border{
+                            width: 100%; height: 50px; line-height: 50px; text-align: center; border: none !important; color: $custom_primary; font-weight: 600; font-size: 26px; line-height: 92px; text-transform: capitalize; text-decoration: none;; float: left; border-radius: 10px; background-color: $custom_secondary; padding: 0; margin: 0;
+                        }
+                        
+                    }
+                    
+                   
+                    
+                }
+            }
+        }
+    }
+    
+    
+}

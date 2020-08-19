@@ -1,0 +1,21 @@
+.search-bar {
+  width: 100%;
+  height: auto;
+  float: left;
+  background-color: #001f46;
+  padding: 50px 30px 30px 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.search-bar .sc-ion-searchbar-md-h {
+  padding: 20px 0 0 0;
+  text-align: left;
+}
+
+.search-bar ion-title {
+  text-overflow: unset;
+  white-space: unset;
+  position: static;
+}
+/*# sourceMappingURL=searchbar.component.css.map */

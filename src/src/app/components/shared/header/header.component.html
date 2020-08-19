@@ -1,0 +1,43 @@
+<!--<ng-container 
+*ngIf="router.url === '/entrypoint'  ||
+router.url === '/sign-in'  || 
+router.url === '/sign-up'  || 
+router.url === '/forgot-password'; then blankheader; else mainheader">
+</ng-container>
+
+<ng-template #blankheader></ng-template>
+<ng-template #mainheader>
+  <ion-header class="site-header">
+    <ion-toolbar color="custom">
+      <ion-buttons slot="start">
+        <ion-menu-toggle>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+        </ion-menu-toggle>
+      </ion-buttons>
+      <ion-title start>Avatto</ion-title>
+      <ion-buttons slot="end" [routerLink]="['/cart']">
+        <ion-button>
+          <div class="icon-details">
+            <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+            <span class="no">{{qtn}}</span>
+          </div>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-menu content-id="main" menuId="main-menu" side="start" type="overlay">
+    <app-menu></app-menu>
+  </ion-menu>
+  
+</ng-template>-->
+<ion-menu content-id="main" menuId="main-menu" side="end" type="overlay">
+  <app-menu></app-menu>
+</ion-menu>
+
+
+
+
+
+

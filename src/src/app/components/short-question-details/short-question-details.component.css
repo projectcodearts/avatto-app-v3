@@ -1,0 +1,222 @@
+.details_back {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  width: 100%;
+  float: left;
+}
+
+.details_back.active {
+  padding: 15px;
+}
+
+.details_back .details {
+  margin-bottom: 30px;
+}
+
+.details_back .title {
+  color: #212121;
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.details_back p {
+  color: #727272;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.details_back .list {
+  width: 100%;
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+}
+
+.details_back .list li {
+  width: 50%;
+  list-style: none;
+  float: left;
+  padding-left: 16px;
+  position: relative;
+  font-size: 14px;
+  color: #727272;
+  margin-bottom: 10px;
+}
+
+.details_back .list li:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "";
+  background: #fb4138;
+  background: -webkit-gradient(linear, left top, right top, from(#fb4138), to(#ff8003));
+  background: linear-gradient(to right, #fb4138 0%, #ff8003 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb4138', endColorstr='#ff8003',GradientType=1 );
+}
+
+.drescription-back {
+  width: 100%;
+  float: left;
+  padding: 20px 15px;
+}
+
+.drescription-back.active {
+  padding: 15px;
+}
+
+.drescription-back .head {
+  width: 100%;
+  height: 68px;
+  text-transform: capitalize;
+  font-size: 21px;
+  border-radius: 5px;
+  margin-top: 20px;
+  line-height: 68px;
+  color: #fff;
+  padding: 0 0 0 15px;
+  position: relative;
+  background: #286bbf;
+  background: -webkit-gradient(linear, left top, right top, from(#286bbf), to(#163c6c));
+  background: linear-gradient(to right, #286bbf 0%, #163c6c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#286bbf', endColorstr='#163c6c',GradientType=1 );
+}
+
+.drescription-back .head.minus:after {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  content: "-";
+  line-height: 20px;
+  text-align: center;
+  font-size: 34px;
+  color: #163c6c;
+  margin: auto;
+}
+
+.drescription-back .head.minus.plus:after {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  content: "+";
+  line-height: 22px;
+  text-align: center;
+  font-size: 22px;
+  color: #163c6c;
+  margin: auto;
+}
+
+.short-new-back {
+  width: 100%;
+  padding: 15px;
+}
+
+.short-question-item {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.short-question-item .accordion-back {
+  width: 100%;
+  float: left;
+  margin-top: 1px;
+}
+
+.short-question-item .accordion-back .heading {
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 15px 70px 15px 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: #001f46;
+  position: relative;
+  text-align: left;
+}
+
+.short-question-item .accordion-back .heading .icon-back {
+  width: 60px;
+  height: 100%;
+  background-color: #f7bb00;
+  color: #001f46;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.short-question-item .accordion-back .heading .icon-back:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "+";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.short-question-item .accordion-back .heading .icon-back.active:after {
+  content: "-";
+}
+
+.short-question-item .accordion-back .heading.active .icon-back:after {
+  content: "-";
+}
+
+.short-question-item .accordion-back .details_back {
+  width: 100%;
+  float: left;
+  background-color: #fff;
+  padding: 0 15px 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.short-question-item .accordion-back .details_back p {
+  color: #5d5b5b;
+  font-size: 15px;
+  line-height: 28px;
+  text-align: justify;
+  margin: 0;
+}
+
+#scroll-min {
+  height: 250px;
+  overflow: auto;
+  background-color: #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0, 0, 0, 0.1 1px 0 10px;
+          box-shadow: 0, 0, 0, 0.1 1px 0 10px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=short-question-details.component.css.map */

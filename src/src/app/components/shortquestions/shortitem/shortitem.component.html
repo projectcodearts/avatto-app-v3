@@ -1,0 +1,47 @@
+<!--<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<div class="short-question-item" *ngFor="let data of squestion;let i = index;">
+  <div class="accordion-back">
+    <div class="heading accordion">
+      {{data.title}}
+      <div class="icon-back" (click)="toggleAccordian($event, i)"></div>
+    </div>
+    <div class="details_back">
+      <div id="scroll-min">
+        <p [innerHTML]="data.drescription"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<ion-button [routerLink]="['/', 'short-question-listing', pageid]">View More</ion-button>-->
+<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<ion-card [routerLink]="['/', 'short-question-listing', pageid]" *ngIf="count>0">
+  <div>
+    <img src="assets/images/s-question.png">
+    <ion-card-header>
+      <ion-card-title class="card-title">Short Questions</ion-card-title>
+    </ion-card-header>
+    <!-- <div class="progress-back">
+      <ion-progress-bar value="0.4" style="--progress-background: #4caf50;"></ion-progress-bar>
+    </div> -->
+    <div class="completed">
+      {{count}} Chapters
+    </div>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </div>
+</ion-card>

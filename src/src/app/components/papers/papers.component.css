@@ -1,0 +1,114 @@
+.avatoo-section {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  padding: 0 0 0 11px;
+}
+
+.avatoo-section .heading {
+  margin-bottom: 0;
+  width: 100%;
+  float: left;
+  padding: 0 11px 11px 0;
+}
+
+.avatoo-section h2 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #212121;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.avatoo-section a {
+  font-size: 14px;
+  color: #001f46;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+  float: right;
+  margin-top: 6px;
+}
+
+.avatoo-section .papers-details {
+  text-align: center;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.avatoo-section .papers-details ion-slide {
+  width: 37% !important;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 0;
+}
+
+.avatoo-section .papers-details ion-card {
+  height: 149px;
+  -webkit-box-shadow: rgba(23, 49, 67, 0.15) 2px 0 4px;
+          box-shadow: rgba(23, 49, 67, 0.15) 2px 0 4px;
+  border-radius: 5px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.avatoo-section .papers-details ion-card .image-box {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.avatoo-section .papers-details ion-card .image-box img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.avatoo-section .papers-details .card-title {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #212121;
+  width: 100%;
+  font-weight: 700;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+ion-slides {
+  --bullet-background: #000;
+  --bullet-background-active: #001f46;
+}
+
+ion-slide {
+  display: block !important;
+  height: calc(200px);
+}
+
+@media only screen and (max-width: 500px) {
+  .avatoo-section .papers-details ion-card .image-box img {
+    width: 36px;
+  }
+  .avatoo-section .papers-details .card-title {
+    font-size: 11px;
+  }
+}
+/*# sourceMappingURL=papers.component.css.map */

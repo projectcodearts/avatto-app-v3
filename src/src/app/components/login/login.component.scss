@@ -1,0 +1,98 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+.back{ color: #fff; }
+.login-back{
+    width: 100%; height: 100vh; height: 100%; background-color: $custom_primary; text-align: center; position: relative; z-index: 1; 
+    &:before{
+        width: 100%; height: 100vh; background-image: url(../../../assets/images/first-screen-bg.png); background-position: center center; background-size: contain; position: absolute; top: 0; left: 0; content: ""; z-index: -1;
+    }
+    .logo-cover{
+        width: 100%; height: 40%;  text-align: center; position: relative; 
+        img{
+            width: 60%; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;
+        }
+    }
+    .login-main-back{
+        width: 100%; height: 60%; background-color: #fff; float: left;
+        h3{
+            font-size: 60px; color: $custom_primary; text-align: center; margin: 80px 0;
+        }
+        form{
+            padding: 0 30px;
+            .form-portion{
+                width: 100%; height: 40px;  padding: 0; outline-width: none; position: relative; margin-bottom: 80px;
+                ion-input.sc-ion-input-md-h, ion-input.sc-ion-input-ios-h{
+                    text-align: left;
+                    border: none; border-bottom: #b6b6b6 1px solid; padding: 0 10px 0 70px !important; transition: all .5s ease-in-out;
+                    &.has-focus{
+                        border-color: $custom_primary;
+                    }
+                    &.ng-invalid.ng-touched{
+                        border-color: $invalid;
+                    }
+                    &.ng-valid{
+                        border-color: green;
+                    }
+                    
+                }
+                ion-icon{
+                    position: absolute; top: 0; left: 0; bottom: 0; margin: auto; height: 30px; width: 70px; text-align: center; line-height: 40px;
+                }
+            }
+            .button-list{
+                width: 100%; height: auto; margin: 30px 0 0 0; padding: 0 30px; float: left; 
+                li{ 
+                    width: 100%; list-style: none; float: left; margin-bottom: 20px;
+                    ion-button{
+                        cursor: pointer;  border-radius: 100px; --box-shadow: none;
+                        &.blue-border{
+                            width: 100%; height: 50px; text-align: center; border: $custom_primary 2px solid; color: #727272; font-weight: 600; font-size: 18px; text-transform: capitalize; text-decoration: none; float: left; background-color: transparent;
+                            &.forgot{
+                                border: none !important; font-size: 21px; box-shadow: none; 
+                            }
+                        }
+                        
+                        
+                    }
+                    a{
+                        width: 100%; height: 50px; line-height: 50px; text-align: center; color: #768ba6; font-size: 18px; text-transform: capitalize; text-decoration: none;; float: left; border-radius: 100px;
+                        &.yellow{
+                           background-color: $custom_secondary; color: $custom_primary; font-size: 18px;
+                        }
+                    }
+                   
+                    
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+@media only screen and (max-width:768px){
+    .login-back{
+        .login-main-back{
+            h3{ font-size: 40px; margin: 20px 0;}
+            
+        }
+        
+    }
+}
+
+@media only screen and (max-width:500px){
+    .login-back{
+        .login-main-back{
+            h3{ font-size: 30px; margin: 20px 0;}
+            form{
+                .form-portion{
+                    margin-bottom: 30px;
+                }
+                
+            }
+        }
+        
+    }
+}
+

@@ -1,0 +1,90 @@
+ion-content {
+  --background: #286bbf !important;
+  --background: -moz-linear-gradient(left,  #286bbf 0%, #163c6c 100%) !important;
+  --background: -webkit-linear-gradient(left,  #286bbf 0%,#163c6c 100%) !important;
+  --background: linear-gradient(to right,  #286bbf 0%,#163c6c 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#286bbf', endColorstr='#163c6c',GradientType=1 ) !important;
+}
+
+.instruction-back {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.instruction-back ion-card {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.instruction-back ion-card ion-card-header {
+  text-align: center;
+  color: #fff;
+}
+
+.instruction-back ion-card ion-card-header ion-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.instruction-back ion-card ion-card-header ion-card-title {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.instruction-back ion-card ion-list {
+  background: none !important;
+  padding-top: 30px;
+}
+
+.instruction-back ion-card ion-list ion-item {
+  --background: none !important;
+  overflow: visible;
+}
+
+.instruction-back ion-card ion-list ion-item ion-label {
+  color: #fff;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px 20px;
+  border-radius: 200px;
+  overflow: visible;
+}
+
+.instruction-back ion-card ion-list ion-item ion-label ion-icon {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: absolute;
+  top: -29px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #f7bb00;
+}
+
+.instruction-back ion-card ion-list ion-item ion-label p {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+}
+
+ion-button {
+  display: inline-block;
+  background-color: #f7bb00;
+  color: #001f46;
+  width: 90%;
+  height: 50px;
+  margin: 5.5px 0;
+  border: none;
+  border-radius: 100px;
+  --box-shadow: none;
+  display: inline-block;
+}
+/*# sourceMappingURL=quiz-instruction.page.css.map */

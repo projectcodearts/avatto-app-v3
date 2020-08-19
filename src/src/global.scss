@@ -1,0 +1,238 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+@import "theme/variables.scss";
+@import "theme/color_variables.scss";
+
+.clear{ clear: both;}
+html.md{
+    font-family: 'Nunito', sans-serif !important;
+}
+html.ios{
+    font-family: 'Nunito', sans-serif !important;
+}
+body{
+    font-family: 'Nunito', sans-serif !important; 
+}
+
+.scroll-y, .inner-scroll { display: none; }
+  *::-webkit-scrollbar {
+    display: none;
+}
+ion-content{
+    --background: #f2f2f3 !important;
+}
+.back{ position: absolute; top: 30px; left: 15px; z-index: 1; width: 32px; height: 32px;}
+
+.fetching-block{ width: 100%; padding: 30px; text-align: center; }
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px; vertical-align: middle;
+  }
+  .lds-ring span {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #001f46;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #001f46 transparent transparent transparent;
+  }
+  .lds-ring span:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring span:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring span:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .inner-heading-style{
+      width: 100%; height: auto; margin: 0; padding: 0; float: left; height: 95px; position: relative; text-align: center; font-size: 18px; font-weight: 700; text-transform: capitalize; border-radius: 10px 10px 0 0;
+      &.yellow{
+        background-color: $custom_secondary;
+        color: $custom_primary;
+        .heading{
+          .icon-back{
+            background-color: $custom_primary;
+          }
+        }
+      }
+      &.blue{
+        background-color: $custom_primary;
+        color: #fff;
+        .heading{
+          .icon-back{
+            background-color: $custom_secondary;
+          }
+        }
+      }
+      .heading{
+        width: 100%; position: absolute; top: -31px; left: 0;
+        .icon-back{
+          width: 62px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 100%; margin: 0 auto 15px;
+        }
+      }
+  }
+
+.site-header{
+    background-color: #001f46; padding-top: 32px; z-index: 99;
+    .title-default{ text-align: center; color: #fff;}
+    ion-icon{
+        color: #fff; width: 64px; height: 30px;
+    }
+    ion-menu-button{
+        color: #fff; width: 64px; height: 30px;
+    }
+    ion-back-button{
+      color: #fff; width: 64px; height: 30px;
+  }
+    ion-button{ text-align: center;}
+}
+.my-custom-menu {
+    --width: 500px;
+  }
+
+.toolbar-container{
+    background-color: #001f46;
+}
+.icon-details{
+    display: inline-block; position: relative;
+    span{
+        width: 18px; height: 18px; background-color: $custom_secondary; color: $custom_primary; position: absolute;top: -1px; left: 15px; float: left; border-radius: 100%; text-align: center; line-height: 18px; font-size: 9px;
+    }
+}
+
+
+.my-custom-class{
+  .alert-wrapper{
+    max-width: 90%; padding: 80px 20px 40px; text-align: center;  background-image: url(assets/images/error.svg); background-repeat: no-repeat; background-position: center 30px; background-size: 11%;
+    .alert-title{
+      text-align: center; font-weight: 700; font-size: 19px;
+    }
+    .alert-button-group{
+      display: block !important;
+    }
+    button[type="button"]{
+      width: 100%; background-color: #001f46; text-align: center; border-radius: 100px; text-align: center; margin-bottom: 15px; color: #fff;
+      span{
+        display: block !important; text-align: center; width: 100%; padding: 6px 0;
+      }
+      &:last-child{ 
+        margin-bottom: 0; background-color: transparent; border: #001f46 2px solid; color: #001f46;
+      }
+    }
+  }
+}
+
+p.ins{
+  &:after{
+      background-image: url(assets/images/down_arrow.png); background-repeat: no-repeat; background-position: center top; width: 64px; height: 64px; content: ""; position: absolute; top: -49px; left: 0; right: 0; margin: auto;
+  }
+  color: #fff;
+  text-align: center;
+  background-color: rgba(255,255,255,.1);
+  
+  padding: 30px 20px;
+  border-radius: 200px;
+  overflow: visible; 
+  margin-top: 30px; position: relative;
+}
+
+.drescription-back p{
+  line-height: 28px;
+  color: #727272;
+  font-size: 14px;
+  font-weight: normal;
+}
+.drescription-back h2 {font-size: 25px; color: #001f46;}
+.drescription-back h3 {font-size: 20px}
+.drescription-back h4 {font-size: 18px}
+.drescription-back h5 {font-size: 16px}
+
+.drescription-back h3, h4, h5{
+  
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.drescription-back{
+  ul{
+    width: 100%;
+      text-align: left;
+      margin: 20px 0;
+      padding: 0; float: left;
+      li{
+        &:before{
+          width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      position: absolute; font-weight: normal;
+      top: 7px;
+      left: 0;
+      content: "";
+      background: #fb4138;
+      background: linear-gradient(to right, #fb4138 0%, #ff8003 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fb4138", endColorstr="#ff8003",GradientType=1 );
+        }
+        width: 100%;
+        list-style: none;
+        float: left;
+        padding-left: 16px;
+        position: relative;
+        font-size: 14px;
+        color: #727272;
+        margin-bottom: 10px;
+        font-weight: normal;
+        line-height: 24px;
+      }
+  }
+  table{
+    width: 100%; max-width: 100%; border: #ddd 1px solid;
+    
+    td{
+      padding: 8px; border: #ddd 1px solid;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<ion-grid class="coupon-details">
+  <div class="fetching-block" *ngIf="fetching">
+    <div class="lds-ring">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Fetching...</p> 
+  </div>
+  <ion-row>
+    <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
+      <ion-card>
+        <div class="logo-back">
+          <img src="assets/images/avatto-web.png">
+        </div>
+        <div class="details-back">
+          <div>
+            <ion-card-header>
+              <ion-card-subtitle class="card-sub-title">Coupon Code</ion-card-subtitle>
+              <ion-card-title class="card-title">{{couponExcerpt}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>{{couponDescription}}</ion-card-content>
+            <ion-button color="button_transparent" (click)="copyText(couponTitle)">{{couponTitle}}</ion-button>
+          </div>
+        </div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

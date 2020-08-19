@@ -1,0 +1,31 @@
+<div class="login-back">
+  <div class="logo-cover">
+    <a [routerLink]="['/sign-in']"><ion-icon class="back" name="arrow-back-outline"></ion-icon></a>
+    <img src="{{mainlogo}}" alt="">
+  </div>
+  <div class="login-main-back">
+    <h3>Register</h3>
+    <form [formGroup]="userForm" (ngSubmit)="signUp()">
+      <div class="form-portion">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input type="text" formControlName="username" placeholder="Your user name"></ion-input>
+      </div>
+      <div class="form-portion">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input type="email" formControlName="email" placeholder="Your email adress"></ion-input>
+      </div>
+      <div class="form-portion">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="password" formControlName="password" placeholder="Your password"></ion-input>
+      </div>
+      
+        <ul class="button-list">
+          <li><ion-button class="blue-border" color="button_transparent" expand="full" [disabled]="!userForm.valid" type="submit">Register</ion-button></li>
+          
+        </ul>
+     
+      
+    </form>
+    
+  </div>
+</div>

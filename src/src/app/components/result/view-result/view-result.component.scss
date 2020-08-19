@@ -1,0 +1,50 @@
+.my-custom-class {
+    --background: #222;
+  }
+  .result-back{
+    width: 100%; padding: 0 15px;
+  }
+  .header{
+    text-align: center; width: 100%; padding: 20px 0;
+    .reports{
+      background-image: url(../../../../assets/images/reports.svg); background-repeat: no-repeat; background-position: center; background-size: contain; width: 40px; height: 40px; display: inline-block; 
+    }
+    ion-label{
+      text-align: center; font-weight: 700; font-size: 24px; color: #000; width: 100%; display: block;
+    }
+    
+  }
+  ion-list{
+    ion-item{
+      ion-icon{
+        color: #001f46; 
+      }
+      ion-label{
+        color: #001f46; font-weight: 700;
+      }
+    }
+  }
+  .answare{
+    background-color: #001f46; border-radius: 100px; padding: 10px 0; --box-shadow: none; height: 50px; position: absolute; bottom: 40px; left: 0; right: 0; margin: auto; width: 80%;
+  }
+
+  .view-result{
+    ion-card-header{
+      background-color: #001f46; 
+      ion-card-title{
+        color: #fff; font-size: 14px; text-align: center; line-height: 24px;
+      }
+      
+      
+    }
+    ion-grid{ 
+      padding: 20px 0;
+      ion-col{
+        text-align: center;
+      }
+    }
+    ion-button{
+      background-color: #f7bb00; border-radius: 100px; padding: 10px 0; --box-shadow: none; height: 50px;margin: 0 0 20px 0; width: 100%; color: #001f46;
+    }
+  }
+  

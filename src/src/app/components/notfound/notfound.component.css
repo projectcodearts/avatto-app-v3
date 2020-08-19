@@ -1,0 +1,18 @@
+.page-notfound {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-notfound img {
+  width: 50%;
+}
+/*# sourceMappingURL=notfound.component.css.map */

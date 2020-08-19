@@ -1,0 +1,62 @@
+<div class="result-back">
+  <div class="header">
+    <ion-icon class="reports"></ion-icon>
+    <ion-label> Higher section 2 </ion-label>
+  </div>
+<ion-list>
+  <ion-item>
+    <ion-icon name="arrow-forward-outline" slot="start"></ion-icon>
+    <ion-label> Total Question : </ion-label>
+    {{ shortResult.totQuestion }}
+  </ion-item>
+  <ion-item>
+    <ion-icon name="arrow-forward-outline" slot="start"> </ion-icon>
+    <ion-label> Correct :  </ion-label>
+    {{ shortResult.correctChoiceCount }}
+  </ion-item>
+  <ion-item>
+    <ion-icon name="arrow-forward-outline" slot="start"> </ion-icon>
+    <ion-label> Incorrect : </ion-label>
+    {{ shortResult.incorrectChoiceCount }}
+  </ion-item>
+  <ion-item>
+    <ion-icon name="arrow-forward-outline" slot="start"> </ion-icon>
+    <ion-label> Unattended : </ion-label>
+    {{ shortResult.unattended }}
+  </ion-item>
+  <ion-item>
+    <ion-icon name="arrow-forward-outline" slot="start"> </ion-icon>
+    <ion-label> Time Taken : </ion-label>
+    {{ shortResult.timeTaken }} Second
+  </ion-item>
+</ion-list>
+<ion-button expand="block" (click)="vewDetails()" (click)="vewDetails()" *ngIf="ViewDetail != 'true'" color="button_transparent" class="answare" >Answer Key</ion-button> 
+<div *ngIf="ViewDetail == 'true'" class="view-result">
+  <ion-card *ngFor="let item of resultSheet;let i=index" >
+    <ion-card-header>
+      <ion-card-title> <div [innerHTML]="item.questionName"> </div></ion-card-title>
+    </ion-card-header>
+     <ion-card-content>
+      <ion-grid >
+        <ion-row >
+          <ion-col size="6" >Correct Choice  : </ion-col>
+          <ion-col size="4" *ngIf="item.correctChoice=='A'">({{item.correctChoice}})  {{optionList[i].option['A']}}</ion-col>
+          <ion-col size="4" *ngIf="item.correctChoice=='B'">({{item.correctChoice}})  {{optionList[i].option['B']}}</ion-col>
+          <ion-col size="4" *ngIf="item.correctChoice=='C'">({{item.correctChoice}})  {{optionList[i].option['C']}}</ion-col>
+          <ion-col size="4" *ngIf="item.correctChoice=='D'">({{item.correctChoice}})  {{optionList[i].option['D']}}</ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col size="6" >User Choice  : </ion-col>
+          <ion-col size="4" *ngIf="item.userChoice == 'A'">({{item.userChoice}})  {{optionList[i].option['A']}} </ion-col>
+          <ion-col size="4" *ngIf="item.userChoice == 'B'">({{item.userChoice}})  {{optionList[i].option['B']}} </ion-col>
+          <ion-col size="4" *ngIf="item.userChoice == 'C'">({{item.userChoice}})  {{optionList[i].option['C']}} </ion-col>
+          <ion-col size="4" *ngIf="item.userChoice == 'D'">({{item.userChoice}})  {{optionList[i].option['D']}} </ion-col>
+          <ion-col size="4" *ngIf="item.userChoice == 'N/A'"> N/A </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+      <ion-button color="button_transparent" size="full" (click)="checkExplain(item.explain)" > Check Explain </ion-button>
+    </ion-card-content>
+  </ion-card>
+</div>
+</div>

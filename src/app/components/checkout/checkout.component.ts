@@ -174,14 +174,14 @@ export class CheckoutComponent implements OnInit {
         description: 'Credits towards consultation',
         image: 'https://i.imgur.com/3g7nmJC.png',
         currency: "INR", // your 3 letter currency code
-        key: "rzp_test_1DP5mmOlF5G5ag", // your Key Id from Razorpay dashboard
+        key: "rzp_live_bDPcCrYRvrGjT5", // your Key Id from Razorpay dashboard
         amount: this.price, // Payment amount in smallest denomiation e.g. cents for USD
         name: 'Razorpay',
        
         prefill: {
-          email: 'test@razorpay.com',
-          contact: '9990009991',
-          name: 'Razorpay'
+          email: 'support@avatto.com',
+          contact: '9920808017',
+          name: 'Avatto'
         },
         theme: {
           color: '#F37254'
@@ -236,7 +236,7 @@ export class CheckoutComponent implements OnInit {
         payment_method: "razorpay",
         payment_method_title: "Razorpay",
         set_paid: true,
-        discount_total: this.price,
+        discount_total: this.price*100,
   
         billing: {
           first_name: "",
@@ -329,7 +329,7 @@ export class CheckoutComponent implements OnInit {
         payment_method: "razorpay",
         payment_method_title: "Razorpay",
         set_paid: true,
-        discount_total: this.price,
+        discount_total: this.price*100,
   
         billing: {
           first_name: "",

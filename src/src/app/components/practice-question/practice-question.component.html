@@ -1,0 +1,25 @@
+<div class="fetching-block" *ngIf="fetching">
+  <div class="lds-ring">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Fetching...</p> 
+</div>
+<ion-card [routerLink]="['/', 'practice-question', data.link]"  *ngFor="let data of pqdata">
+  <div>
+    <img src="{{data.icon}}">
+    <ion-card-header>
+      <ion-card-title class="card-title">{{data.name}}</ion-card-title>
+      <!--<ion-card-subtitle class="card-subtitle">{{data.subname}}</ion-card-subtitle>-->
+    </ion-card-header>
+    <!-- <div class="progress-back">
+      <ion-progress-bar value="0.3" style="--progress-background: #001f46;"></ion-progress-bar>
+    </div> -->
+    <div class="completed">
+      {{data.countchildren}} Chapters
+    </div>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </div>
+</ion-card>

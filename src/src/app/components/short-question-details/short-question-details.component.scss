@@ -1,0 +1,102 @@
+@import "../../../assets/css/mixin.component.scss";
+@import "../../../theme/color_variables.scss";
+.details_back{
+     max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; 
+    width: 100%; float: left; 
+    &.active{
+        padding: 15px;
+    }
+        
+        .details{ margin-bottom: 30px;}
+        .title{
+            color: #212121; font-size: 20px; text-decoration: underline; margin-bottom: 15px;
+        }
+        p{
+            color: #727272; font-size: 14px; line-height: 24px;
+        }
+        .list{
+            width: 100%; float: left; margin: 15px 0; padding: 0;
+            li{
+                width: 50%; list-style: none; float: left; padding-left: 16px; position: relative; font-size: 14px; color: #727272; margin-bottom: 10px;
+                &:before{
+                    width: 10px; height: 10px; border-radius: 100%; position: absolute; top: 4px; left: 0; content: ""; 
+                    background: #fb4138; 
+                    background: -moz-linear-gradient(left,  #fb4138 0%, #ff8003 100%); 
+                    background: -webkit-linear-gradient(left,  #fb4138 0%,#ff8003 100%); 
+                    background: linear-gradient(to right,  #fb4138 0%,#ff8003 100%); 
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb4138', endColorstr='#ff8003',GradientType=1 ); 
+                    
+                }
+            }
+        }
+    }
+    
+
+
+.drescription-back{
+    width: 100%; float: left; padding: 20px 15px;
+    &.active{
+        padding: 15px;
+    }
+    .head{
+        width: 100%; height: 68px; text-transform: capitalize; font-size: 21px; border-radius: 5px; margin-top: 20px; line-height: 68px; color: #fff; padding: 0 0 0 15px; position: relative;
+        background: #286bbf; 
+        background: -moz-linear-gradient(left,  #286bbf 0%, #163c6c 100%); 
+        background: -webkit-linear-gradient(left,  #286bbf 0%,#163c6c 100%); 
+        background: linear-gradient(to right,  #286bbf 0%,#163c6c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#286bbf', endColorstr='#163c6c',GradientType=1 ); 
+        &.minus{
+            &:after{
+                width: 22px; height: 22px; background-color: #fff; border-radius: 100%; position: absolute; top: 0; bottom: 0; right: 20px; content: "-"; line-height: 20px; text-align: center; font-size: 34px; color: #163c6c; margin: auto;
+            }
+        }
+        &.minus{
+            &.plus{
+                &:after{
+                    width: 22px; height: 22px; background-color: #fff; border-radius: 100%; position: absolute; top: 0; bottom: 0; right: 20px; content: "+"; line-height: 22px; text-align: center; font-size: 22px; color: #163c6c; margin: auto;
+                }
+            }
+            
+        }
+    }
+    
+    
+}
+
+
+.short-new-back{
+    width: 100%; padding: 15px;
+}
+.short-question-item{
+    width: 100%; height: auto; float: left; 
+    .accordion-back{
+        width: 100%; float: left; margin-top: 1px;
+        .heading{
+            width: 100%; height: auto; float: left; padding: 15px 70px 15px 15px; color: #fff; font-size: 15px; font-weight: bold; text-transform: capitalize;  background-color: $custom_primary; position: relative; text-align: left;
+            .icon-back{
+                width: 60px; height: 100%;  background-color: $custom_secondary; color: $custom_primary; font-size: 20px; position: absolute; top: 0; right: 0;
+                &:after{
+                    position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: "+"; display: flex; align-items: center; justify-content: center;
+                }
+                &.active:after{
+                    content: "-";
+                }
+            }
+            &.active{
+                .icon-back{
+                    &:after{ content: "-";}
+                }
+            }
+        }
+        .details_back{
+            width: 100%;  float: left; background-color: #fff;  padding: 0 15px 0 15px; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; 
+            p{
+                color: #5d5b5b; font-size: 15px; line-height: 28px; text-align: justify; margin: 0;
+            }
+        }
+    }
+}
+
+#scroll-min{
+    height: 172px; overflow: auto; background-color: #ddd; padding: 20px; margin-top: 20px; margin-bottom: 20px; box-shadow: (0,0,0,.1) 1px 0 10px; border-radius: 5px;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACJ,KAAK,EAAE,IAAI;EAAE,MAAM,EAAE,IAAI;EAAE,MAAM,EAAE,CAAC;EAAE,OAAO,EAAE,IAAI;EAAE,KAAK,EAAE,IAAI;CACpE",
+    "sources": [
+        "mcq.component.scss"
+    ],
+    "names": [],
+    "file": "mcq.component.css"
+}
