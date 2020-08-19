@@ -24,7 +24,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
-
+import { AdMobFree } from '@ionic-native/admob-free/ngx';
 
 
 @NgModule({
@@ -36,7 +36,7 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(),
     AppRoutingModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
   ],
   providers: [
     StatusBar,
@@ -49,7 +49,10 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
     FileOpener,
     FileTransfer,
     DocumentViewer,
-    OneSignal
+    OneSignal,
+    AdMobFree
+   
+    
     
   ],
   bootstrap: [AppComponent]
