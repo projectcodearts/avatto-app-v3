@@ -1,6 +1,6 @@
 
 <ion-content>
-  <div class="orders">
+  <!--<div class="orders">
     <ion-card>
       <ion-card-header>
         <ion-card-title class="title">
@@ -10,7 +10,7 @@
       </ion-card-header>
       <ion-icon name="close-outline" class="close_modal" (click)="dismiss()"></ion-icon>
     </ion-card>
-  </div>
+  </div>-->
   
   <!--<ion-list *ngFor="let orderContent of orderList" >
     <ion-item *ngFor="let product of orderContent.line_items" >
@@ -19,6 +19,17 @@
       <ion-label> Status : {{orderContent.status}} </ion-label>
     </ion-item>
   </ion-list>-->
+  <ion-header class="site-header">
+    <ion-toolbar color="custom">
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title start>{{title}}</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="profile"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <div class="main-orders">
     <ion-list>
     <ion-item *ngFor="let item of orderDatas">

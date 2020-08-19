@@ -23,7 +23,11 @@
           <ion-icon name="cube-outline"></ion-icon>
           Order Information
         </ion-card-title>
-        <ion-button color="button_transparent" (click)="presentModal()" >
+        <!--<ion-button color="button_transparent" (click)="presentModal()" >
+          <ion-icon slot="end" name="gift-outline"></ion-icon>
+          Check Order
+        </ion-button>-->
+        <ion-button color="button_transparent" [routerLink]="['/orders']" routerLinkActive="router-link-active"  >
           <ion-icon slot="end" name="gift-outline"></ion-icon>
           Check Order
         </ion-button>

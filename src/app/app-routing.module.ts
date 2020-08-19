@@ -98,6 +98,10 @@ const routes: Routes = [
     path: 'practice-question/:id',
     loadChildren: () => import('./allPages/practice-question-details/practice-question-details.module').then( m => m.PracticeQuestionDetailsPageModule)
   },
+  {
+    path: 'contactus',
+    loadChildren: () => import('./allPages/contactuspage/contactuspage.module').then( m => m.ContactuspagePageModule)
+  },
   
   {
     path: 'mcq/:id',
@@ -162,6 +166,8 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./allPages/pagenotfound/pagenotfound.module').then( m => m.PagenotfoundPageModule)
   }
+
+
 
   
 
