@@ -15,7 +15,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { EntrypointComponent } from './components/entrypoint/entrypoint.component';
 
 import { MenuComponent } from './components/shared/header/menu/menu.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +37,7 @@ import { AdMobFree } from '@ionic-native/admob-free/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     StatusBar,

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactus',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactus.component.scss'],
 })
 export class ContactusComponent implements OnInit {
-
+  @ViewChild('contactForm') contactForm: NgForm
   constructor() { }
 
   ngOnInit() {}
-
+  onSubmit(form: NgForm){
+    console.log(this.contactForm)
+  }
+ 
 }
