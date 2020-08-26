@@ -39,8 +39,6 @@ export class AppComponent implements OnInit {
 			}
 		});*/
     this.initializeApp();
-  }
-  showbannarad(){
     const bannerConfig: AdMobFreeBannerConfig = {
       // add your config here
       // for the sake of this example we will just use the test config
@@ -52,10 +50,15 @@ export class AppComponent implements OnInit {
      
      this.admobFree.banner.prepare()
        .then(() => {
+         console.log('add is ready');
          // banner Ad is ready
          // if we set autoShow to false, then we will need to call the show method here
        })
        .catch(e => console.log(e));
+  }
+  showbannarad(){
+    
+    
   }
   doRefresh(event){
     setTimeout(()=>{

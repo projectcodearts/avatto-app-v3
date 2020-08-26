@@ -51,7 +51,7 @@
           <div class="icon-cover"><ion-icon name="arrow-forward-outline"></ion-icon></div> 
           <ion-label class="ion-text-wrap"><span [innerHTML]="questionContent.option.C"> </span></ion-label>
         </ion-item>
-        <ion-item lines="none" (click)="selectAnswer('D',questionContent.id,questionContent.choice,lStart)" [color]="buttonValue == 'D' ? 'primary' : ''">
+        <ion-item lines="none" (click)="selectAnswer('D',questionContent.id,questionContent.choice,lStart)" [color]="buttonValue == 'D' ? 'primary' : ''" *ngIf="questionContent.option.D !=''">
           <div class="icon-cover"><ion-icon name="arrow-forward-outline"></ion-icon></div> 
           <ion-label class="ion-text-wrap"><span [innerHTML]="questionContent.option.D"> </span></ion-label>
         </ion-item>  

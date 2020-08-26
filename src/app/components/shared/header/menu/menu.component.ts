@@ -54,6 +54,11 @@ export class MenuComponent implements OnInit, OnDestroy/*AfterViewInit*/ {
       navigator['app'].exitApp();
     });
   }
+
+  exitApps(){
+    navigator['app'].exitApp();
+  }
+
   ngOnDestroy() { 
     this.backButtonSubscription.unsubscribe();
   }

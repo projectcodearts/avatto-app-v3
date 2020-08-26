@@ -15,10 +15,11 @@ export class OrdersPage implements OnInit {
   userid:any;
   userData:any;
   orderDatas:any;
+  fetching = false;
   constructor(public _products: ProductsService,private http:HttpClient,private storage: Storage, public modalController: ModalController, private router: Router) { }
   orderList : [];
   ngOnInit() {
-    
+    this.fetching = true;
     this.storage.get('userInfo').then((val) => {
       let userInfo = JSON.parse(val);
       console.log(userInfo.user_email);
@@ -35,6 +36,7 @@ export class OrdersPage implements OnInit {
              
             const response = JSON.stringify(data)
             this.orderDatas = JSON.parse(response);
+            this.fetching = false;
           })
         }
       })

@@ -1,5 +1,6 @@
 
 <ion-content>
+  
   <!--<div class="orders">
     <ion-card>
       <ion-card-header>
@@ -31,10 +32,19 @@
     </ion-toolbar>
   </ion-header>
   <div class="main-orders">
+    <div class="fetching-block" *ngIf="fetching">
+      <div class="lds-ring">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Fetching...</p> 
+    </div>
     <ion-list>
     <ion-item *ngFor="let item of orderDatas">
       <ion-avatar slot="start" class="ios hydrated">
-        <img src="{{item.order_status}}">
+        <img src="{{item.image}}">
       </ion-avatar>
       <ion-label>
         <h2>{{item.product_name}}</h2>

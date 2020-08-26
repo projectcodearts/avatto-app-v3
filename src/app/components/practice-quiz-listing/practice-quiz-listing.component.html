@@ -46,7 +46,7 @@
 </div>
 <ion-card *ngFor="let item of practiceQs;let i = index;">
   <div class="top">
-    <img src="assets/images/s-question.png">
+    <img src="{{item.image}}">
     <ion-card-header>
       <ion-card-title class="card-title">{{item.testname}} (Free)</ion-card-title>
     </ion-card-header>

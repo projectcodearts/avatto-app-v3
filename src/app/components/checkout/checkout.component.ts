@@ -40,6 +40,8 @@ export class CheckoutComponent implements OnInit {
   cartProduct : any = JSON.parse(localStorage.getItem("product"))?JSON.parse(localStorage.getItem("product")):[];
   price:any;
   couponData:any;
+  razorPayment:any;
+  customerInfo:any;
   orderData = {
     payment_method: "razorpay",
     payment_method_title: "Razorpay",
@@ -94,6 +96,19 @@ export class CheckoutComponent implements OnInit {
         }
       })
 
+      this.http.get('https://avatto.in/wp-json/avatto/v2/user-id/?ue='+userInfo.user_email).subscribe(data=>{
+      this.userData = data;
+      if(this.userData.id !="null"){
+        this.userid = this.userData.id;
+        this._products.getCustomer(this.userid).then(data => {
+          let item = data[0];
+          this.customerInfo = item;
+          this.orderData.billing = item.billing;
+          console.log(this.customerInfo);
+        });
+      }
+    })
+
     });
 
     
@@ -115,6 +130,11 @@ export class CheckoutComponent implements OnInit {
     }, async (err) => {
       
     });
+
+    
+
+
+
   }
 
   async appyCouponCode(){
@@ -170,18 +190,21 @@ export class CheckoutComponent implements OnInit {
     //this.createOrder();
 
     if(this.userid !=""){
+
+      this.razorPayment = this.price*100;
+
       var options = {
         description: 'Credits towards consultation',
         image: 'https://i.imgur.com/3g7nmJC.png',
         currency: "INR", // your 3 letter currency code
         key: "rzp_live_bDPcCrYRvrGjT5", // your Key Id from Razorpay dashboard
-        amount: this.price, // Payment amount in smallest denomiation e.g. cents for USD
+        amount: this.razorPayment, // Payment amount in smallest denomiation e.g. cents for USD
         name: 'Razorpay',
        
         prefill: {
-          email: 'support@avatto.com',
-          contact: '9920808017',
-          name: 'Avatto'
+          email: this.orderData.billing.email,
+          contact: this.orderData.billing.phone,
+          name: this.orderData.billing.first_name
         },
         theme: {
           color: '#F37254'
@@ -232,11 +255,13 @@ export class CheckoutComponent implements OnInit {
     //this.orderData.line_items.push(products);
 
     if(this.couponAdded == "true"){
+
+      this.razorPayment = this.price*100;
       const createOrderData = {
         payment_method: "razorpay",
         payment_method_title: "Razorpay",
         set_paid: true,
-        discount_total: this.price*100,
+        discount_total: this.razorPayment,
   
         billing: {
           first_name: "",
@@ -325,11 +350,13 @@ export class CheckoutComponent implements OnInit {
     }
 
     else{
+      this.razorPayment = this.price*100;
       const createOrderData = {
+        
         payment_method: "razorpay",
         payment_method_title: "Razorpay",
         set_paid: true,
-        discount_total: this.price*100,
+        discount_total: this.razorPayment,
   
         billing: {
           first_name: "",

@@ -86,6 +86,7 @@ export class ViewQuizComponent implements OnInit {
     });
     loading.present();
     this.quiz.getQuestions(id).then(data => {
+      console.log(data);
       this.storage.set("questions_data",data);
       loading.dismiss();
       let item = data[0];

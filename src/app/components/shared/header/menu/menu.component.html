@@ -13,13 +13,8 @@
         <ion-label>Contact Us</ion-label>
       </ion-item>
     </ion-menu-toggle>
-    <ion-menu-toggle>
-      <ion-item lines="none" color="warning" class="logout" (click)="showbannarad()" >
-        <ion-icon slot="start"  name="download-outline"></ion-icon>
-        <ion-label>Exit</ion-label>
-      </ion-item>
-    </ion-menu-toggle>
-    <!--<ion-menu-toggle *ngIf="loggedin !='false'">
+    
+    <ion-menu-toggle *ngIf="loggedin !='false'">
       <ion-item lines="none" color="warning" class="logout" (click)="logout()">
         <ion-icon slot="start"  name="log-out-outline"></ion-icon>
         <ion-label>Logout</ion-label>
@@ -31,7 +26,14 @@
         <ion-icon slot="start"  name="log-out-outline"></ion-icon>
         <ion-label>Log In</ion-label>
       </ion-item>
-    </ion-menu-toggle>-->
+    </ion-menu-toggle>
+
+    <ion-menu-toggle>
+      <ion-item lines="none" color="warning" class="logout" (click)="exitApps()" >
+        <ion-icon slot="start"  name="download-outline"></ion-icon>
+        <ion-label>Exit</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
 
   </div>
 </div>
