@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class PracticeQuestionDetailsComponent implements OnInit {
   fetching = false;
   practiceQs:any=[];
+  responseUser:any;
   uemail:any;
   percentage : any = [];
   percentageBar : any = [];
@@ -28,6 +29,10 @@ export class PracticeQuestionDetailsComponent implements OnInit {
 
     this.http.get('http://avatto.in/wp-json/avatto/v2/paid-check/?id='+id+'&ue='+this.uemail).subscribe(res=>{
       console.log(res);
+      this.responseUser = res;
+      if(this.responseUser.bought == "no"){
+        this.router.navigate(['/products', this.responseUser.id]);
+      }
     })
 
     this.fetching = true;

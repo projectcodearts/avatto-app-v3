@@ -10,4 +10,9 @@ export class EligiblityService {
   public geteligiblity():Observable<object>{
     return this.http.get("https://avatto.in/wp-json/avatto/v2/featuredeligibility");
  }
+
+ public getAlleligiblity():Observable<object>{
+  return this.http.get("https://avatto.in/wp-json/avatto/v2/eligibility");
+}
+
 }

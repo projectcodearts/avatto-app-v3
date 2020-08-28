@@ -47,6 +47,7 @@ export class EligiblityDetailsComponent implements OnInit {
     });
   }
   ViewPDFFromUrl2(URL: string, filename: string) {
+    this.fetching = true;
     console.log(URL);
     filename = filename + new Date().toISOString();
     const transfer: FileTransferObject = this.ft.create();
@@ -55,11 +56,14 @@ export class EligiblityDetailsComponent implements OnInit {
       if (this.platform.is('ios')) {
         //// iOS Version
         this.document.viewDocument(entryUrl, 'application/pdf',{});
+        this.fetching = false;
       } else {
         this.fileopen.open(entryUrl, 'application/pdf');
+        this.fetching = false;
       }
     }, (error) => {
      console.log('Failed!', error);
+     this.fetching = false;
     });
 
   }

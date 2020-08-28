@@ -11,6 +11,7 @@ export class ViewResultComponent implements OnInit {
   postAns : any = JSON.parse(localStorage.getItem("postAns"))?JSON.parse(localStorage.getItem("postAns")):{};
   questionList : any = JSON.parse(localStorage.getItem("question"))?JSON.parse(localStorage.getItem("question")):[];
   optionList:any;
+  quizTitle:any;
   resultSheet : any = [];
   shortResult : any = [];
   ViewDetail : any = "";
@@ -20,6 +21,7 @@ export class ViewResultComponent implements OnInit {
 
     this.storage.get("questions_data").then((val)=>{
       this.optionList = val[0].question;
+      this.quizTitle = val[0].name;
       console.log(val[0].question);
     })
 

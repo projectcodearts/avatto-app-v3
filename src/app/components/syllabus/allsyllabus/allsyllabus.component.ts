@@ -15,7 +15,7 @@ export class AllsyllabusComponent implements OnInit {
   
   ngOnInit() {
     this.fetching = true;
-    this._syllabus.getsyllabus().pipe().subscribe(response=>{
+    this._syllabus.getallSyllabus().pipe().subscribe(response=>{
       const data = JSON.stringify(response)
       this.sylllabus = JSON.parse(data);
       this.fetching = false;

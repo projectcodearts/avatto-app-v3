@@ -88,6 +88,7 @@ export class ViewQuizComponent implements OnInit {
     this.quiz.getQuestions(id).then(data => {
       console.log(data);
       this.storage.set("questions_data",data);
+      //this.storage.set("quiz_title",data);
       loading.dismiss();
       let item = data[0];
       this.timer = item['time_of_quiz'];

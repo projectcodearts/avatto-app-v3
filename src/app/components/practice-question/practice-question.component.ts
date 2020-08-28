@@ -17,6 +17,7 @@ export class PracticeQuestionComponent implements OnInit {
     this._subcatquestion.getPQSdata(id,'').pipe().subscribe(response=>{
       const data = JSON.stringify(response)
       this.pqdata = response;
+      console.log(this.pqdata);
       this.fetching = false;
       
     });

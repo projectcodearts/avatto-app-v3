@@ -12,4 +12,10 @@ export class SyllabusService {
     return this.http.get("https://avatto.in/wp-json/avatto/v2/featuredsyllabus");
    
   }
+
+  public getallSyllabus():Observable<object>{
+
+    return this.http.get("https://avatto.in/wp-json/avatto/v2/syllabus");
+   
+  }
 }

@@ -13,7 +13,7 @@ export class AllEligiblityComponent implements OnInit {
   constructor(private _eligiblity: EligiblityService) { }
   ngOnInit() {
     this.fetching = true;
-    this._eligiblity.geteligiblity().pipe().subscribe(response=>{
+    this._eligiblity.getAlleligiblity().pipe().subscribe(response=>{
       const data = JSON.stringify(response)
       this.eligiblity = JSON.parse(data);
       this.fetching = false;

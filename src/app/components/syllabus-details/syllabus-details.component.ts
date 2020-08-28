@@ -56,6 +56,8 @@ export class SyllabusDetailsComponent implements OnInit {
   }
 
   openLocalPdf(){
+
+    this.fetching = true;
     let filePath = this.file.applicationDirectory + 'www/assets';
 
     if(this.platform.is('android')){
@@ -65,6 +67,8 @@ export class SyllabusDetailsComponent implements OnInit {
         this.fileopen.open(result.nativeURL,'application/pdf');
       })
 
+      this.fetching = false;
+
     }else{
 
       const options:DocumentViewerOptions = {
@@ -73,6 +77,8 @@ export class SyllabusDetailsComponent implements OnInit {
       }
 
       this.document.viewDocument(`${filePath}/myFile.pdf`,'application/pdf',options);
+
+      this.fetching = false;
 
     }
 
@@ -140,6 +146,8 @@ export class SyllabusDetailsComponent implements OnInit {
   }
 
   ViewPDFFromUrl(URL: string, filename: string) {
+
+    this.fetching = true;
     console.log(URL);
     filename = filename + new Date().toISOString();
     const transfer: FileTransferObject = this.ft.create();
@@ -148,11 +156,14 @@ export class SyllabusDetailsComponent implements OnInit {
       if (this.platform.is('ios')) {
         //// iOS Version
         this.document.viewDocument(entryUrl, 'application/pdf',{});
+        this.fetching = false;
       } else {
         this.fileopen.open(entryUrl, 'application/pdf');
+        this.fetching = false;
       }
     }, (error) => {
      console.log('Failed!', error);
+     this.fetching = false;
     });
 
   }
