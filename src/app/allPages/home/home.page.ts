@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MenuController, Platform } from '@ionic/angular';
 import { MenuServices } from 'src/app/allServices/menu.service';
+import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig, AdMobFreeRewardVideoConfig } from '@ionic-native/admob-free/ngx';
+import { AdmobService } from 'src/app/allServices/admob.service';
 
-
-import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free/ngx';
 
 @Component({
   selector: 'app-home',
@@ -15,21 +15,37 @@ export class HomePage implements OnInit, OnDestroy {
   title:string = "Avatto";
   exitmethod: any;
   menu: any[];
+  
   mainlogo: string = "assets/images/avatto-web-white.png";
-  constructor(public admob: AdMobFree,private _menu: MenuServices /*private _exitmethod: Platform*/) {
-    /*this.exitmethod=this._exitmethod.backButton.subscribeWithPriority(666666,()=>{
-      if(this.constructor.name === "HomePage"){
-        if(window.confirm("Do You Want to Exit the Avatto?")){
-          navigator["app"].exit();
-        }
-      }
-    })*/
+  constructor(public admob: AdMobFree,private _menu: MenuServices,private admobService: AdmobService) {
+    
    }
    
 
-  ngOnInit() {
-    
-  }
+   ngOnInit() {
+    // const intervalMs = 100;
+
+    // setInterval(() => {  
+    //   this.admobService.ShowRewardVideo();
+    // }, 70000);   
+
+    // setInterval(() => {  
+    //   this.admobService.ShowInterstitial();
+    // }, 150000);  
+
+    // this.admobService.ShowBanner();
+
+    // //LOAD THE BANNER AT PAGE INIT
+    // this.admobService.ShowBanner();
+    }
+    //FUNCTION FOR INTERSTITIAL
+    Interstitial(){
+    this.admobService.ShowInterstitial();
+    }
+    //FUNCTION FOR VIDEOREWARD
+    Reward(){
+    this.admobService.ShowRewardVideo();
+    }
   ngOnDestroy(){
    
   }
@@ -37,9 +53,9 @@ export class HomePage implements OnInit, OnDestroy {
   showBanner(){
 
     let bannerConfig: AdMobFreeBannerConfig = {
-        isTesting: true, // Remove in production
+        
         autoShow: true,
-        id: 'ca-app-pub-3940256099942544/6300978111',
+        id: 'ca-app-pub-6514638375454017/8837959762',
     };
 
     this.admob.banner.config(bannerConfig);

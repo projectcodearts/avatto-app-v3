@@ -24,6 +24,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
+//IMPORT ADMOB FREE
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 
 
@@ -51,7 +52,7 @@ import { AdMobFree } from '@ionic-native/admob-free/ngx';
     FileTransfer,
     DocumentViewer,
     OneSignal,
-    AdMobFree
+    AdMobFree,
    
     
     

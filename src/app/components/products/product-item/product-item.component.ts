@@ -32,7 +32,7 @@ export class ProductItemComponent implements OnInit {
     this.onlinepro=true;
     this.offlinepro=false;
     let id = this.route.snapshot.paramMap.get('id');
-    this._products.getproducts(id).pipe().subscribe(data=>{
+    this._products.getproductsall().pipe().subscribe(data=>{
       
       const demo = JSON.stringify(data)
       this.product = data;

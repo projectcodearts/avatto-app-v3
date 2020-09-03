@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="avatto.in" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="avatto.in" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Avatto</name>
     <description>Get online guidance for CS foundation, CA foundation, Data Scientist, Machine Learning, Actuarial Science and many more such exams</description>
     <author email="info@avatto.in" href="https://avatto.in/">Avatto Team</author>
